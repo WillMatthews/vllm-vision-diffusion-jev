@@ -1,3 +1,70 @@
+# Visual probabilities with DiffusionGemma
+
+This fork explores **image in → probabilities over predefined answers** using
+DiffusionGemma and vLLM. Supply an image and a question schema; get a distribution
+for each question without generating a prose answer.
+
+It builds on [vLLM PR #57250](https://github.com/vllm-project/vllm/pull/57250),
+inspired by [TypeSafe's Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev).
+This is an independent experiment using DiffusionGemma, with no Jev weights or
+calibration training. The original vLLM README follows below.
+
+## What works
+
+- A Python client for local images and boolean, choice, or ordered-score questions.
+- Multiple answer slots scored in a diffusion step, with per-question probabilities
+  and the underlying diagnostics preserved.
+- A labelled-image evaluation runner reporting accuracy, Brier score, log loss,
+  calibration error, threshold coverage, and request latency.
+- A Vast.ai bootstrap, synthetic image fixtures, and scoped teardown helper.
+
+## First GPU smoke test
+
+On a **32 GB RTX 5090**, using NVIDIA's NVFP4 DiffusionGemma checkpoint, all six
+answers were correct across three solid-colour images. Each request asked for
+the colour and whether the image was red, using one sample and no generated thought.
+
+| Image | Probability assigned to correct colour | End-to-end latency |
+| --- | --- | --- |
+| Red | 99.94% | 6.89 s (first request) |
+| Green | 99.86% | 0.467 s |
+| Blue | 96.57% | 0.500 s |
+
+These are three synthetic smoke-test requests over an SSH tunnel, using eager
+execution. They establish a working image-to-probabilities path; real-image
+accuracy, calibrated confidence, and representative performance remain to be evaluated.
+
+**The scores are normalized over the allowed answer tokens.** For the blue image,
+those tokens collectively held only 1.9% of the original vocabulary probability,
+even though the normalized blue score was 96.57%. A high score alone should not
+be treated as a reliable probability of correctness.
+
+[Recorded results](examples/features/diffusion_reads/vast/smoke-results.json) ·
+[GPU setup and findings](examples/features/diffusion_reads/vast/README.md)
+
+## Try it
+
+Start the patched model server and structured adapter using the
+[setup instructions](examples/features/diffusion_reads/README.md#visual-probabilities-prototype),
+then send an image with the supplied screenshot schema:
+
+```bash
+.venv/bin/python examples/features/diffusion_reads/visual_client.py \
+    --image screenshot.png \
+    --schema examples/features/diffusion_reads/visual_schema.json \
+    --endpoint http://127.0.0.1:8011
+```
+
+Install the client dependency with `uv pip install pybase64`. Model serving requires a
+suitable GPU and this fork's code. The first cloud run exposed missing Python
+headers and build tools, now included in the bootstrap; FlashInfer also needed
+an initial kernel compilation. See the GPU runbook for optional cache reuse.
+
+For evaluation on your own labelled images, see the
+[manifest format and metrics](examples/features/diffusion_reads/README.md#evaluate-labelled-images).
+
+---
+
 <!-- markdownlint-disable MD001 MD041 -->
 <p align="center">
   <picture>

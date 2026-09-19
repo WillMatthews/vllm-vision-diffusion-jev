@@ -30,7 +30,7 @@ reads one hazard label per frame. Browsers only open the webcam on a
 secure origin, so --tls-port adds an HTTPS listener with a self-signed
 certificate kept in --cert-dir.
 
-Each answer is one calibrated distribution per question, from a single
+Each answer is one label-normalized distribution per question, from a single
 denoise step over a seeded canvas, averaged over a few noise draws. The
 canvas, tokenizer, slot resolution, noise draws and averaging stay behind
 this server.
@@ -74,7 +74,6 @@ then run this in front of it:
 """
 
 import argparse
-import base64
 import json
 import math
 import os
@@ -88,6 +87,7 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
+import pybase64 as base64
 from transformers import AutoTokenizer
 
 ARGS = None

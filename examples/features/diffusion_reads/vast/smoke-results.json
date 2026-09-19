@@ -1,0 +1,301 @@
+{
+  "run": {
+    "date": "2026-09-19",
+    "gpu": "RTX 5090 32 GB",
+    "model": "nvidia/diffusiongemma-26B-A4B-it-NVFP4",
+    "model_revision": "ffc65bb9103ef37ba010cdfe259c2cde5401c579",
+    "source_base": "58eacf242207c9b9b54abff57e684fc1a7d74548",
+    "samples": 1,
+    "think": 0,
+    "eager": true,
+    "transport": "SSH tunnel",
+    "scope": "Synthetic smoke test; not a calibration benchmark"
+  },
+  "metrics": {
+    "images": 3,
+    "labelled_decisions": 6,
+    "scored_decisions": 6,
+    "skipped_decisions": 0,
+    "accuracy": 1.0,
+    "brier": 0.0003485942610861679,
+    "nll": 0.006377245365922462,
+    "ece_10_bins": 0.006276459923787318,
+    "threshold": 0.9,
+    "coverage": 1.0,
+    "selective_accuracy": 1.0,
+    "latency_p50_ms": 499.644129013177,
+    "latency_p95_ms": 6885.807022976223
+  },
+  "records": [
+    {
+      "probabilities": {
+        "colour": {
+          "red": 0.9993514567756105,
+          "green": 0.0006216254810077468,
+          "blue": 2.691774338169774e-05
+        },
+        "is_red": {
+          "yes": 0.9987839488663977,
+          "no": 0.0012160511336023472
+        }
+      },
+      "latency_ms": 6885.807022976223,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "colour",
+            "is_red"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "colour",
+            "is_red"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "colour": [
+                "A",
+                0.9993514567756105,
+                0.7077232922223808
+              ],
+              "is_red": [
+                "yes",
+                0.9987839488663977,
+                0.07057924517290141
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 6605.595111846924,
+          "reads": 1
+        },
+        "prompt_tokens": 376,
+        "questions": {
+          "colour": {
+            "pos": 6,
+            "entropy": [
+              0.7077232922223808
+            ],
+            "label_mass": 0.32033104587554984,
+            "argmax_is_label": false
+          },
+          "is_red": {
+            "pos": 12,
+            "entropy": [
+              0.07057924517290141
+            ],
+            "label_mass": 0.9394512926534566,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 376,
+        "output_tokens": 14
+      },
+      "image": "red.png",
+      "expected": {
+        "colour": "red",
+        "is_red": "yes"
+      }
+    },
+    {
+      "probabilities": {
+        "colour": {
+          "red": 0.0012292695888177106,
+          "green": 0.9985865379623288,
+          "blue": 0.00018419244885357273
+        },
+        "is_red": {
+          "yes": 4.122344051945083e-05,
+          "no": 0.9999587765594805
+        }
+      },
+      "latency_ms": 466.71832096762955,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "colour",
+            "is_red"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "colour",
+            "is_red"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "colour": [
+                "B",
+                0.9985865379623288,
+                0.34129086496926114
+              ],
+              "is_red": [
+                "no",
+                0.9999587765594806,
+                0.0243778464732001
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 197.92890548706055,
+          "reads": 1
+        },
+        "prompt_tokens": 376,
+        "questions": {
+          "colour": {
+            "pos": 6,
+            "entropy": [
+              0.34129086496926114
+            ],
+            "label_mass": 0.09096265153950357,
+            "argmax_is_label": false
+          },
+          "is_red": {
+            "pos": 12,
+            "entropy": [
+              0.0243778464732001
+            ],
+            "label_mass": 0.9759646382879754,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 376,
+        "output_tokens": 14
+      },
+      "image": "green.png",
+      "expected": {
+        "colour": "green",
+        "is_red": "no"
+      }
+    },
+    {
+      "probabilities": {
+        "colour": {
+          "red": 0.004561109847518142,
+          "green": 0.02975885521609823,
+          "blue": 0.9656800349363837
+        },
+        "is_red": {
+          "yes": 1.9514642925088933e-05,
+          "no": 0.999980485357075
+        }
+      },
+      "latency_ms": 499.644129013177,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "colour",
+            "is_red"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "colour",
+            "is_red"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "colour": [
+                "C",
+                0.9656800349363837,
+                0.11074508560489438
+              ],
+              "is_red": [
+                "no",
+                0.9999804853570748,
+                0.01141041854722881
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 238.4622097015381,
+          "reads": 1
+        },
+        "prompt_tokens": 376,
+        "questions": {
+          "colour": {
+            "pos": 6,
+            "entropy": [
+              0.11074508560489438
+            ],
+            "label_mass": 0.01908145023327342,
+            "argmax_is_label": false
+          },
+          "is_red": {
+            "pos": 12,
+            "entropy": [
+              0.01141041854722881
+            ],
+            "label_mass": 0.9887855656004668,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 376,
+        "output_tokens": 14
+      },
+      "image": "blue.png",
+      "expected": {
+        "colour": "blue",
+        "is_red": "no"
+      }
+    }
+  ]
+}

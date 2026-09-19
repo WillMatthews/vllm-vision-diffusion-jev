@@ -1,0 +1,21 @@
+{
+  "state": {"task": "Inspect the supplied application screenshot."},
+  "samples": 1,
+  "think": 0,
+  "questions": {
+    "is_error_screen": {
+      "type": "noul",
+      "instructions": "Does the screenshot visibly show an application error?"
+    },
+    "screen_type": {
+      "type": "choice",
+      "instructions": "Which category best describes the visible screen?",
+      "criteria": {
+        "login": "A sign-in or authentication screen",
+        "dashboard": "An application's main overview or dashboard",
+        "error": "A failure or error screen",
+        "other": "None of these, or not visually determinable"
+      }
+    }
+  }
+}
