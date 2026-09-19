@@ -1,0 +1,168 @@
+{
+  "state": {
+    "task": "Inspect the supplied photograph. Judge only visible evidence."
+  },
+  "samples": 1,
+  "think": 0,
+  "questions": {
+    "species": {
+      "type": "choice",
+      "instructions": "Classify the main animal. Use other for an animal outside the listed classes; unknown if no animal or not identifiable.",
+      "criteria": {
+        "dog": "dog",
+        "cat": "cat",
+        "fox": "fox",
+        "raccoon": "raccoon",
+        "opossum": "opossum",
+        "skunk": "skunk",
+        "coyote": "coyote",
+        "badger": "badger",
+        "hedgehog": "hedgehog",
+        "squirrel": "squirrel",
+        "rabbit_hare": "rabbit hare",
+        "rodent": "rodent",
+        "deer": "deer",
+        "wild_boar": "wild boar",
+        "bear": "bear",
+        "big_cat": "big cat",
+        "monkey_primate": "monkey primate",
+        "kangaroo": "kangaroo",
+        "horse": "horse",
+        "livestock": "livestock",
+        "bird": "bird",
+        "reptile": "reptile",
+        "other": "other",
+        "unknown": "unknown"
+      }
+    },
+    "coat_colour": {
+      "type": "choice",
+      "instructions": "What is the predominant coat colour? Use other for feathers or scales.",
+      "criteria": {
+        "black": "black",
+        "white": "white",
+        "gray": "gray",
+        "tan_cream": "tan cream",
+        "brown": "brown",
+        "red_ginger": "red ginger",
+        "other": "other"
+      }
+    },
+    "coat_pattern": {
+      "type": "choice",
+      "instructions": "What is the coat pattern? Use other for feathers or scales.",
+      "criteria": {
+        "solid": "solid",
+        "bicolour": "bicolour",
+        "tabby_striped": "tabby striped",
+        "spotted": "spotted",
+        "patched": "patched",
+        "merle": "merle",
+        "brindle": "brindle",
+        "other": "other"
+      }
+    },
+    "posture": {
+      "type": "choice",
+      "instructions": "What is the main animal doing?",
+      "criteria": {
+        "standing": "standing",
+        "sitting": "sitting",
+        "lying": "lying",
+        "walking_running": "walking running",
+        "climbing_jumping": "climbing jumping",
+        "other": "other"
+      }
+    },
+    "view": {
+      "type": "choice",
+      "instructions": "From which direction is the main animal body viewed?",
+      "criteria": {
+        "front": "front",
+        "front_three_quarter": "front three quarter",
+        "side": "side",
+        "rear_three_quarter": "rear three quarter",
+        "rear": "rear",
+        "top": "top",
+        "other": "other",
+        "unknown": "unknown"
+      }
+    },
+    "has_collar": {
+      "type": "noul",
+      "instructions": "Is a collar visibly present around the animal neck?"
+    },
+    "has_harness": {
+      "type": "noul",
+      "instructions": "Is a body harness visibly present?"
+    },
+    "on_leash": {
+      "type": "noul",
+      "instructions": "Is the animal visibly attached to a leash?"
+    },
+    "tethered_or_tied": {
+      "type": "noul",
+      "instructions": "Is the animal visibly tethered or tied to a fixed object?"
+    },
+    "has_ear_tag": {
+      "type": "noul",
+      "instructions": "Is an ear tag visible?"
+    },
+    "muzzled": {
+      "type": "noul",
+      "instructions": "Is the animal wearing a muzzle?"
+    },
+    "wearing_service_or_working_vest": {
+      "type": "noul",
+      "instructions": "Is the animal wearing a service or working vest?"
+    },
+    "wearing_coat_or_clothing": {
+      "type": "noul",
+      "instructions": "Is the animal wearing clothing or a coat?"
+    },
+    "saddled_or_ridden": {
+      "type": "noul",
+      "instructions": "Is the animal saddled or being ridden?"
+    },
+    "carrying_object_or_prey": {
+      "type": "noul",
+      "instructions": "Is the animal carrying an object or prey?"
+    },
+    "is_juvenile": {
+      "type": "noul",
+      "instructions": "Does the animal visibly appear juvenile?"
+    },
+    "not_truncated": {
+      "type": "noul",
+      "instructions": "Is the entire animal inside the image boundaries?"
+    },
+    "not_occluded": {
+      "type": "noul",
+      "instructions": "Is the animal free of substantial occlusion by other objects?"
+    },
+    "sharpness": {
+      "type": "noul",
+      "instructions": "Is the animal sharp enough to see fine detail?"
+    },
+    "exposure": {
+      "type": "noul",
+      "instructions": "Is the animal exposed well enough to see its features?"
+    },
+    "species_legibility": {
+      "type": "noul",
+      "instructions": "Is the animal species visually identifiable?"
+    },
+    "outdoors": {
+      "type": "noul",
+      "instructions": "Is the scene outdoors?"
+    },
+    "visible_people": {
+      "type": "noul",
+      "instructions": "Is any real person visible?"
+    },
+    "multiple_animals": {
+      "type": "noul",
+      "instructions": "Are multiple real animals visible?"
+    }
+  }
+}

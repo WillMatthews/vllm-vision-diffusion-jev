@@ -1,0 +1,4122 @@
+{
+  "metrics": {
+    "images": 7,
+    "labelled_decisions": 43,
+    "scored_decisions": 43,
+    "skipped_decisions": 0,
+    "accuracy": 0.9534883720930233,
+    "brier": 0.07625148322775413,
+    "nll": 0.12841500575731082,
+    "ece_10_bins": 0.06590565320328859,
+    "threshold": 0.9,
+    "coverage": 0.8372093023255814,
+    "selective_accuracy": 1.0,
+    "latency_p50_ms": 3833.4008590318263,
+    "latency_p95_ms": 7667.642707005143
+  },
+  "records": [
+    {
+      "probabilities": {
+        "species": {
+          "dog": 0.9999818198694523,
+          "cat": 4.217995668201231e-06,
+          "fox": 2.3709443030111507e-06,
+          "raccoon": 3.4864320190892493e-06,
+          "opossum": 2.9909054500480954e-07,
+          "skunk": 5.026375988688432e-07,
+          "coyote": 7.564916463545315e-07,
+          "badger": 2.604176371967618e-08,
+          "hedgehog": 3.4430838983228216e-08,
+          "squirrel": 2.4240848196595336e-07,
+          "rabbit_hare": 2.693094936696926e-07,
+          "rodent": 4.636778611559071e-06,
+          "deer": 9.773735120840301e-08,
+          "wild_boar": 7.865259289774272e-08,
+          "bear": 6.2724507839507246e-09,
+          "big_cat": 1.755967660920955e-08,
+          "monkey_primate": 1.031709831421731e-07,
+          "kangaroo": 1.4248937473538178e-07,
+          "horse": 2.693094936696926e-07,
+          "livestock": 2.2995314368886583e-07,
+          "bird": 9.773735120840301e-08,
+          "reptile": 1.2490542767664213e-08,
+          "other": 1.1493277471289083e-07,
+          "unknown": 1.672638418237113e-07
+        },
+        "coat_colour": {
+          "black": 5.9785607464891775e-05,
+          "white": 8.95216135058086e-05,
+          "gray": 5.072787080910589e-05,
+          "tan_cream": 0.9994769270861797,
+          "brown": 0.00028310414978574165,
+          "red_ginger": 1.4058437700379579e-05,
+          "other": 2.587523455440774e-05
+        },
+        "coat_pattern": {
+          "solid": 0.9998736315877272,
+          "bicolour": 3.7368109546977574e-05,
+          "tabby_striped": 2.1809974557885903e-05,
+          "spotted": 1.3773887568009471e-05,
+          "patched": 4.081982828720172e-05,
+          "merle": 4.612073122025571e-06,
+          "brindle": 6.787174745278454e-06,
+          "other": 1.1973644452894655e-06
+        },
+        "posture": {
+          "standing": 0.5542073371124688,
+          "sitting": 0.020678373422724456,
+          "lying": 0.08112148354682866,
+          "walking_running": 0.24668384992913964,
+          "climbing_jumping": 0.00872971048460903,
+          "other": 0.08857924550422934
+        },
+        "view": {
+          "front": 7.214457767346177e-05,
+          "front_three_quarter": 0.011744859190962244,
+          "side": 0.9879933173200448,
+          "rear_three_quarter": 4.008093212685714e-05,
+          "rear": 4.9690847296028905e-05,
+          "top": 8.453600756549134e-05,
+          "other": 8.117519025496095e-06,
+          "unknown": 7.253605305749171e-06
+        },
+        "has_collar": {
+          "yes": 5.5271641199987604e-08,
+          "no": 0.9999999447283588
+        },
+        "has_harness": {
+          "yes": 4.244782858488671e-08,
+          "no": 0.9999999575521714
+        },
+        "on_leash": {
+          "yes": 2.4924011518505996e-08,
+          "no": 0.9999999750759885
+        },
+        "tethered_or_tied": {
+          "yes": 1.2409644072827941e-08,
+          "no": 0.9999999875903559
+        },
+        "has_ear_tag": {
+          "yes": 7.257373762895109e-08,
+          "no": 0.9999999274262624
+        },
+        "muzzled": {
+          "yes": 5.432650981745752e-07,
+          "no": 0.9999994567349019
+        },
+        "wearing_service_or_working_vest": {
+          "yes": 5.09004126916779e-07,
+          "no": 0.999999490995873
+        },
+        "wearing_coat_or_clothing": {
+          "yes": 1.1553462501794243e-06,
+          "no": 0.9999988446537498
+        },
+        "saddled_or_ridden": {
+          "yes": 2.169608845345321e-07,
+          "no": 0.9999997830391155
+        },
+        "carrying_object_or_prey": {
+          "yes": 1.988974676526074e-06,
+          "no": 0.9999980110253235
+        },
+        "is_juvenile": {
+          "yes": 0.00011754643254017179,
+          "no": 0.9998824535674599
+        },
+        "not_truncated": {
+          "yes": 0.9999999436107022,
+          "no": 5.638929778672974e-08
+        },
+        "not_occluded": {
+          "yes": 0.9999995830290429,
+          "no": 4.1697095709558596e-07
+        },
+        "sharpness": {
+          "yes": 0.9999999239637012,
+          "no": 7.603629881280938e-08
+        },
+        "exposure": {
+          "yes": 0.9999999641660304,
+          "no": 3.5833969569409874e-08
+        },
+        "species_legibility": {
+          "yes": 0.9999984784601672,
+          "no": 1.5215398327939056e-06
+        },
+        "outdoors": {
+          "yes": 0.999999579870857,
+          "no": 4.201291430305787e-07
+        },
+        "visible_people": {
+          "yes": 7.973298265260744e-06,
+          "no": 0.9999920267017347
+        },
+        "multiple_animals": {
+          "yes": 6.189601748698533e-05,
+          "no": 0.999938103982513
+        }
+      },
+      "latency_ms": 5146.610746043734,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "species",
+            "coat_colour",
+            "coat_pattern",
+            "posture",
+            "view",
+            "has_collar",
+            "has_harness",
+            "on_leash",
+            "tethered_or_tied",
+            "has_ear_tag",
+            "muzzled",
+            "wearing_service_or_working_vest",
+            "wearing_coat_or_clothing",
+            "saddled_or_ridden",
+            "carrying_object_or_prey",
+            "is_juvenile",
+            "not_truncated",
+            "not_occluded",
+            "sharpness",
+            "exposure",
+            "species_legibility",
+            "outdoors",
+            "visible_people",
+            "multiple_animals"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "species",
+            "coat_colour",
+            "coat_pattern",
+            "posture",
+            "view",
+            "has_collar",
+            "has_harness",
+            "on_leash",
+            "tethered_or_tied"
+          ],
+          [
+            "has_ear_tag",
+            "muzzled",
+            "wearing_service_or_working_vest",
+            "wearing_coat_or_clothing",
+            "saddled_or_ridden",
+            "carrying_object_or_prey"
+          ],
+          [
+            "is_juvenile",
+            "not_truncated",
+            "not_occluded",
+            "sharpness",
+            "exposure",
+            "species_legibility",
+            "outdoors",
+            "visible_people",
+            "multiple_animals"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": [
+            1,
+            1,
+            1
+          ],
+          "tops": [
+            [
+              {
+                "species": [
+                  "A",
+                  0.9999818198694523,
+                  0.0011626735942222354
+                ],
+                "coat_colour": [
+                  "D",
+                  0.9994769270861797,
+                  0.006149507223047967
+                ],
+                "coat_pattern": [
+                  "A",
+                  0.9998736315877272,
+                  0.0025941651729583953
+                ],
+                "posture": [
+                  "A",
+                  0.5542073371124688,
+                  0.310805693611832
+                ],
+                "view": [
+                  "C",
+                  0.9879933173200448,
+                  0.14401435847119917
+                ],
+                "has_collar": [
+                  "no",
+                  0.999999944728359,
+                  0.00018995216037924863
+                ],
+                "has_harness": [
+                  "no",
+                  0.9999999575521714,
+                  0.0002464849485857769
+                ],
+                "on_leash": [
+                  "no",
+                  0.9999999750759885,
+                  0.00023038844424915565
+                ],
+                "tethered_or_tied": [
+                  "no",
+                  0.9999999875903559,
+                  0.0004974168885780123
+                ]
+              }
+            ],
+            [
+              {
+                "has_ear_tag": [
+                  "no",
+                  0.9999999274262624,
+                  3.063637693426703e-05
+                ],
+                "muzzled": [
+                  "no",
+                  0.9999994567349018,
+                  4.3955161615658954e-05
+                ],
+                "wearing_service_or_working_vest": [
+                  "no",
+                  0.9999994909958732,
+                  5.910834658522841e-05
+                ],
+                "wearing_coat_or_clothing": [
+                  "no",
+                  0.9999988446537499,
+                  6.335529974506128e-05
+                ],
+                "saddled_or_ridden": [
+                  "no",
+                  0.9999997830391154,
+                  6.650369237705117e-05
+                ],
+                "carrying_object_or_prey": [
+                  "no",
+                  0.9999980110253236,
+                  0.0002514542145144416
+                ]
+              }
+            ],
+            [
+              {
+                "is_juvenile": [
+                  "no",
+                  0.9998824535674598,
+                  0.0013167348277143213
+                ],
+                "not_truncated": [
+                  "yes",
+                  0.9999999436107022,
+                  6.030208190937835e-05
+                ],
+                "not_occluded": [
+                  "yes",
+                  0.9999995830290429,
+                  4.77266176175261e-05
+                ],
+                "sharpness": [
+                  "yes",
+                  0.9999999239637012,
+                  8.003432433954974e-05
+                ],
+                "exposure": [
+                  "yes",
+                  0.9999999641660304,
+                  3.6494394864936545e-05
+                ],
+                "species_legibility": [
+                  "yes",
+                  0.9999984784601672,
+                  4.7202757977380486e-05
+                ],
+                "outdoors": [
+                  "yes",
+                  0.999999579870857,
+                  0.00016706140581265207
+                ],
+                "visible_people": [
+                  "no",
+                  0.9999920267017348,
+                  0.0003017782775088735
+                ],
+                "multiple_animals": [
+                  "no",
+                  0.999938103982513,
+                  0.0021625344356022026
+                ]
+              }
+            ]
+          ],
+          "policy": [
+            {
+              "mode": "fixed",
+              "n": 1,
+              "extended": null,
+              "first_read_entropy": null
+            },
+            {
+              "mode": "fixed",
+              "n": 1,
+              "extended": null,
+              "first_read_entropy": null
+            },
+            {
+              "mode": "fixed",
+              "n": 1,
+              "extended": null,
+              "first_read_entropy": null
+            }
+          ]
+        },
+        "timing": {
+          "total_ms": 4457.741260528564,
+          "reads": 3
+        },
+        "prompt_tokens": 1022,
+        "questions": {
+          "species": {
+            "pos": 6,
+            "entropy": [
+              0.0011626735942222354
+            ],
+            "label_mass": 0.999090979773537,
+            "argmax_is_label": true
+          },
+          "coat_colour": {
+            "pos": 12,
+            "entropy": [
+              0.006149507223047967
+            ],
+            "label_mass": 0.9992534052435367,
+            "argmax_is_label": true
+          },
+          "coat_pattern": {
+            "pos": 18,
+            "entropy": [
+              0.0025941651729583953
+            ],
+            "label_mass": 0.9988994037678995,
+            "argmax_is_label": true
+          },
+          "posture": {
+            "pos": 23,
+            "entropy": [
+              0.310805693611832
+            ],
+            "label_mass": 0.05979458568446943,
+            "argmax_is_label": false
+          },
+          "view": {
+            "pos": 27,
+            "entropy": [
+              0.14401435847119917
+            ],
+            "label_mass": 0.9135065852437996,
+            "argmax_is_label": true
+          },
+          "has_collar": {
+            "pos": 33,
+            "entropy": [
+              0.00018995216037924863
+            ],
+            "label_mass": 0.9998261591497001,
+            "argmax_is_label": true
+          },
+          "has_harness": {
+            "pos": 40,
+            "entropy": [
+              0.0002464849485857769
+            ],
+            "label_mass": 0.999776098349982,
+            "argmax_is_label": true
+          },
+          "on_leash": {
+            "pos": 47,
+            "entropy": [
+              0.00023038844424915565
+            ],
+            "label_mass": 0.9997742934855549,
+            "argmax_is_label": true
+          },
+          "tethered_or_tied": {
+            "pos": 57,
+            "entropy": [
+              0.0004974168885780123
+            ],
+            "label_mass": 0.9995060148656915,
+            "argmax_is_label": true
+          },
+          "has_ear_tag": {
+            "pos": 10,
+            "entropy": [
+              3.063637693426703e-05
+            ],
+            "label_mass": 0.9999706287434845,
+            "argmax_is_label": true
+          },
+          "muzzled": {
+            "pos": 16,
+            "entropy": [
+              4.3955161615658954e-05
+            ],
+            "label_mass": 0.9999644241345461,
+            "argmax_is_label": true
+          },
+          "wearing_service_or_working_vest": {
+            "pos": 28,
+            "entropy": [
+              5.910834658522841e-05
+            ],
+            "label_mass": 0.9999487748234217,
+            "argmax_is_label": true
+          },
+          "wearing_coat_or_clothing": {
+            "pos": 38,
+            "entropy": [
+              6.335529974506128e-05
+            ],
+            "label_mass": 0.9999535930486342,
+            "argmax_is_label": true
+          },
+          "saddled_or_ridden": {
+            "pos": 48,
+            "entropy": [
+              6.650369237705117e-05
+            ],
+            "label_mass": 0.9999370400131217,
+            "argmax_is_label": true
+          },
+          "carrying_object_or_prey": {
+            "pos": 59,
+            "entropy": [
+              0.0002514542145144416
+            ],
+            "label_mass": 0.9997766145719991,
+            "argmax_is_label": true
+          },
+          "is_juvenile": {
+            "pos": 9,
+            "entropy": [
+              0.0013167348277143213
+            ],
+            "label_mass": 0.9998642748852762,
+            "argmax_is_label": true
+          },
+          "not_truncated": {
+            "pos": 15,
+            "entropy": [
+              6.030208190937835e-05
+            ],
+            "label_mass": 0.9999406936825739,
+            "argmax_is_label": true
+          },
+          "not_occluded": {
+            "pos": 22,
+            "entropy": [
+              4.77266176175261e-05
+            ],
+            "label_mass": 0.9999588146429698,
+            "argmax_is_label": true
+          },
+          "sharpness": {
+            "pos": 27,
+            "entropy": [
+              8.003432433954974e-05
+            ],
+            "label_mass": 0.9999212849009386,
+            "argmax_is_label": true
+          },
+          "exposure": {
+            "pos": 31,
+            "entropy": [
+              3.6494394864936545e-05
+            ],
+            "label_mass": 0.9999641551241808,
+            "argmax_is_label": true
+          },
+          "species_legibility": {
+            "pos": 38,
+            "entropy": [
+              4.7202757977380486e-05
+            ],
+            "label_mass": 0.9999747001310483,
+            "argmax_is_label": true
+          },
+          "outdoors": {
+            "pos": 43,
+            "entropy": [
+              0.00016706140581265207
+            ],
+            "label_mass": 0.9998395134188915,
+            "argmax_is_label": true
+          },
+          "visible_people": {
+            "pos": 49,
+            "entropy": [
+              0.0003017782775088735
+            ],
+            "label_mass": 0.9997997564349801,
+            "argmax_is_label": true
+          },
+          "multiple_animals": {
+            "pos": 55,
+            "entropy": [
+              0.0021625344356022026
+            ],
+            "label_mass": 0.9984970109255722,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 1022,
+        "output_tokens": 177
+      },
+      "image": "images/dog.jpg",
+      "expected": {
+        "species": "dog",
+        "coat_colour": "tan_cream",
+        "posture": "standing",
+        "outdoors": "yes",
+        "visible_people": "no",
+        "multiple_animals": "no"
+      }
+    },
+    {
+      "probabilities": {
+        "species": {
+          "dog": 8.382470743558413e-05,
+          "cat": 0.9997315448661,
+          "fox": 2.8151117591520185e-05,
+          "raccoon": 8.101168327384674e-06,
+          "opossum": 1.318105836199803e-05,
+          "skunk": 1.0861423303295158e-05,
+          "coyote": 4.932137389927864e-06,
+          "badger": 4.241228519194038e-07,
+          "hedgehog": 1.053427712475657e-06,
+          "squirrel": 3.717748296194801e-05,
+          "rabbit_hare": 7.662446507391403e-07,
+          "rodent": 3.717748296194801e-05,
+          "deer": 4.033628609736495e-06,
+          "wild_boar": 3.1305428995933146e-06,
+          "bear": 1.4918428378709898e-07,
+          "big_cat": 8.523062111014707e-07,
+          "monkey_primate": 1.522509284613164e-05,
+          "kangaroo": 4.242197483273319e-06,
+          "horse": 5.185251826908466e-06,
+          "livestock": 3.6457343730495906e-06,
+          "bird": 8.523062111014707e-07,
+          "reptile": 4.7263136904131515e-07,
+          "other": 3.6457343730495906e-06,
+          "unknown": 1.3701498644167894e-06
+        },
+        "coat_colour": {
+          "black": 4.147606216602791e-05,
+          "white": 7.764337926788222e-06,
+          "gray": 0.2964488448231982,
+          "tan_cream": 0.0008297293550126823,
+          "brown": 0.7019062361519627,
+          "red_ginger": 6.754821933829926e-05,
+          "other": 0.0006984010503952101
+        },
+        "coat_pattern": {
+          "solid": 9.692395909331355e-05,
+          "bicolour": 2.591212406161032e-05,
+          "tabby_striped": 0.9990157760357538,
+          "spotted": 0.00045290609339931616,
+          "patched": 0.0002048435198900077,
+          "merle": 5.7801474392388515e-05,
+          "brindle": 0.00011478106737379811,
+          "other": 3.105572603584758e-05
+        },
+        "posture": {
+          "standing": 0.0004315409637947751,
+          "sitting": 0.998848415136348,
+          "lying": 0.00019775245987903203,
+          "walking_running": 6.847150494345817e-05,
+          "climbing_jumping": 9.794985079413902e-05,
+          "other": 0.0003558700842406852
+        },
+        "view": {
+          "front": 0.4368002792318115,
+          "front_three_quarter": 0.5127364720142219,
+          "side": 0.012065025986790302,
+          "rear_three_quarter": 0.0030071229879485074,
+          "rear": 0.004074951208311415,
+          "top": 0.004074951208311415,
+          "other": 0.027041262552510208,
+          "unknown": 0.0001999348100948737
+        },
+        "has_collar": {
+          "yes": 1.034418513877198e-07,
+          "no": 0.9999998965581486
+        },
+        "has_harness": {
+          "yes": 1.0940785371707338e-07,
+          "no": 0.9999998905921463
+        },
+        "on_leash": {
+          "yes": 3.060273637785983e-08,
+          "no": 0.9999999693972637
+        },
+        "tethered_or_tied": {
+          "yes": 3.752398145900387e-08,
+          "no": 0.9999999624760185
+        },
+        "has_ear_tag": {
+          "yes": 9.386756826698686e-06,
+          "no": 0.9999906132431733
+        },
+        "muzzled": {
+          "yes": 7.051440728288087e-06,
+          "no": 0.9999929485592717
+        },
+        "wearing_service_or_working_vest": {
+          "yes": 5.245350100391596e-06,
+          "no": 0.9999947546498996
+        },
+        "wearing_coat_or_clothing": {
+          "yes": 1.9178411354876308e-05,
+          "no": 0.9999808215886451
+        },
+        "saddled_or_ridden": {
+          "yes": 1.8359442686169076e-06,
+          "no": 0.9999981640557314
+        },
+        "carrying_object_or_prey": {
+          "yes": 1.6897668049812945e-05,
+          "no": 0.9999831023319502
+        },
+        "is_juvenile": {
+          "yes": 8.364515314879931e-05,
+          "no": 0.9999163548468512
+        },
+        "not_truncated": {
+          "yes": 0.9999999137496259,
+          "no": 8.625037406506664e-08
+        },
+        "not_occluded": {
+          "yes": 0.9999998147072836,
+          "no": 1.8529271639255995e-07
+        },
+        "sharpness": {
+          "yes": 0.9999999935458257,
+          "no": 6.454174306114169e-09
+        },
+        "exposure": {
+          "yes": 0.9999999406506088,
+          "no": 5.9349391179353006e-08
+        },
+        "species_legibility": {
+          "yes": 0.9999989618875199,
+          "no": 1.0381124800895591e-06
+        },
+        "outdoors": {
+          "yes": 0.9984702693259301,
+          "no": 0.001529730674069918
+        },
+        "visible_people": {
+          "yes": 3.51231009102309e-05,
+          "no": 0.9999648768990897
+        },
+        "multiple_animals": {
+          "yes": 0.00017687091854527067,
+          "no": 0.9998231290814548
+        }
+      },
+      "latency_ms": 2564.8671200033277,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "species",
+            "coat_colour",
+            "coat_pattern",
+            "posture",
+            "view",
+            "has_collar",
+            "has_harness",
+            "on_leash",
+            "tethered_or_tied",
+            "has_ear_tag",
+            "muzzled",
+            "wearing_service_or_working_vest",
+            "wearing_coat_or_clothing",
+            "saddled_or_ridden",
+            "carrying_object_or_prey",
+            "is_juvenile",
+            "not_truncated",
+            "not_occluded",
+            "sharpness",
+            "exposure",
+            "species_legibility",
+            "outdoors",
+            "visible_people",
+            "multiple_animals"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "species",
+            "coat_colour",
+            "coat_pattern",
+            "posture",
+            "view",
+            "has_collar",
+            "has_harness",
+            "on_leash",
+            "tethered_or_tied"
+          ],
+          [
+            "has_ear_tag",
+            "muzzled",
+            "wearing_service_or_working_vest",
+            "wearing_coat_or_clothing",
+            "saddled_or_ridden",
+            "carrying_object_or_prey"
+          ],
+          [
+            "is_juvenile",
+            "not_truncated",
+            "not_occluded",
+            "sharpness",
+            "exposure",
+            "species_legibility",
+            "outdoors",
+            "visible_people",
+            "multiple_animals"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": [
+            1,
+            1,
+            1
+          ],
+          "tops": [
+            [
+              {
+                "species": [
+                  "B",
+                  0.9997315448661,
+                  0.00680966254377151
+                ],
+                "coat_colour": [
+                  "E",
+                  0.7019062361519627,
+                  0.6227665432071144
+                ],
+                "coat_pattern": [
+                  "C",
+                  0.9990157760357538,
+                  0.014928609058839595
+                ],
+                "posture": [
+                  "B",
+                  0.998848415136348,
+                  0.04446526072424158
+                ],
+                "view": [
+                  "B",
+                  0.5127364720142219,
+                  0.08882329660952103
+                ],
+                "has_collar": [
+                  "no",
+                  0.9999998965581485,
+                  0.0003334839661809186
+                ],
+                "has_harness": [
+                  "no",
+                  0.9999998905921463,
+                  0.0004112620701670172
+                ],
+                "on_leash": [
+                  "no",
+                  0.9999999693972637,
+                  0.0005350327157573042
+                ],
+                "tethered_or_tied": [
+                  "no",
+                  0.9999999624760186,
+                  0.0012097151267617657
+                ]
+              }
+            ],
+            [
+              {
+                "has_ear_tag": [
+                  "no",
+                  0.9999906132431734,
+                  0.00019554762459134562
+                ],
+                "muzzled": [
+                  "no",
+                  0.9999929485592716,
+                  0.00017970817965004798
+                ],
+                "wearing_service_or_working_vest": [
+                  "no",
+                  0.9999947546498996,
+                  0.0002341898908894678
+                ],
+                "wearing_coat_or_clothing": [
+                  "no",
+                  0.9999808215886451,
+                  0.0002966199395931736
+                ],
+                "saddled_or_ridden": [
+                  "no",
+                  0.9999981640557315,
+                  0.00025864607011895157
+                ],
+                "carrying_object_or_prey": [
+                  "no",
+                  0.9999831023319503,
+                  0.0005501994727932613
+                ]
+              }
+            ],
+            [
+              {
+                "is_juvenile": [
+                  "no",
+                  0.9999163548468513,
+                  0.0009150994933350433
+                ],
+                "not_truncated": [
+                  "yes",
+                  0.9999999137496259,
+                  1.1773983000601464e-05
+                ],
+                "not_occluded": [
+                  "yes",
+                  0.9999998147072836,
+                  3.779868074259338e-05
+                ],
+                "sharpness": [
+                  "yes",
+                  0.9999999935458257,
+                  2.9565107548900872e-05
+                ],
+                "exposure": [
+                  "yes",
+                  0.9999999406506088,
+                  1.8153243233070174e-05
+                ],
+                "species_legibility": [
+                  "yes",
+                  0.9999989618875199,
+                  4.2315871775089594e-05
+                ],
+                "outdoors": [
+                  "yes",
+                  0.9984702693259301,
+                  0.01163855887119163
+                ],
+                "visible_people": [
+                  "no",
+                  0.9999648768990897,
+                  0.0005634997379786873
+                ],
+                "multiple_animals": [
+                  "no",
+                  0.9998231290814548,
+                  0.0036108171887530988
+                ]
+              }
+            ]
+          ],
+          "policy": [
+            {
+              "mode": "fixed",
+              "n": 1,
+              "extended": null,
+              "first_read_entropy": null
+            },
+            {
+              "mode": "fixed",
+              "n": 1,
+              "extended": null,
+              "first_read_entropy": null
+            },
+            {
+              "mode": "fixed",
+              "n": 1,
+              "extended": null,
+              "first_read_entropy": null
+            }
+          ]
+        },
+        "timing": {
+          "total_ms": 443.8180923461914,
+          "reads": 3
+        },
+        "prompt_tokens": 1018,
+        "questions": {
+          "species": {
+            "pos": 6,
+            "entropy": [
+              0.00680966254377151
+            ],
+            "label_mass": 0.9962620342317009,
+            "argmax_is_label": true
+          },
+          "coat_colour": {
+            "pos": 12,
+            "entropy": [
+              0.6227665432071144
+            ],
+            "label_mass": 0.9960862622693988,
+            "argmax_is_label": true
+          },
+          "coat_pattern": {
+            "pos": 18,
+            "entropy": [
+              0.014928609058839595
+            ],
+            "label_mass": 0.9948747714244209,
+            "argmax_is_label": true
+          },
+          "posture": {
+            "pos": 23,
+            "entropy": [
+              0.04446526072424158
+            ],
+            "label_mass": 0.9691913274935614,
+            "argmax_is_label": true
+          },
+          "view": {
+            "pos": 27,
+            "entropy": [
+              0.08882329660952103
+            ],
+            "label_mass": 0.012824383379596807,
+            "argmax_is_label": false
+          },
+          "has_collar": {
+            "pos": 33,
+            "entropy": [
+              0.0003334839661809186
+            ],
+            "label_mass": 0.9996901361478823,
+            "argmax_is_label": true
+          },
+          "has_harness": {
+            "pos": 40,
+            "entropy": [
+              0.0004112620701670172
+            ],
+            "label_mass": 0.9996321265283853,
+            "argmax_is_label": true
+          },
+          "on_leash": {
+            "pos": 47,
+            "entropy": [
+              0.0005350327157573042
+            ],
+            "label_mass": 0.9994707831872428,
+            "argmax_is_label": true
+          },
+          "tethered_or_tied": {
+            "pos": 57,
+            "entropy": [
+              0.0012097151267617657
+            ],
+            "label_mass": 0.9987971148041149,
+            "argmax_is_label": true
+          },
+          "has_ear_tag": {
+            "pos": 10,
+            "entropy": [
+              0.00019554762459134562
+            ],
+            "label_mass": 0.9999224900090766,
+            "argmax_is_label": true
+          },
+          "muzzled": {
+            "pos": 16,
+            "entropy": [
+              0.00017970817965004798
+            ],
+            "label_mass": 0.99991097735392,
+            "argmax_is_label": true
+          },
+          "wearing_service_or_working_vest": {
+            "pos": 28,
+            "entropy": [
+              0.0002341898908894678
+            ],
+            "label_mass": 0.999834804248932,
+            "argmax_is_label": true
+          },
+          "wearing_coat_or_clothing": {
+            "pos": 38,
+            "entropy": [
+              0.0002966199395931736
+            ],
+            "label_mass": 0.9999308508025352,
+            "argmax_is_label": true
+          },
+          "saddled_or_ridden": {
+            "pos": 48,
+            "entropy": [
+              0.00025864607011895157
+            ],
+            "label_mass": 0.9997674058161978,
+            "argmax_is_label": true
+          },
+          "carrying_object_or_prey": {
+            "pos": 59,
+            "entropy": [
+              0.0005501994727932613
+            ],
+            "label_mass": 0.9996522443680561,
+            "argmax_is_label": true
+          },
+          "is_juvenile": {
+            "pos": 9,
+            "entropy": [
+              0.0009150994933350433
+            ],
+            "label_mass": 0.9999538392262791,
+            "argmax_is_label": true
+          },
+          "not_truncated": {
+            "pos": 15,
+            "entropy": [
+              1.1773983000601464e-05
+            ],
+            "label_mass": 0.9999897151487365,
+            "argmax_is_label": true
+          },
+          "not_occluded": {
+            "pos": 22,
+            "entropy": [
+              3.779868074259338e-05
+            ],
+            "label_mass": 0.9999652581855863,
+            "argmax_is_label": true
+          },
+          "sharpness": {
+            "pos": 27,
+            "entropy": [
+              2.9565107548900872e-05
+            ],
+            "label_mass": 0.9999705626258627,
+            "argmax_is_label": true
+          },
+          "exposure": {
+            "pos": 31,
+            "entropy": [
+              1.8153243233070174e-05
+            ],
+            "label_mass": 0.9999828935053536,
+            "argmax_is_label": true
+          },
+          "species_legibility": {
+            "pos": 38,
+            "entropy": [
+              4.2315871775089594e-05
+            ],
+            "label_mass": 0.9999730246867167,
+            "argmax_is_label": true
+          },
+          "outdoors": {
+            "pos": 43,
+            "entropy": [
+              0.01163855887119163
+            ],
+            "label_mass": 0.9998044735362467,
+            "argmax_is_label": true
+          },
+          "visible_people": {
+            "pos": 49,
+            "entropy": [
+              0.0005634997379786873
+            ],
+            "label_mass": 0.9998317874973485,
+            "argmax_is_label": true
+          },
+          "multiple_animals": {
+            "pos": 55,
+            "entropy": [
+              0.0036108171887530988
+            ],
+            "label_mass": 0.9980891338420925,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 1018,
+        "output_tokens": 177
+      },
+      "image": "images/cat.jpg",
+      "expected": {
+        "species": "cat",
+        "coat_colour": "brown",
+        "posture": "sitting",
+        "outdoors": "yes",
+        "visible_people": "no",
+        "multiple_animals": "no",
+        "coat_pattern": "tabby_striped"
+      }
+    },
+    {
+      "probabilities": {
+        "species": {
+          "dog": 4.7442975447402806e-06,
+          "cat": 4.5204008574082385e-06,
+          "fox": 0.9999423161532122,
+          "raccoon": 3.060009988155161e-06,
+          "opossum": 2.639355516558591e-06,
+          "skunk": 4.978809057185865e-06,
+          "coyote": 1.5394835829571735e-05,
+          "badger": 4.911190742401754e-07,
+          "hedgehog": 3.9790548618505333e-07,
+          "squirrel": 2.913100920015102e-06,
+          "rabbit_hare": 7.450176848223583e-07,
+          "rodent": 1.1670854116544928e-05,
+          "deer": 4.660067842250516e-07,
+          "wild_boar": 5.453338329780267e-07,
+          "bear": 3.4737587393393784e-09,
+          "big_cat": 2.214759926945717e-07,
+          "monkey_primate": 1.2887792072828287e-07,
+          "kangaroo": 2.511930210019396e-06,
+          "horse": 2.098813195218592e-07,
+          "livestock": 2.465602471040781e-07,
+          "bird": 8.260856940605216e-07,
+          "reptile": 2.214759926945717e-07,
+          "other": 6.376583510247657e-07,
+          "unknown": 1.0938060870192539e-07
+        },
+        "coat_colour": {
+          "black": 0.00022849335728680344,
+          "white": 6.217739813871375e-05,
+          "gray": 0.0017460148767632108,
+          "tan_cream": 0.10875646523368525,
+          "brown": 0.356951897771961,
+          "red_ginger": 0.5223482248847564,
+          "other": 0.009906726477408633
+        },
+        "coat_pattern": {
+          "solid": 0.9682571391864757,
+          "bicolour": 0.0011576859119984985,
+          "tabby_striped": 0.00014492466885793767,
+          "spotted": 0.0005867258326475902,
+          "patched": 0.001320201157309498,
+          "merle": 0.0023405934509544745,
+          "brindle": 0.002990137931513522,
+          "other": 0.02320259186024281
+        },
+        "posture": {
+          "standing": 0.0007319044331656895,
+          "sitting": 0.0020908358963373425,
+          "lying": 0.9951796682148503,
+          "walking_running": 0.0003709422436493527,
+          "climbing_jumping": 0.00021910256402000403,
+          "other": 0.0014075466479773087
+        },
+        "view": {
+          "front": 0.6514834275751648,
+          "front_three_quarter": 0.2835110184122548,
+          "side": 0.030014878329229396,
+          "rear_three_quarter": 0.004434022840852937,
+          "rear": 0.007453033082707805,
+          "top": 0.008833240800898425,
+          "other": 0.013413476757390963,
+          "unknown": 0.0008569022015008728
+        },
+        "has_collar": {
+          "yes": 9.340932365890773e-07,
+          "no": 0.9999990659067635
+        },
+        "has_harness": {
+          "yes": 6.381930038962568e-07,
+          "no": 0.9999993618069961
+        },
+        "on_leash": {
+          "yes": 3.390715936373168e-07,
+          "no": 0.9999996609284063
+        },
+        "tethered_or_tied": {
+          "yes": 2.467130446467084e-07,
+          "no": 0.9999997532869553
+        },
+        "has_ear_tag": {
+          "yes": 6.862785031338361e-06,
+          "no": 0.9999931372149686
+        },
+        "muzzled": {
+          "yes": 1.0455804869060142e-05,
+          "no": 0.999989544195131
+        },
+        "wearing_service_or_working_vest": {
+          "yes": 1.0358076769421342e-06,
+          "no": 0.999998964192323
+        },
+        "wearing_coat_or_clothing": {
+          "yes": 2.4923105272117333e-05,
+          "no": 0.9999750768947279
+        },
+        "saddled_or_ridden": {
+          "yes": 8.033293165999422e-06,
+          "no": 0.999991966706834
+        },
+        "carrying_object_or_prey": {
+          "yes": 0.0001962323487970753,
+          "no": 0.9998037676512029
+        },
+        "is_juvenile": {
+          "yes": 0.0006760425776711827,
+          "no": 0.9993239574223288
+        },
+        "not_truncated": {
+          "yes": 0.9388712017691344,
+          "no": 0.06112879823086559
+        },
+        "not_occluded": {
+          "yes": 0.9990113815707735,
+          "no": 0.0009886184292264844
+        },
+        "sharpness": {
+          "yes": 0.9999917701936363,
+          "no": 8.229806363724279e-06
+        },
+        "exposure": {
+          "yes": 0.9999969764266712,
+          "no": 3.023573328819751e-06
+        },
+        "species_legibility": {
+          "yes": 0.9999892068148895,
+          "no": 1.0793185110546943e-05
+        },
+        "outdoors": {
+          "yes": 0.9999744697193492,
+          "no": 2.5530280650776227e-05
+        },
+        "visible_people": {
+          "yes": 1.9763214684214742e-05,
+          "no": 0.9999802367853158
+        },
+        "multiple_animals": {
+          "yes": 0.0007466440680054974,
+          "no": 0.9992533559319945
+        }
+      },
+      "latency_ms": 2138.7005419819616,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "species",
+            "coat_colour",
+            "coat_pattern",
+            "posture",
+            "view",
+            "has_collar",
+            "has_harness",
+            "on_leash",
+            "tethered_or_tied",
+            "has_ear_tag",
+            "muzzled",
+            "wearing_service_or_working_vest",
+            "wearing_coat_or_clothing",
+            "saddled_or_ridden",
+            "carrying_object_or_prey",
+            "is_juvenile",
+            "not_truncated",
+            "not_occluded",
+            "sharpness",
+            "exposure",
+            "species_legibility",
+            "outdoors",
+            "visible_people",
+            "multiple_animals"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "species",
+            "coat_colour",
+            "coat_pattern",
+            "posture",
+            "view",
+            "has_collar",
+            "has_harness",
+            "on_leash",
+            "tethered_or_tied"
+          ],
+          [
+            "has_ear_tag",
+            "muzzled",
+            "wearing_service_or_working_vest",
+            "wearing_coat_or_clothing",
+            "saddled_or_ridden",
+            "carrying_object_or_prey"
+          ],
+          [
+            "is_juvenile",
+            "not_truncated",
+            "not_occluded",
+            "sharpness",
+            "exposure",
+            "species_legibility",
+            "outdoors",
+            "visible_people",
+            "multiple_animals"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": [
+            1,
+            1,
+            1
+          ],
+          "tops": [
+            [
+              {
+                "species": [
+                  "C",
+                  0.9999423161532122,
+                  0.01774989393823569
+                ],
+                "coat_colour": [
+                  "F",
+                  0.5223482248847564,
+                  1.007871974536018
+                ],
+                "coat_pattern": [
+                  "A",
+                  0.9682571391864757,
+                  0.22103491204321807
+                ],
+                "posture": [
+                  "C",
+                  0.9951796682148503,
+                  0.08455942828337734
+                ],
+                "view": [
+                  "A",
+                  0.6514834275751648,
+                  0.16002442594054445
+                ],
+                "has_collar": [
+                  "no",
+                  0.9999990659067634,
+                  0.0006800466364905704
+                ],
+                "has_harness": [
+                  "no",
+                  0.9999993618069961,
+                  0.0007241839277144057
+                ],
+                "on_leash": [
+                  "no",
+                  0.9999996609284063,
+                  0.0007409905413539715
+                ],
+                "tethered_or_tied": [
+                  "no",
+                  0.9999997532869553,
+                  0.0008112466012402661
+                ]
+              }
+            ],
+            [
+              {
+                "has_ear_tag": [
+                  "no",
+                  0.9999931372149686,
+                  0.00018325730410699212
+                ],
+                "muzzled": [
+                  "no",
+                  0.999989544195131,
+                  0.00023813370692871624
+                ],
+                "wearing_service_or_working_vest": [
+                  "no",
+                  0.999998964192323,
+                  3.50152812793432e-05
+                ],
+                "wearing_coat_or_clothing": [
+                  "no",
+                  0.999975076894728,
+                  0.0004673250525619691
+                ],
+                "saddled_or_ridden": [
+                  "no",
+                  0.9999919667068339,
+                  0.0002295100373075012
+                ],
+                "carrying_object_or_prey": [
+                  "no",
+                  0.9998037676512028,
+                  0.002497110431404401
+                ]
+              }
+            ],
+            [
+              {
+                "is_juvenile": [
+                  "no",
+                  0.9993239574223288,
+                  0.005737398656453733
+                ],
+                "not_truncated": [
+                  "yes",
+                  0.9388712017691344,
+                  0.23048577403490608
+                ],
+                "not_occluded": [
+                  "yes",
+                  0.9990113815707735,
+                  0.008032183702902899
+                ],
+                "sharpness": [
+                  "yes",
+                  0.9999917701936363,
+                  0.00024984590451399696
+                ],
+                "exposure": [
+                  "yes",
+                  0.9999969764266712,
+                  9.957350693584664e-05
+                ],
+                "species_legibility": [
+                  "yes",
+                  0.9999892068148895,
+                  0.00024797491421700525
+                ],
+                "outdoors": [
+                  "yes",
+                  0.9999744697193492,
+                  0.0007292473569095291
+                ],
+                "visible_people": [
+                  "no",
+                  0.9999802367853158,
+                  0.0005366726106139002
+                ],
+                "multiple_animals": [
+                  "no",
+                  0.9992533559319946,
+                  0.008882219710455382
+                ]
+              }
+            ]
+          ],
+          "policy": [
+            {
+              "mode": "fixed",
+              "n": 1,
+              "extended": null,
+              "first_read_entropy": null
+            },
+            {
+              "mode": "fixed",
+              "n": 1,
+              "extended": null,
+              "first_read_entropy": null
+            },
+            {
+              "mode": "fixed",
+              "n": 1,
+              "extended": null,
+              "first_read_entropy": null
+            }
+          ]
+        },
+        "timing": {
+          "total_ms": 424.8309135437012,
+          "reads": 3
+        },
+        "prompt_tokens": 1012,
+        "questions": {
+          "species": {
+            "pos": 6,
+            "entropy": [
+              0.01774989393823569
+            ],
+            "label_mass": 0.9828503811305714,
+            "argmax_is_label": true
+          },
+          "coat_colour": {
+            "pos": 12,
+            "entropy": [
+              1.007871974536018
+            ],
+            "label_mass": 0.9795018377929551,
+            "argmax_is_label": true
+          },
+          "coat_pattern": {
+            "pos": 18,
+            "entropy": [
+              0.22103491204321807
+            ],
+            "label_mass": 0.9397778890959858,
+            "argmax_is_label": true
+          },
+          "posture": {
+            "pos": 23,
+            "entropy": [
+              0.08455942828337734
+            ],
+            "label_mass": 0.9526759580871214,
+            "argmax_is_label": true
+          },
+          "view": {
+            "pos": 27,
+            "entropy": [
+              0.16002442594054445
+            ],
+            "label_mass": 0.028932689018272114,
+            "argmax_is_label": false
+          },
+          "has_collar": {
+            "pos": 33,
+            "entropy": [
+              0.0006800466364905704
+            ],
+            "label_mass": 0.9993771430142067,
+            "argmax_is_label": true
+          },
+          "has_harness": {
+            "pos": 40,
+            "entropy": [
+              0.0007241839277144057
+            ],
+            "label_mass": 0.9993541072557282,
+            "argmax_is_label": true
+          },
+          "on_leash": {
+            "pos": 47,
+            "entropy": [
+              0.0007409905413539715
+            ],
+            "label_mass": 0.999272500204782,
+            "argmax_is_label": true
+          },
+          "tethered_or_tied": {
+            "pos": 57,
+            "entropy": [
+              0.0008112466012402661
+            ],
+            "label_mass": 0.9992018246511601,
+            "argmax_is_label": true
+          },
+          "has_ear_tag": {
+            "pos": 10,
+            "entropy": [
+              0.00018325730410699212
+            ],
+            "label_mass": 0.9999051869528405,
+            "argmax_is_label": true
+          },
+          "muzzled": {
+            "pos": 16,
+            "entropy": [
+              0.00023813370692871624
+            ],
+            "label_mass": 0.9998922130459235,
+            "argmax_is_label": true
+          },
+          "wearing_service_or_working_vest": {
+            "pos": 28,
+            "entropy": [
+              3.50152812793432e-05
+            ],
+            "label_mass": 0.999980293800642,
+            "argmax_is_label": true
+          },
+          "wearing_coat_or_clothing": {
+            "pos": 38,
+            "entropy": [
+              0.0004673250525619691
+            ],
+            "label_mass": 0.9998217081222277,
+            "argmax_is_label": true
+          },
+          "saddled_or_ridden": {
+            "pos": 48,
+            "entropy": [
+              0.0002295100373075012
+            ],
+            "label_mass": 0.9998727480321662,
+            "argmax_is_label": true
+          },
+          "carrying_object_or_prey": {
+            "pos": 59,
+            "entropy": [
+              0.002497110431404401
+            ],
+            "label_mass": 0.9993728130519741,
+            "argmax_is_label": true
+          },
+          "is_juvenile": {
+            "pos": 9,
+            "entropy": [
+              0.005737398656453733
+            ],
+            "label_mass": 0.9998722975608986,
+            "argmax_is_label": true
+          },
+          "not_truncated": {
+            "pos": 15,
+            "entropy": [
+              0.23048577403490608
+            ],
+            "label_mass": 0.999449689216449,
+            "argmax_is_label": true
+          },
+          "not_occluded": {
+            "pos": 22,
+            "entropy": [
+              0.008032183702902899
+            ],
+            "label_mass": 0.9997947688792949,
+            "argmax_is_label": true
+          },
+          "sharpness": {
+            "pos": 27,
+            "entropy": [
+              0.00024984590451399696
+            ],
+            "label_mass": 0.9998547106178635,
+            "argmax_is_label": true
+          },
+          "exposure": {
+            "pos": 31,
+            "entropy": [
+              9.957350693584664e-05
+            ],
+            "label_mass": 0.9999418727717342,
+            "argmax_is_label": true
+          },
+          "species_legibility": {
+            "pos": 38,
+            "entropy": [
+              0.00024797491421700525
+            ],
+            "label_mass": 0.9998862337638168,
+            "argmax_is_label": true
+          },
+          "outdoors": {
+            "pos": 43,
+            "entropy": [
+              0.0007292473569095291
+            ],
+            "label_mass": 0.9995660593833227,
+            "argmax_is_label": true
+          },
+          "visible_people": {
+            "pos": 49,
+            "entropy": [
+              0.0005366726106139002
+            ],
+            "label_mass": 0.9996970426505808,
+            "argmax_is_label": true
+          },
+          "multiple_animals": {
+            "pos": 55,
+            "entropy": [
+              0.008882219710455382
+            ],
+            "label_mass": 0.9972190285783062,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 1012,
+        "output_tokens": 177
+      },
+      "image": "images/fox.jpg",
+      "expected": {
+        "species": "fox",
+        "coat_colour": "red_ginger",
+        "posture": "lying",
+        "outdoors": "yes",
+        "visible_people": "no",
+        "multiple_animals": "no"
+      }
+    },
+    {
+      "probabilities": {
+        "species": {
+          "dog": 2.7455973213689637e-05,
+          "cat": 5.5223922191453886e-05,
+          "fox": 1.4588406005346488e-05,
+          "raccoon": 3.0004059212167175e-05,
+          "opossum": 8.354694024775843e-06,
+          "skunk": 2.760503549774517e-06,
+          "coyote": 5.996509644183258e-06,
+          "badger": 3.392213119966865e-07,
+          "hedgehog": 2.89273311328267e-07,
+          "squirrel": 1.0076358450206701e-05,
+          "rabbit_hare": 1.0076358450206701e-05,
+          "rodent": 3.277555540828152e-05,
+          "deer": 0.9997777684338667,
+          "wild_boar": 7.828127323718649e-07,
+          "bear": 3.22366411178641e-08,
+          "big_cat": 2.3364464742284355e-07,
+          "monkey_primate": 2.760503549774517e-06,
+          "kangaroo": 7.059913199252467e-07,
+          "horse": 1.7654000451317898e-06,
+          "livestock": 1.7654000451317898e-06,
+          "bird": 3.7706194781707057e-07,
+          "reptile": 7.45014715431608e-08,
+          "other": 1.0076358450206701e-05,
+          "unknown": 5.716820509435143e-06
+        },
+        "coat_colour": {
+          "black": 9.577042779881608e-05,
+          "white": 1.536147073362631e-05,
+          "gray": 0.00023278840660690894,
+          "tan_cream": 0.03881818575197606,
+          "brown": 0.9606828046699056,
+          "red_ginger": 2.2065336608345485e-05,
+          "other": 0.00013302393637069565
+        },
+        "coat_pattern": {
+          "solid": 0.9981780715816595,
+          "bicolour": 0.00041462744987970785,
+          "tabby_striped": 0.00011245098410305588,
+          "spotted": 0.00016703997304742926,
+          "patched": 0.00019514169309140186,
+          "merle": 0.0001544528386445502,
+          "brindle": 0.0003321004569431746,
+          "other": 0.00044611502263123154
+        },
+        "posture": {
+          "standing": 0.5854151630240435,
+          "sitting": 0.016169962426496435,
+          "lying": 0.057499037674320436,
+          "walking_running": 0.25643229089582525,
+          "climbing_jumping": 0.008995700444680873,
+          "other": 0.07548784553463354
+        },
+        "view": {
+          "front": 0.013361331480060872,
+          "front_three_quarter": 0.04979106350909441,
+          "side": 0.9185685440035991,
+          "rear_three_quarter": 0.0013567166813726022,
+          "rear": 0.00728434717770497,
+          "top": 0.007665928494795532,
+          "other": 0.0010928776850058204,
+          "unknown": 0.0008791909683667067
+        },
+        "has_collar": {
+          "yes": 4.0849607045443463e-07,
+          "no": 0.9999995915039296
+        },
+        "has_harness": {
+          "yes": 1.3946162419510644e-07,
+          "no": 0.9999998605383758
+        },
+        "on_leash": {
+          "yes": 1.0491653768564019e-07,
+          "no": 0.9999998950834623
+        },
+        "tethered_or_tied": {
+          "yes": 2.295871774963316e-07,
+          "no": 0.9999997704128225
+        },
+        "has_ear_tag": {
+          "yes": 4.397102863069562e-06,
+          "no": 0.999995602897137
+        },
+        "muzzled": {
+          "yes": 2.150587693351977e-06,
+          "no": 0.9999978494123066
+        },
+        "wearing_service_or_working_vest": {
+          "yes": 6.515724583528502e-07,
+          "no": 0.9999993484275417
+        },
+        "wearing_coat_or_clothing": {
+          "yes": 1.229049609876693e-05,
+          "no": 0.9999877095039013
+        },
+        "saddled_or_ridden": {
+          "yes": 1.1614874067555823e-06,
+          "no": 0.9999988385125932
+        },
+        "carrying_object_or_prey": {
+          "yes": 3.5868121773159354e-06,
+          "no": 0.9999964131878227
+        },
+        "is_juvenile": {
+          "yes": 4.3697631259989436e-05,
+          "no": 0.99995630236874
+        },
+        "not_truncated": {
+          "yes": 0.9806684259814944,
+          "no": 0.019331574018505604
+        },
+        "not_occluded": {
+          "yes": 0.9997986535739298,
+          "no": 0.00020134642607017028
+        },
+        "sharpness": {
+          "yes": 0.9999999221606172,
+          "no": 7.783938282823755e-08
+        },
+        "exposure": {
+          "yes": 0.9999993265504971,
+          "no": 6.734495029414589e-07
+        },
+        "species_legibility": {
+          "yes": 0.9999925141388899,
+          "no": 7.4858611101014105e-06
+        },
+        "outdoors": {
+          "yes": 0.9999992544073529,
+          "no": 7.455926470667507e-07
+        },
+        "visible_people": {
+          "yes": 1.7189051055370134e-05,
+          "no": 0.9999828109489446
+        },
+        "multiple_animals": {
+          "yes": 0.0002518519146060439,
+          "no": 0.9997481480853939
+        }
+      },
+      "latency_ms": 3837.663052021526,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "species",
+            "coat_colour",
+            "coat_pattern",
+            "posture",
+            "view",
+            "has_collar",
+            "has_harness",
+            "on_leash",
+            "tethered_or_tied",
+            "has_ear_tag",
+            "muzzled",
+            "wearing_service_or_working_vest",
+            "wearing_coat_or_clothing",
+            "saddled_or_ridden",
+            "carrying_object_or_prey",
+            "is_juvenile",
+            "not_truncated",
+            "not_occluded",
+            "sharpness",
+            "exposure",
+            "species_legibility",
+            "outdoors",
+            "visible_people",
+            "multiple_animals"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "species",
+            "coat_colour",
+            "coat_pattern",
+            "posture",
+            "view",
+            "has_collar",
+            "has_harness",
+            "on_leash",
+            "tethered_or_tied"
+          ],
+          [
+            "has_ear_tag",
+            "muzzled",
+            "wearing_service_or_working_vest",
+            "wearing_coat_or_clothing",
+            "saddled_or_ridden",
+            "carrying_object_or_prey"
+          ],
+          [
+            "is_juvenile",
+            "not_truncated",
+            "not_occluded",
+            "sharpness",
+            "exposure",
+            "species_legibility",
+            "outdoors",
+            "visible_people",
+            "multiple_animals"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": [
+            1,
+            1,
+            1
+          ],
+          "tops": [
+            [
+              {
+                "species": [
+                  "M",
+                  0.9997777684338667,
+                  0.0049358947970630646
+                ],
+                "coat_colour": [
+                  "E",
+                  0.9606828046699056,
+                  0.1712355788006833
+                ],
+                "coat_pattern": [
+                  "A",
+                  0.9981780715816595,
+                  0.03605706468242769
+                ],
+                "posture": [
+                  "A",
+                  0.5854151630240435,
+                  0.5772160388517673
+                ],
+                "view": [
+                  "C",
+                  0.9185685440035991,
+                  0.5405077953438668
+                ],
+                "has_collar": [
+                  "no",
+                  0.9999995915039296,
+                  0.00014617507756112307
+                ],
+                "has_harness": [
+                  "no",
+                  0.9999998605383759,
+                  0.0002174752592472556
+                ],
+                "on_leash": [
+                  "no",
+                  0.9999998950834622,
+                  0.0002521051558457641
+                ],
+                "tethered_or_tied": [
+                  "no",
+                  0.9999997704128226,
+                  0.001114719403066964
+                ]
+              }
+            ],
+            [
+              {
+                "has_ear_tag": [
+                  "no",
+                  0.999995602897137,
+                  0.00011633572822372239
+                ],
+                "muzzled": [
+                  "no",
+                  0.9999978494123066,
+                  7.407514673885991e-05
+                ],
+                "wearing_service_or_working_vest": [
+                  "no",
+                  0.9999993484275416,
+                  5.016684868589523e-05
+                ],
+                "wearing_coat_or_clothing": [
+                  "no",
+                  0.9999877095039013,
+                  0.00019438700617909415
+                ],
+                "saddled_or_ridden": [
+                  "no",
+                  0.9999988385125932,
+                  9.47787299105139e-05
+                ],
+                "carrying_object_or_prey": [
+                  "no",
+                  0.9999964131878227,
+                  0.0004464492006978902
+                ]
+              }
+            ],
+            [
+              {
+                "is_juvenile": [
+                  "no",
+                  0.99995630236874,
+                  0.0005165865154892939
+                ],
+                "not_truncated": [
+                  "yes",
+                  0.9806684259814944,
+                  0.09562200901888998
+                ],
+                "not_occluded": [
+                  "yes",
+                  0.9997986535739298,
+                  0.002149102088679467
+                ],
+                "sharpness": [
+                  "yes",
+                  0.9999999221606172,
+                  2.201586993459721e-05
+                ],
+                "exposure": [
+                  "yes",
+                  0.9999993265504971,
+                  6.058751438146283e-05
+                ],
+                "species_legibility": [
+                  "yes",
+                  0.9999925141388899,
+                  0.00011350261688459053
+                ],
+                "outdoors": [
+                  "yes",
+                  0.9999992544073529,
+                  0.00015770916107909892
+                ],
+                "visible_people": [
+                  "no",
+                  0.9999828109489446,
+                  0.00040043854691634113
+                ],
+                "multiple_animals": [
+                  "no",
+                  0.9997481480853939,
+                  0.003989198016524398
+                ]
+              }
+            ]
+          ],
+          "policy": [
+            {
+              "mode": "fixed",
+              "n": 1,
+              "extended": null,
+              "first_read_entropy": null
+            },
+            {
+              "mode": "fixed",
+              "n": 1,
+              "extended": null,
+              "first_read_entropy": null
+            },
+            {
+              "mode": "fixed",
+              "n": 1,
+              "extended": null,
+              "first_read_entropy": null
+            }
+          ]
+        },
+        "timing": {
+          "total_ms": 431.6904544830322,
+          "reads": 3
+        },
+        "prompt_tokens": 1018,
+        "questions": {
+          "species": {
+            "pos": 6,
+            "entropy": [
+              0.0049358947970630646
+            ],
+            "label_mass": 0.9976681121487924,
+            "argmax_is_label": true
+          },
+          "coat_colour": {
+            "pos": 12,
+            "entropy": [
+              0.1712355788006833
+            ],
+            "label_mass": 0.9975067499386561,
+            "argmax_is_label": true
+          },
+          "coat_pattern": {
+            "pos": 18,
+            "entropy": [
+              0.03605706468242769
+            ],
+            "label_mass": 0.980538885994494,
+            "argmax_is_label": true
+          },
+          "posture": {
+            "pos": 23,
+            "entropy": [
+              0.5772160388517673
+            ],
+            "label_mass": 0.1338323300481503,
+            "argmax_is_label": false
+          },
+          "view": {
+            "pos": 27,
+            "entropy": [
+              0.5405077953438668
+            ],
+            "label_mass": 0.5053556370919627,
+            "argmax_is_label": true
+          },
+          "has_collar": {
+            "pos": 33,
+            "entropy": [
+              0.00014617507756112307
+            ],
+            "label_mass": 0.9998613105505428,
+            "argmax_is_label": true
+          },
+          "has_harness": {
+            "pos": 40,
+            "entropy": [
+              0.0002174752592472556
+            ],
+            "label_mass": 0.9997918050105421,
+            "argmax_is_label": true
+          },
+          "on_leash": {
+            "pos": 47,
+            "entropy": [
+              0.0002521051558457641
+            ],
+            "label_mass": 0.9997500663232062,
+            "argmax_is_label": true
+          },
+          "tethered_or_tied": {
+            "pos": 57,
+            "entropy": [
+              0.001114719403066964
+            ],
+            "label_mass": 0.998893881205537,
+            "argmax_is_label": true
+          },
+          "has_ear_tag": {
+            "pos": 10,
+            "entropy": [
+              0.00011633572822372239
+            ],
+            "label_mass": 0.9999422926659355,
+            "argmax_is_label": true
+          },
+          "muzzled": {
+            "pos": 16,
+            "entropy": [
+              7.407514673885991e-05
+            ],
+            "label_mass": 0.9999561378248645,
+            "argmax_is_label": true
+          },
+          "wearing_service_or_working_vest": {
+            "pos": 28,
+            "entropy": [
+              5.016684868589523e-05
+            ],
+            "label_mass": 0.999959764432562,
+            "argmax_is_label": true
+          },
+          "wearing_coat_or_clothing": {
+            "pos": 38,
+            "entropy": [
+              0.00019438700617909415
+            ],
+            "label_mass": 0.9999568607177391,
+            "argmax_is_label": true
+          },
+          "saddled_or_ridden": {
+            "pos": 48,
+            "entropy": [
+              9.47787299105139e-05
+            ],
+            "label_mass": 0.9999222510751129,
+            "argmax_is_label": true
+          },
+          "carrying_object_or_prey": {
+            "pos": 59,
+            "entropy": [
+              0.0004464492006978902
+            ],
+            "label_mass": 0.9996020114071212,
+            "argmax_is_label": true
+          },
+          "is_juvenile": {
+            "pos": 9,
+            "entropy": [
+              0.0005165865154892939
+            ],
+            "label_mass": 0.9999657393389232,
+            "argmax_is_label": true
+          },
+          "not_truncated": {
+            "pos": 15,
+            "entropy": [
+              0.09562200901888998
+            ],
+            "label_mass": 0.9997835032665136,
+            "argmax_is_label": true
+          },
+          "not_occluded": {
+            "pos": 22,
+            "entropy": [
+              0.002149102088679467
+            ],
+            "label_mass": 0.9997653025655876,
+            "argmax_is_label": true
+          },
+          "sharpness": {
+            "pos": 27,
+            "entropy": [
+              2.201586993459721e-05
+            ],
+            "label_mass": 0.9999793358511513,
+            "argmax_is_label": true
+          },
+          "exposure": {
+            "pos": 31,
+            "entropy": [
+              6.058751438146283e-05
+            ],
+            "label_mass": 0.9999496544435785,
+            "argmax_is_label": true
+          },
+          "species_legibility": {
+            "pos": 38,
+            "entropy": [
+              0.00011350261688459053
+            ],
+            "label_mass": 0.999982333201598,
+            "argmax_is_label": true
+          },
+          "outdoors": {
+            "pos": 43,
+            "entropy": [
+              0.00015770916107909892
+            ],
+            "label_mass": 0.9998535436872795,
+            "argmax_is_label": true
+          },
+          "visible_people": {
+            "pos": 49,
+            "entropy": [
+              0.00040043854691634113
+            ],
+            "label_mass": 0.9998052764966556,
+            "argmax_is_label": true
+          },
+          "multiple_animals": {
+            "pos": 55,
+            "entropy": [
+              0.003989198016524398
+            ],
+            "label_mass": 0.9983443922387497,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 1018,
+        "output_tokens": 177
+      },
+      "image": "images/deer.jpg",
+      "expected": {
+        "species": "deer",
+        "coat_colour": "brown",
+        "posture": "standing",
+        "outdoors": "yes",
+        "visible_people": "no",
+        "multiple_animals": "no"
+      }
+    },
+    {
+      "probabilities": {
+        "species": {
+          "dog": 2.7008116617650723e-05,
+          "cat": 4.134253955958327e-05,
+          "fox": 7.694842531501754e-07,
+          "raccoon": 2.7008116617650723e-05,
+          "opossum": 4.052150588595884e-06,
+          "skunk": 1.7902224162504708e-06,
+          "coyote": 2.2829983034115334e-06,
+          "badger": 2.5145143072736972e-06,
+          "hedgehog": 4.172090700588921e-07,
+          "squirrel": 8.510399010442269e-07,
+          "rabbit_hare": 3.392202743759537e-07,
+          "rodent": 1.0219625387681357e-05,
+          "deer": 8.52024580531121e-06,
+          "wild_boar": 1.332988899983955e-06,
+          "bear": 6.508905843687096e-08,
+          "big_cat": 5.123905423255835e-07,
+          "monkey_primate": 1.2072724667727907e-06,
+          "kangaroo": 4.052150588595884e-06,
+          "horse": 0.9997312536339766,
+          "livestock": 0.00012911618160205815,
+          "bird": 2.396075832029556e-06,
+          "reptile": 5.123905423255835e-07,
+          "other": 1.7047594299640055e-06,
+          "unknown": 7.315839588690798e-07
+        },
+        "coat_colour": {
+          "black": 0.99994574104107,
+          "white": 7.763705992672397e-06,
+          "gray": 2.5996131854071627e-06,
+          "tan_cream": 1.2293278084275914e-05,
+          "brown": 2.7291560435831855e-06,
+          "red_ginger": 2.300825703189654e-05,
+          "other": 5.864948592032771e-06
+        },
+        "coat_pattern": {
+          "solid": 0.9999200485682822,
+          "bicolour": 1.1510788798429689e-05,
+          "tabby_striped": 7.212698788533641e-06,
+          "spotted": 1.8190607195212523e-05,
+          "patched": 9.558982980100909e-06,
+          "merle": 5.688615972924512e-06,
+          "brindle": 1.2623972235592573e-05,
+          "other": 1.516576574694167e-05
+        },
+        "posture": {
+          "standing": 0.00021548307344342025,
+          "sitting": 1.5097634745094686e-05,
+          "lying": 0.00021548307344342025,
+          "walking_running": 0.9990319905641143,
+          "climbing_jumping": 3.087545946016539e-05,
+          "other": 0.0004910701947936871
+        },
+        "view": {
+          "front": 0.8492146030153657,
+          "front_three_quarter": 0.07310344396720694,
+          "side": 0.017065626425650033,
+          "rear_three_quarter": 0.006861243233595198,
+          "rear": 0.007941204729460903,
+          "top": 0.01553035564471583,
+          "other": 0.02718188908421468,
+          "unknown": 0.003101633899790725
+        },
+        "has_collar": {
+          "yes": 0.8149614176057522,
+          "no": 0.18503858239424775
+        },
+        "has_harness": {
+          "yes": 0.001035339493071068,
+          "no": 0.9989646605069289
+        },
+        "on_leash": {
+          "yes": 0.004010815668991277,
+          "no": 0.9959891843310087
+        },
+        "tethered_or_tied": {
+          "yes": 0.0008855179150742679,
+          "no": 0.9991144820849257
+        },
+        "has_ear_tag": {
+          "yes": 9.98526095933294e-06,
+          "no": 0.9999900147390407
+        },
+        "muzzled": {
+          "yes": 0.0001747368619387096,
+          "no": 0.9998252631380613
+        },
+        "wearing_service_or_working_vest": {
+          "yes": 6.564868640234176e-06,
+          "no": 0.9999934351313597
+        },
+        "wearing_coat_or_clothing": {
+          "yes": 2.0364733970425717e-06,
+          "no": 0.999997963526603
+        },
+        "saddled_or_ridden": {
+          "yes": 0.00028450458717954206,
+          "no": 0.9997154954128205
+        },
+        "carrying_object_or_prey": {
+          "yes": 0.0004440236625551565,
+          "no": 0.9995559763374449
+        },
+        "is_juvenile": {
+          "yes": 4.709836068148439e-05,
+          "no": 0.9999529016393185
+        },
+        "not_truncated": {
+          "yes": 0.9999996211776664,
+          "no": 3.788223336131935e-07
+        },
+        "not_occluded": {
+          "yes": 0.9999984436222689,
+          "no": 1.5563777311378146e-06
+        },
+        "sharpness": {
+          "yes": 0.9999999526117975,
+          "no": 4.7388202473186425e-08
+        },
+        "exposure": {
+          "yes": 0.9999996139884348,
+          "no": 3.860115651566076e-07
+        },
+        "species_legibility": {
+          "yes": 0.99928810779144,
+          "no": 0.0007118922085600499
+        },
+        "outdoors": {
+          "yes": 0.999999019516986,
+          "no": 9.804830140014431e-07
+        },
+        "visible_people": {
+          "yes": 3.163601572326331e-05,
+          "no": 0.9999683639842767
+        },
+        "multiple_animals": {
+          "yes": 0.0003381122277128973,
+          "no": 0.9996618877722871
+        }
+      },
+      "latency_ms": 7667.642707005143,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "species",
+            "coat_colour",
+            "coat_pattern",
+            "posture",
+            "view",
+            "has_collar",
+            "has_harness",
+            "on_leash",
+            "tethered_or_tied",
+            "has_ear_tag",
+            "muzzled",
+            "wearing_service_or_working_vest",
+            "wearing_coat_or_clothing",
+            "saddled_or_ridden",
+            "carrying_object_or_prey",
+            "is_juvenile",
+            "not_truncated",
+            "not_occluded",
+            "sharpness",
+            "exposure",
+            "species_legibility",
+            "outdoors",
+            "visible_people",
+            "multiple_animals"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "species",
+            "coat_colour",
+            "coat_pattern",
+            "posture",
+            "view",
+            "has_collar",
+            "has_harness",
+            "on_leash",
+            "tethered_or_tied"
+          ],
+          [
+            "has_ear_tag",
+            "muzzled",
+            "wearing_service_or_working_vest",
+            "wearing_coat_or_clothing",
+            "saddled_or_ridden",
+            "carrying_object_or_prey"
+          ],
+          [
+            "is_juvenile",
+            "not_truncated",
+            "not_occluded",
+            "sharpness",
+            "exposure",
+            "species_legibility",
+            "outdoors",
+            "visible_people",
+            "multiple_animals"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": [
+            1,
+            1,
+            1
+          ],
+          "tops": [
+            [
+              {
+                "species": [
+                  "S",
+                  0.9997312536339766,
+                  0.008477541477065474
+                ],
+                "coat_colour": [
+                  "A",
+                  0.99994574104107,
+                  0.0021887065116901433
+                ],
+                "coat_pattern": [
+                  "A",
+                  0.9999200485682822,
+                  0.00201846764144226
+                ],
+                "posture": [
+                  "D",
+                  0.9990319905641143,
+                  0.14723008421578382
+                ],
+                "view": [
+                  "A",
+                  0.8492146030153657,
+                  0.0272174151179279
+                ],
+                "has_collar": [
+                  "yes",
+                  0.8149614176057522,
+                  0.48040557466657463
+                ],
+                "has_harness": [
+                  "no",
+                  0.9989646605069289,
+                  0.009961120225081648
+                ],
+                "on_leash": [
+                  "no",
+                  0.9959891843310087,
+                  0.0278882727352967
+                ],
+                "tethered_or_tied": [
+                  "no",
+                  0.9991144820849257,
+                  0.008995686249975826
+                ]
+              }
+            ],
+            [
+              {
+                "has_ear_tag": [
+                  "no",
+                  0.9999900147390408,
+                  0.00018410229713881936
+                ],
+                "muzzled": [
+                  "no",
+                  0.9998252631380614,
+                  0.0018616818314514743
+                ],
+                "wearing_service_or_working_vest": [
+                  "no",
+                  0.9999934351313597,
+                  0.00016284676149086892
+                ],
+                "wearing_coat_or_clothing": [
+                  "no",
+                  0.9999979635266029,
+                  6.876377739021072e-05
+                ],
+                "saddled_or_ridden": [
+                  "no",
+                  0.9997154954128205,
+                  0.0028160039786153494
+                ],
+                "carrying_object_or_prey": [
+                  "no",
+                  0.9995559763374449,
+                  0.0042827197612673425
+                ]
+              }
+            ],
+            [
+              {
+                "is_juvenile": [
+                  "no",
+                  0.9999529016393186,
+                  0.0006571343796635829
+                ],
+                "not_truncated": [
+                  "yes",
+                  0.9999996211776664,
+                  3.182621937851898e-05
+                ],
+                "not_occluded": [
+                  "yes",
+                  0.9999984436222689,
+                  8.672864871796486e-05
+                ],
+                "sharpness": [
+                  "yes",
+                  0.9999999526117975,
+                  2.7977786601301588e-05
+                ],
+                "exposure": [
+                  "yes",
+                  0.9999996139884348,
+                  5.695617007261393e-05
+                ],
+                "species_legibility": [
+                  "yes",
+                  0.99928810779144,
+                  0.005951059992400402
+                ],
+                "outdoors": [
+                  "yes",
+                  0.999999019516986,
+                  0.00026797669795123474
+                ],
+                "visible_people": [
+                  "no",
+                  0.9999683639842767,
+                  0.0008590082274427631
+                ],
+                "multiple_animals": [
+                  "no",
+                  0.999661887772287,
+                  0.004950033719929229
+                ]
+              }
+            ]
+          ],
+          "policy": [
+            {
+              "mode": "fixed",
+              "n": 1,
+              "extended": null,
+              "first_read_entropy": null
+            },
+            {
+              "mode": "fixed",
+              "n": 1,
+              "extended": null,
+              "first_read_entropy": null
+            },
+            {
+              "mode": "fixed",
+              "n": 1,
+              "extended": null,
+              "first_read_entropy": null
+            }
+          ]
+        },
+        "timing": {
+          "total_ms": 486.1621856689453,
+          "reads": 3
+        },
+        "prompt_tokens": 1018,
+        "questions": {
+          "species": {
+            "pos": 6,
+            "entropy": [
+              0.008477541477065474
+            ],
+            "label_mass": 0.9944547387023929,
+            "argmax_is_label": true
+          },
+          "coat_colour": {
+            "pos": 12,
+            "entropy": [
+              0.0021887065116901433
+            ],
+            "label_mass": 0.9986423591804207,
+            "argmax_is_label": true
+          },
+          "coat_pattern": {
+            "pos": 18,
+            "entropy": [
+              0.00201846764144226
+            ],
+            "label_mass": 0.9990258642172167,
+            "argmax_is_label": true
+          },
+          "posture": {
+            "pos": 23,
+            "entropy": [
+              0.14723008421578382
+            ],
+            "label_mass": 0.848476385024966,
+            "argmax_is_label": true
+          },
+          "view": {
+            "pos": 27,
+            "entropy": [
+              0.0272174151179279
+            ],
+            "label_mass": 0.0033163700538886565,
+            "argmax_is_label": false
+          },
+          "has_collar": {
+            "pos": 33,
+            "entropy": [
+              0.48040557466657463
+            ],
+            "label_mass": 0.9978582304401762,
+            "argmax_is_label": true
+          },
+          "has_harness": {
+            "pos": 40,
+            "entropy": [
+              0.009961120225081648
+            ],
+            "label_mass": 0.9982577252933345,
+            "argmax_is_label": true
+          },
+          "on_leash": {
+            "pos": 47,
+            "entropy": [
+              0.0278882727352967
+            ],
+            "label_mass": 0.9982296105816153,
+            "argmax_is_label": true
+          },
+          "tethered_or_tied": {
+            "pos": 57,
+            "entropy": [
+              0.008995686249975826
+            ],
+            "label_mass": 0.9981125410333529,
+            "argmax_is_label": true
+          },
+          "has_ear_tag": {
+            "pos": 10,
+            "entropy": [
+              0.00018410229713881936
+            ],
+            "label_mass": 0.9999408480662076,
+            "argmax_is_label": true
+          },
+          "muzzled": {
+            "pos": 16,
+            "entropy": [
+              0.0018616818314514743
+            ],
+            "label_mass": 0.9998245919450655,
+            "argmax_is_label": true
+          },
+          "wearing_service_or_working_vest": {
+            "pos": 28,
+            "entropy": [
+              0.00016284676149086892
+            ],
+            "label_mass": 0.999922052114487,
+            "argmax_is_label": true
+          },
+          "wearing_coat_or_clothing": {
+            "pos": 38,
+            "entropy": [
+              6.876377739021072e-05
+            ],
+            "label_mass": 0.9999599572820191,
+            "argmax_is_label": true
+          },
+          "saddled_or_ridden": {
+            "pos": 48,
+            "entropy": [
+              0.0028160039786153494
+            ],
+            "label_mass": 0.9997908048090942,
+            "argmax_is_label": true
+          },
+          "carrying_object_or_prey": {
+            "pos": 59,
+            "entropy": [
+              0.0042827197612673425
+            ],
+            "label_mass": 0.999587221566612,
+            "argmax_is_label": true
+          },
+          "is_juvenile": {
+            "pos": 9,
+            "entropy": [
+              0.0006571343796635829
+            ],
+            "label_mass": 0.9998591340087932,
+            "argmax_is_label": true
+          },
+          "not_truncated": {
+            "pos": 15,
+            "entropy": [
+              3.182621937851898e-05
+            ],
+            "label_mass": 0.999974153456521,
+            "argmax_is_label": true
+          },
+          "not_occluded": {
+            "pos": 22,
+            "entropy": [
+              8.672864871796486e-05
+            ],
+            "label_mass": 0.9999356378886617,
+            "argmax_is_label": true
+          },
+          "sharpness": {
+            "pos": 27,
+            "entropy": [
+              2.7977786601301588e-05
+            ],
+            "label_mass": 0.9999728684075092,
+            "argmax_is_label": true
+          },
+          "exposure": {
+            "pos": 31,
+            "entropy": [
+              5.695617007261393e-05
+            ],
+            "label_mass": 0.9999491286244354,
+            "argmax_is_label": true
+          },
+          "species_legibility": {
+            "pos": 38,
+            "entropy": [
+              0.005951059992400402
+            ],
+            "label_mass": 0.9999196021181692,
+            "argmax_is_label": true
+          },
+          "outdoors": {
+            "pos": 43,
+            "entropy": [
+              0.00026797669795123474
+            ],
+            "label_mass": 0.9997465331710128,
+            "argmax_is_label": true
+          },
+          "visible_people": {
+            "pos": 49,
+            "entropy": [
+              0.0008590082274427631
+            ],
+            "label_mass": 0.999500110190233,
+            "argmax_is_label": true
+          },
+          "multiple_animals": {
+            "pos": 55,
+            "entropy": [
+              0.004950033719929229
+            ],
+            "label_mass": 0.9980825902336958,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 1018,
+        "output_tokens": 177
+      },
+      "image": "images/horse.jpg",
+      "expected": {
+        "species": "horse",
+        "coat_colour": "black",
+        "posture": "walking_running",
+        "outdoors": "yes",
+        "visible_people": "no",
+        "multiple_animals": "no"
+      }
+    },
+    {
+      "probabilities": {
+        "species": {
+          "dog": 8.633821379928512e-05,
+          "cat": 1.0021450803689647e-05,
+          "fox": 1.8092942234694817e-06,
+          "raccoon": 4.881080311761542e-06,
+          "opossum": 9.11633692703773e-06,
+          "skunk": 7.903863281296961e-06,
+          "coyote": 8.289760459331173e-06,
+          "badger": 1.08634860344456e-06,
+          "hedgehog": 1.9030261631590603e-06,
+          "squirrel": 1.4577273526639314e-05,
+          "rabbit_hare": 0.9996703873166561,
+          "rodent": 7.2789398626521e-05,
+          "deer": 0.00010224502205371411,
+          "wild_boar": 3.8128458709050986e-07,
+          "bear": 1.8084729669506692e-08,
+          "big_cat": 1.4769592392411882e-06,
+          "monkey_primate": 1.4769592392411882e-06,
+          "kangaroo": 7.964558640362484e-07,
+          "horse": 7.964558640362484e-07,
+          "livestock": 6.46423181633553e-07,
+          "bird": 6.134235770456481e-07,
+          "reptile": 5.820575161922437e-07,
+          "other": 9.799162738976645e-07,
+          "unknown": 8.83594492283975e-07
+        },
+        "coat_colour": {
+          "black": 0.0037148853324980536,
+          "white": 0.0003414910251823178,
+          "gray": 0.08105318328814912,
+          "tan_cream": 0.018138268803910805,
+          "brown": 0.8685730481594811,
+          "red_ginger": 0.0010059805840338949,
+          "other": 0.027173142806744658
+        },
+        "coat_pattern": {
+          "solid": 0.406214831114476,
+          "bicolour": 0.0022721637314571078,
+          "tabby_striped": 0.00702525153874517,
+          "spotted": 0.002591128696286866,
+          "patched": 0.0118214518747715,
+          "merle": 0.004055440012601544,
+          "brindle": 0.009413582698026756,
+          "other": 0.556606150333635
+        },
+        "posture": {
+          "standing": 0.0019100172911916441,
+          "sitting": 0.9955619524295966,
+          "lying": 0.0006289444820784269,
+          "walking_running": 0.0001468916002819278,
+          "climbing_jumping": 0.00035044712664795833,
+          "other": 0.0014017470702035444
+        },
+        "view": {
+          "front": 0.37326735744589257,
+          "front_three_quarter": 0.51763570104173,
+          "side": 0.055117141809478416,
+          "rear_three_quarter": 0.006086583133225031,
+          "rear": 0.012160304251222458,
+          "top": 0.03163967366454289,
+          "other": 0.0038632966002556416,
+          "unknown": 0.00022994205365305665
+        },
+        "has_collar": {
+          "yes": 2.0562490909314763e-07,
+          "no": 0.9999997943750909
+        },
+        "has_harness": {
+          "yes": 1.2119292356157853e-07,
+          "no": 0.9999998788070764
+        },
+        "on_leash": {
+          "yes": 3.752027459628701e-07,
+          "no": 0.999999624797254
+        },
+        "tethered_or_tied": {
+          "yes": 1.7222561974134967e-07,
+          "no": 0.9999998277743802
+        },
+        "has_ear_tag": {
+          "yes": 1.9441431213089867e-07,
+          "no": 0.9999998055856879
+        },
+        "muzzled": {
+          "yes": 2.2425638109050333e-08,
+          "no": 0.9999999775743619
+        },
+        "wearing_service_or_working_vest": {
+          "yes": 1.1275264348918648e-07,
+          "no": 0.9999998872473566
+        },
+        "wearing_coat_or_clothing": {
+          "yes": 1.0950332829790001e-05,
+          "no": 0.9999890496671702
+        },
+        "saddled_or_ridden": {
+          "yes": 1.9301329726785694e-07,
+          "no": 0.9999998069867028
+        },
+        "carrying_object_or_prey": {
+          "yes": 2.051179941942936e-06,
+          "no": 0.9999979488200581
+        },
+        "is_juvenile": {
+          "yes": 0.0034907210429425575,
+          "no": 0.9965092789570574
+        },
+        "not_truncated": {
+          "yes": 0.9999956339990379,
+          "no": 4.366000962097161e-06
+        },
+        "not_occluded": {
+          "yes": 0.9999862925298918,
+          "no": 1.3707470108204056e-05
+        },
+        "sharpness": {
+          "yes": 0.9999982784366722,
+          "no": 1.721563327783393e-06
+        },
+        "exposure": {
+          "yes": 0.9999988523428744,
+          "no": 1.1476571255553125e-06
+        },
+        "species_legibility": {
+          "yes": 0.999894063868381,
+          "no": 0.00010593613161902216
+        },
+        "outdoors": {
+          "yes": 0.999999672035578,
+          "no": 3.2796442195337505e-07
+        },
+        "visible_people": {
+          "yes": 3.4300689657463126e-06,
+          "no": 0.9999965699310343
+        },
+        "multiple_animals": {
+          "yes": 0.00013582556709766205,
+          "no": 0.9998641744329023
+        }
+      },
+      "latency_ms": 3833.4008590318263,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "species",
+            "coat_colour",
+            "coat_pattern",
+            "posture",
+            "view",
+            "has_collar",
+            "has_harness",
+            "on_leash",
+            "tethered_or_tied",
+            "has_ear_tag",
+            "muzzled",
+            "wearing_service_or_working_vest",
+            "wearing_coat_or_clothing",
+            "saddled_or_ridden",
+            "carrying_object_or_prey",
+            "is_juvenile",
+            "not_truncated",
+            "not_occluded",
+            "sharpness",
+            "exposure",
+            "species_legibility",
+            "outdoors",
+            "visible_people",
+            "multiple_animals"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "species",
+            "coat_colour",
+            "coat_pattern",
+            "posture",
+            "view",
+            "has_collar",
+            "has_harness",
+            "on_leash",
+            "tethered_or_tied"
+          ],
+          [
+            "has_ear_tag",
+            "muzzled",
+            "wearing_service_or_working_vest",
+            "wearing_coat_or_clothing",
+            "saddled_or_ridden",
+            "carrying_object_or_prey"
+          ],
+          [
+            "is_juvenile",
+            "not_truncated",
+            "not_occluded",
+            "sharpness",
+            "exposure",
+            "species_legibility",
+            "outdoors",
+            "visible_people",
+            "multiple_animals"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": [
+            1,
+            1,
+            1
+          ],
+          "tops": [
+            [
+              {
+                "species": [
+                  "K",
+                  0.9996703873166561,
+                  0.004475287931279023
+                ],
+                "coat_colour": [
+                  "E",
+                  0.8685730481594811,
+                  0.5303295905086969
+                ],
+                "coat_pattern": [
+                  "H",
+                  0.556606150333635,
+                  0.8791843441788142
+                ],
+                "posture": [
+                  "B",
+                  0.9955619524295966,
+                  0.04631134658954027
+                ],
+                "view": [
+                  "B",
+                  0.51763570104173,
+                  0.6313582792310811
+                ],
+                "has_collar": [
+                  "no",
+                  0.999999794375091,
+                  0.0003287771062553908
+                ],
+                "has_harness": [
+                  "no",
+                  0.9999998788070763,
+                  0.00032415058104333215
+                ],
+                "on_leash": [
+                  "no",
+                  0.999999624797254,
+                  0.0005572735535239733
+                ],
+                "tethered_or_tied": [
+                  "no",
+                  0.9999998277743803,
+                  0.0012346935203446994
+                ]
+              }
+            ],
+            [
+              {
+                "has_ear_tag": [
+                  "no",
+                  0.9999998055856878,
+                  2.8394878903243244e-05
+                ],
+                "muzzled": [
+                  "no",
+                  0.9999999775743619,
+                  3.186473969850863e-05
+                ],
+                "wearing_service_or_working_vest": [
+                  "no",
+                  0.9999998872473567,
+                  0.00017008457238286732
+                ],
+                "wearing_coat_or_clothing": [
+                  "no",
+                  0.9999890496671703,
+                  0.00023555357869513142
+                ],
+                "saddled_or_ridden": [
+                  "no",
+                  0.9999998069867029,
+                  5.2452131371298367e-05
+                ],
+                "carrying_object_or_prey": [
+                  "no",
+                  0.9999979488200581,
+                  0.0004094163927616301
+                ]
+              }
+            ],
+            [
+              {
+                "is_juvenile": [
+                  "no",
+                  0.9965092789570574,
+                  0.023449653908317915
+                ],
+                "not_truncated": [
+                  "yes",
+                  0.9999956339990379,
+                  0.00011765163669359321
+                ],
+                "not_occluded": [
+                  "yes",
+                  0.9999862925298918,
+                  0.00023322259534591032
+                ],
+                "sharpness": [
+                  "yes",
+                  0.9999982784366722,
+                  0.0001009203934266091
+                ],
+                "exposure": [
+                  "yes",
+                  0.9999988523428744,
+                  6.146998564187091e-05
+                ],
+                "species_legibility": [
+                  "yes",
+                  0.999894063868381,
+                  0.0011398498381147242
+                ],
+                "outdoors": [
+                  "yes",
+                  0.999999672035578,
+                  0.0003475647360035668
+                ],
+                "visible_people": [
+                  "no",
+                  0.9999965699310341,
+                  0.00018522199653160488
+                ],
+                "multiple_animals": [
+                  "no",
+                  0.9998641744329023,
+                  0.0022923831679095485
+                ]
+              }
+            ]
+          ],
+          "policy": [
+            {
+              "mode": "fixed",
+              "n": 1,
+              "extended": null,
+              "first_read_entropy": null
+            },
+            {
+              "mode": "fixed",
+              "n": 1,
+              "extended": null,
+              "first_read_entropy": null
+            },
+            {
+              "mode": "fixed",
+              "n": 1,
+              "extended": null,
+              "first_read_entropy": null
+            }
+          ]
+        },
+        "timing": {
+          "total_ms": 494.60768699645996,
+          "reads": 3
+        },
+        "prompt_tokens": 1022,
+        "questions": {
+          "species": {
+            "pos": 6,
+            "entropy": [
+              0.004475287931279023
+            ],
+            "label_mass": 0.9991101045605375,
+            "argmax_is_label": true
+          },
+          "coat_colour": {
+            "pos": 12,
+            "entropy": [
+              0.5303295905086969
+            ],
+            "label_mass": 0.9960747525328578,
+            "argmax_is_label": true
+          },
+          "coat_pattern": {
+            "pos": 18,
+            "entropy": [
+              0.8791843441788142
+            ],
+            "label_mass": 0.9677392152251327,
+            "argmax_is_label": true
+          },
+          "posture": {
+            "pos": 23,
+            "entropy": [
+              0.04631134658954027
+            ],
+            "label_mass": 0.9908671153193345,
+            "argmax_is_label": true
+          },
+          "view": {
+            "pos": 27,
+            "entropy": [
+              0.6313582792310811
+            ],
+            "label_mass": 0.15257794671528402,
+            "argmax_is_label": false
+          },
+          "has_collar": {
+            "pos": 33,
+            "entropy": [
+              0.0003287771062553908
+            ],
+            "label_mass": 0.999708347221771,
+            "argmax_is_label": true
+          },
+          "has_harness": {
+            "pos": 40,
+            "entropy": [
+              0.00032415058104333215
+            ],
+            "label_mass": 0.9996889625488684,
+            "argmax_is_label": true
+          },
+          "on_leash": {
+            "pos": 47,
+            "entropy": [
+              0.0005572735535239733
+            ],
+            "label_mass": 0.9994575522976097,
+            "argmax_is_label": true
+          },
+          "tethered_or_tied": {
+            "pos": 57,
+            "entropy": [
+              0.0012346935203446994
+            ],
+            "label_mass": 0.998774773464248,
+            "argmax_is_label": true
+          },
+          "has_ear_tag": {
+            "pos": 10,
+            "entropy": [
+              2.8394878903243244e-05
+            ],
+            "label_mass": 0.9999748034750556,
+            "argmax_is_label": true
+          },
+          "muzzled": {
+            "pos": 16,
+            "entropy": [
+              3.186473969850863e-05
+            ],
+            "label_mass": 0.9999685521624557,
+            "argmax_is_label": true
+          },
+          "wearing_service_or_working_vest": {
+            "pos": 28,
+            "entropy": [
+              0.00017008457238286732
+            ],
+            "label_mass": 0.9998318175390737,
+            "argmax_is_label": true
+          },
+          "wearing_coat_or_clothing": {
+            "pos": 38,
+            "entropy": [
+              0.00023555357869513142
+            ],
+            "label_mass": 0.999900454440888,
+            "argmax_is_label": true
+          },
+          "saddled_or_ridden": {
+            "pos": 48,
+            "entropy": [
+              5.2452131371298367e-05
+            ],
+            "label_mass": 0.9999507235946352,
+            "argmax_is_label": true
+          },
+          "carrying_object_or_prey": {
+            "pos": 59,
+            "entropy": [
+              0.0004094163927616301
+            ],
+            "label_mass": 0.999619415848168,
+            "argmax_is_label": true
+          },
+          "is_juvenile": {
+            "pos": 9,
+            "entropy": [
+              0.023449653908317915
+            ],
+            "label_mass": 0.9997790774740268,
+            "argmax_is_label": true
+          },
+          "not_truncated": {
+            "pos": 15,
+            "entropy": [
+              0.00011765163669359321
+            ],
+            "label_mass": 0.9999405928425266,
+            "argmax_is_label": true
+          },
+          "not_occluded": {
+            "pos": 22,
+            "entropy": [
+              0.00023322259534591032
+            ],
+            "label_mass": 0.9999339619095511,
+            "argmax_is_label": true
+          },
+          "sharpness": {
+            "pos": 27,
+            "entropy": [
+              0.0001009203934266091
+            ],
+            "label_mass": 0.9999236454439375,
+            "argmax_is_label": true
+          },
+          "exposure": {
+            "pos": 31,
+            "entropy": [
+              6.146998564187091e-05
+            ],
+            "label_mass": 0.9999553733341338,
+            "argmax_is_label": true
+          },
+          "species_legibility": {
+            "pos": 38,
+            "entropy": [
+              0.0011398498381147242
+            ],
+            "label_mass": 0.9999356082499765,
+            "argmax_is_label": true
+          },
+          "outdoors": {
+            "pos": 43,
+            "entropy": [
+              0.0003475647360035668
+            ],
+            "label_mass": 0.9996575994408171,
+            "argmax_is_label": true
+          },
+          "visible_people": {
+            "pos": 49,
+            "entropy": [
+              0.00018522199653160488
+            ],
+            "label_mass": 0.9998613523132122,
+            "argmax_is_label": true
+          },
+          "multiple_animals": {
+            "pos": 55,
+            "entropy": [
+              0.0022923831679095485
+            ],
+            "label_mass": 0.9990511161198227,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 1022,
+        "output_tokens": 177
+      },
+      "image": "images/rabbit.jpg",
+      "expected": {
+        "species": "rabbit_hare",
+        "coat_colour": "brown",
+        "posture": "sitting",
+        "outdoors": "yes",
+        "visible_people": "no",
+        "multiple_animals": "no"
+      }
+    },
+    {
+      "probabilities": {
+        "species": {
+          "dog": 5.14941960248994e-05,
+          "cat": 4.713985430201545e-05,
+          "fox": 5.818128282063758e-06,
+          "raccoon": 1.7375753309437225e-05,
+          "opossum": 1.583112691115494e-05,
+          "skunk": 7.961715628297378e-05,
+          "coyote": 3.297470659528716e-05,
+          "badger": 2.508778296677044e-06,
+          "hedgehog": 2.1566344374168627e-06,
+          "squirrel": 2.751327362966806e-05,
+          "rabbit_hare": 9.881191600914763e-06,
+          "rodent": 3.297470659528716e-05,
+          "deer": 5.541434935365536e-06,
+          "wild_boar": 5.0254558613544565e-06,
+          "bear": 5.0254558613544565e-06,
+          "big_cat": 3.3864551412089837e-06,
+          "monkey_primate": 3.0126406930304807e-05,
+          "kangaroo": 1.906361363910676e-05,
+          "horse": 6.108054864650793e-06,
+          "livestock": 5.277391974927526e-06,
+          "bird": 0.9995317360465016,
+          "reptile": 9.421211608354637e-06,
+          "other": 1.0866450522482534e-05,
+          "unknown": 4.3136515891440415e-05
+        },
+        "coat_colour": {
+          "black": 0.0003102405371408376,
+          "white": 0.00015132293195379795,
+          "gray": 7.908225290482439e-05,
+          "tan_cream": 1.174156470868656e-05,
+          "brown": 0.001112756810829816,
+          "red_ginger": 0.0003697587256015582,
+          "other": 0.9979650971768604
+        },
+        "coat_pattern": {
+          "solid": 0.2652101093930524,
+          "bicolour": 0.0028188556846025555,
+          "tabby_striped": 0.0018378083615065552,
+          "spotted": 0.0030669439290058284,
+          "patched": 0.008179375034117264,
+          "merle": 0.008853008659930205,
+          "brindle": 0.00957832038184637,
+          "other": 0.7004555785559388
+        },
+        "posture": {
+          "standing": 0.2132057762852455,
+          "sitting": 0.46208855895859774,
+          "lying": 0.10271604392065926,
+          "walking_running": 0.01647553988038662,
+          "climbing_jumping": 0.008610213896477136,
+          "other": 0.19690386705863372
+        },
+        "view": {
+          "front": 0.13748274452056786,
+          "front_three_quarter": 0.47088852344379734,
+          "side": 0.28754273487317483,
+          "rear_three_quarter": 0.0010577661519672234,
+          "rear": 0.014094231013965876,
+          "top": 0.0457799891795015,
+          "other": 0.04219510037383111,
+          "unknown": 0.0009589104431942076
+        },
+        "has_collar": {
+          "yes": 8.627771755682229e-07,
+          "no": 0.9999991372228244
+        },
+        "has_harness": {
+          "yes": 2.509807688847947e-07,
+          "no": 0.9999997490192312
+        },
+        "on_leash": {
+          "yes": 2.7559351336147304e-07,
+          "no": 0.9999997244064867
+        },
+        "tethered_or_tied": {
+          "yes": 7.364369497603476e-08,
+          "no": 0.999999926356305
+        },
+        "has_ear_tag": {
+          "yes": 4.0735086974157255e-08,
+          "no": 0.999999959264913
+        },
+        "muzzled": {
+          "yes": 3.799783874702721e-06,
+          "no": 0.9999962002161253
+        },
+        "wearing_service_or_working_vest": {
+          "yes": 2.537922162926442e-07,
+          "no": 0.9999997462077838
+        },
+        "wearing_coat_or_clothing": {
+          "yes": 3.165632265130521e-05,
+          "no": 0.9999683436773487
+        },
+        "saddled_or_ridden": {
+          "yes": 1.972908590832047e-06,
+          "no": 0.9999980270914092
+        },
+        "carrying_object_or_prey": {
+          "yes": 0.0008460844412248456,
+          "no": 0.9991539155587752
+        },
+        "is_juvenile": {
+          "yes": 0.00040465422901073464,
+          "no": 0.9995953457709893
+        },
+        "not_truncated": {
+          "yes": 0.99999610749239,
+          "no": 3.892507610014917e-06
+        },
+        "not_occluded": {
+          "yes": 0.9999996668851682,
+          "no": 3.3311483182973944e-07
+        },
+        "sharpness": {
+          "yes": 0.9999999841425826,
+          "no": 1.585741737919477e-08
+        },
+        "exposure": {
+          "yes": 0.9999995470128433,
+          "no": 4.5298715667385636e-07
+        },
+        "species_legibility": {
+          "yes": 0.9999989846936931,
+          "no": 1.015306306917374e-06
+        },
+        "outdoors": {
+          "yes": 0.19291087937122472,
+          "no": 0.8070891206287752
+        },
+        "visible_people": {
+          "yes": 0.00011205497710925716,
+          "no": 0.9998879450228907
+        },
+        "multiple_animals": {
+          "yes": 0.0006484142781165313,
+          "no": 0.9993515857218834
+        }
+      },
+      "latency_ms": 1273.5264400253072,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "species",
+            "coat_colour",
+            "coat_pattern",
+            "posture",
+            "view",
+            "has_collar",
+            "has_harness",
+            "on_leash",
+            "tethered_or_tied",
+            "has_ear_tag",
+            "muzzled",
+            "wearing_service_or_working_vest",
+            "wearing_coat_or_clothing",
+            "saddled_or_ridden",
+            "carrying_object_or_prey",
+            "is_juvenile",
+            "not_truncated",
+            "not_occluded",
+            "sharpness",
+            "exposure",
+            "species_legibility",
+            "outdoors",
+            "visible_people",
+            "multiple_animals"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "species",
+            "coat_colour",
+            "coat_pattern",
+            "posture",
+            "view",
+            "has_collar",
+            "has_harness",
+            "on_leash",
+            "tethered_or_tied"
+          ],
+          [
+            "has_ear_tag",
+            "muzzled",
+            "wearing_service_or_working_vest",
+            "wearing_coat_or_clothing",
+            "saddled_or_ridden",
+            "carrying_object_or_prey"
+          ],
+          [
+            "is_juvenile",
+            "not_truncated",
+            "not_occluded",
+            "sharpness",
+            "exposure",
+            "species_legibility",
+            "outdoors",
+            "visible_people",
+            "multiple_animals"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": [
+            1,
+            1,
+            1
+          ],
+          "tops": [
+            [
+              {
+                "species": [
+                  "U",
+                  0.9995317360465016,
+                  0.015469546889768884
+                ],
+                "coat_colour": [
+                  "G",
+                  0.9979650971768604,
+                  0.11767906263023431
+                ],
+                "coat_pattern": [
+                  "H",
+                  0.7004555785559388,
+                  0.536648256908677
+                ],
+                "posture": [
+                  "B",
+                  0.46208855895859774,
+                  0.5699123692439143
+                ],
+                "view": [
+                  "B",
+                  0.47088852344379734,
+                  0.2504522703299632
+                ],
+                "has_collar": [
+                  "no",
+                  0.9999991372228244,
+                  0.0004662248613798972
+                ],
+                "has_harness": [
+                  "no",
+                  0.999999749019231,
+                  0.00035136489443244386
+                ],
+                "on_leash": [
+                  "no",
+                  0.9999997244064867,
+                  0.0002605237261539926
+                ],
+                "tethered_or_tied": [
+                  "no",
+                  0.999999926356305,
+                  0.0015756086806265031
+                ]
+              }
+            ],
+            [
+              {
+                "has_ear_tag": [
+                  "no",
+                  0.999999959264913,
+                  6.386805261747905e-05
+                ],
+                "muzzled": [
+                  "no",
+                  0.9999962002161253,
+                  7.662734386643822e-05
+                ],
+                "wearing_service_or_working_vest": [
+                  "no",
+                  0.9999997462077836,
+                  2.745679878316707e-05
+                ],
+                "wearing_coat_or_clothing": [
+                  "no",
+                  0.9999683436773487,
+                  0.0005208738057905296
+                ],
+                "saddled_or_ridden": [
+                  "no",
+                  0.9999980270914092,
+                  0.00016416696437414097
+                ],
+                "carrying_object_or_prey": [
+                  "no",
+                  0.9991539155587751,
+                  0.007601771020569411
+                ]
+              }
+            ],
+            [
+              {
+                "is_juvenile": [
+                  "no",
+                  0.9995953457709894,
+                  0.003652844576000821
+                ],
+                "not_truncated": [
+                  "yes",
+                  0.99999610749239,
+                  8.686849482346934e-05
+                ],
+                "not_occluded": [
+                  "yes",
+                  0.9999996668851682,
+                  3.9775467549838795e-05
+                ],
+                "sharpness": [
+                  "yes",
+                  0.9999999841425826,
+                  2.1860970555844417e-05
+                ],
+                "exposure": [
+                  "yes",
+                  0.9999995470128433,
+                  5.8349465826267635e-05
+                ],
+                "species_legibility": [
+                  "yes",
+                  0.9999989846936931,
+                  5.2632635712013304e-05
+                ],
+                "outdoors": [
+                  "no",
+                  0.8070891206287754,
+                  0.49091983235183495
+                ],
+                "visible_people": [
+                  "no",
+                  0.9998879450228908,
+                  0.0015736043621917615
+                ],
+                "multiple_animals": [
+                  "no",
+                  0.9993515857218834,
+                  0.0074516086584660406
+                ]
+              }
+            ]
+          ],
+          "policy": [
+            {
+              "mode": "fixed",
+              "n": 1,
+              "extended": null,
+              "first_read_entropy": null
+            },
+            {
+              "mode": "fixed",
+              "n": 1,
+              "extended": null,
+              "first_read_entropy": null
+            },
+            {
+              "mode": "fixed",
+              "n": 1,
+              "extended": null,
+              "first_read_entropy": null
+            }
+          ]
+        },
+        "timing": {
+          "total_ms": 404.56676483154297,
+          "reads": 3
+        },
+        "prompt_tokens": 1012,
+        "questions": {
+          "species": {
+            "pos": 6,
+            "entropy": [
+              0.015469546889768884
+            ],
+            "label_mass": 0.989763459380455,
+            "argmax_is_label": true
+          },
+          "coat_colour": {
+            "pos": 12,
+            "entropy": [
+              0.11767906263023431
+            ],
+            "label_mass": 0.8930983211603682,
+            "argmax_is_label": true
+          },
+          "coat_pattern": {
+            "pos": 18,
+            "entropy": [
+              0.536648256908677
+            ],
+            "label_mass": 0.14594079048460196,
+            "argmax_is_label": false
+          },
+          "posture": {
+            "pos": 23,
+            "entropy": [
+              0.5699123692439143
+            ],
+            "label_mass": 0.07824576281241093,
+            "argmax_is_label": false
+          },
+          "view": {
+            "pos": 27,
+            "entropy": [
+              0.2504522703299632
+            ],
+            "label_mass": 0.022545065329256,
+            "argmax_is_label": false
+          },
+          "has_collar": {
+            "pos": 33,
+            "entropy": [
+              0.0004662248613798972
+            ],
+            "label_mass": 0.9995684389547477,
+            "argmax_is_label": true
+          },
+          "has_harness": {
+            "pos": 40,
+            "entropy": [
+              0.00035136489443244386
+            ],
+            "label_mass": 0.9996569268450233,
+            "argmax_is_label": true
+          },
+          "on_leash": {
+            "pos": 47,
+            "entropy": [
+              0.0002605237261539926
+            ],
+            "label_mass": 0.9997465433305043,
+            "argmax_is_label": true
+          },
+          "tethered_or_tied": {
+            "pos": 57,
+            "entropy": [
+              0.0015756086806265031
+            ],
+            "label_mass": 0.9984399160413157,
+            "argmax_is_label": true
+          },
+          "has_ear_tag": {
+            "pos": 10,
+            "entropy": [
+              6.386805261747905e-05
+            ],
+            "label_mass": 0.9999368637984122,
+            "argmax_is_label": true
+          },
+          "muzzled": {
+            "pos": 16,
+            "entropy": [
+              7.662734386643822e-05
+            ],
+            "label_mass": 0.9999745942635287,
+            "argmax_is_label": true
+          },
+          "wearing_service_or_working_vest": {
+            "pos": 28,
+            "entropy": [
+              2.745679878316707e-05
+            ],
+            "label_mass": 0.9999766509038172,
+            "argmax_is_label": true
+          },
+          "wearing_coat_or_clothing": {
+            "pos": 38,
+            "entropy": [
+              0.0005208738057905296
+            ],
+            "label_mass": 0.9998386886224716,
+            "argmax_is_label": true
+          },
+          "saddled_or_ridden": {
+            "pos": 48,
+            "entropy": [
+              0.00016416696437414097
+            ],
+            "label_mass": 0.999863708983731,
+            "argmax_is_label": true
+          },
+          "carrying_object_or_prey": {
+            "pos": 59,
+            "entropy": [
+              0.007601771020569411
+            ],
+            "label_mass": 0.9992243107324219,
+            "argmax_is_label": true
+          },
+          "is_juvenile": {
+            "pos": 9,
+            "entropy": [
+              0.003652844576000821
+            ],
+            "label_mass": 0.9999127649952824,
+            "argmax_is_label": true
+          },
+          "not_truncated": {
+            "pos": 15,
+            "entropy": [
+              8.686849482346934e-05
+            ],
+            "label_mass": 0.9999655084573071,
+            "argmax_is_label": true
+          },
+          "not_occluded": {
+            "pos": 22,
+            "entropy": [
+              3.9775467549838795e-05
+            ],
+            "label_mass": 0.9999655252041503,
+            "argmax_is_label": true
+          },
+          "sharpness": {
+            "pos": 27,
+            "entropy": [
+              2.1860970555844417e-05
+            ],
+            "label_mass": 0.9999784394412716,
+            "argmax_is_label": true
+          },
+          "exposure": {
+            "pos": 31,
+            "entropy": [
+              5.8349465826267635e-05
+            ],
+            "label_mass": 0.9999487188092956,
+            "argmax_is_label": true
+          },
+          "species_legibility": {
+            "pos": 38,
+            "entropy": [
+              5.2632635712013304e-05
+            ],
+            "label_mass": 0.9999623929499563,
+            "argmax_is_label": true
+          },
+          "outdoors": {
+            "pos": 43,
+            "entropy": [
+              0.49091983235183495
+            ],
+            "label_mass": 0.9990110087151124,
+            "argmax_is_label": true
+          },
+          "visible_people": {
+            "pos": 49,
+            "entropy": [
+              0.0015736043621917615
+            ],
+            "label_mass": 0.9995571556962672,
+            "argmax_is_label": true
+          },
+          "multiple_animals": {
+            "pos": 55,
+            "entropy": [
+              0.0074516086584660406
+            ],
+            "label_mass": 0.9979433529761027,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 1012,
+        "output_tokens": 177
+      },
+      "image": "images/bird.jpg",
+      "expected": {
+        "species": "bird",
+        "coat_colour": "other",
+        "posture": "standing",
+        "outdoors": "yes",
+        "visible_people": "no",
+        "multiple_animals": "no"
+      }
+    }
+  ]
+}

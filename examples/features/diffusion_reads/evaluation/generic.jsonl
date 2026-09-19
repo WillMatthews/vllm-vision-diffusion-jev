@@ -1,0 +1,2 @@
+{"image": "images/coffee.jpg", "expected": {"main_object": "drink", "contains_animal": "no", "contains_person": "no", "cup_visible": "yes", "spoon_visible": "yes", "sign_shape": "no_sign", "hand_symbol": "no", "stop_word": "no"}}
+{"image": "images/stop.jpg", "expected": {"main_object": "traffic_sign", "contains_animal": "no", "contains_person": "no", "cup_visible": "no", "spoon_visible": "no", "sign_shape": "octagon", "hand_symbol": "yes", "stop_word": "no"}}

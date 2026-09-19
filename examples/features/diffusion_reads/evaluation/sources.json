@@ -1,0 +1,101 @@
+[
+  {
+    "id": "dog",
+    "image": "images/dog.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:YellowLabradorLooking_new.jpg",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/YellowLabradorLooking_new.jpg",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "sha256": "d4cb12ea8a768582562e1f1c0c930ea6fc4757f5b66551b986b41498efd75ca1",
+    "modifications": "Wikimedia thumbnail where provided; otherwise original file. No local pixel edits.",
+    "author": "Elf; derivatives by Djmirko (Mirko Marhenke) and FT2"
+  },
+  {
+    "id": "cat",
+    "image": "images/cat.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Cat_November_2010-1a.jpg",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/960px-Cat_November_2010-1a.jpg",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sha256": "9b46595fdf92b4a91d380e6b94721da5a68ec18ace40f4829a29db357d79bda5",
+    "modifications": "Wikimedia thumbnail where provided; otherwise original file. No local pixel edits.",
+    "author": "Alvesgaspar"
+  },
+  {
+    "id": "fox",
+    "image": "images/fox.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Vulpes_vulpes_laying_in_snow.jpg",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Vulpes_vulpes_laying_in_snow.jpg/960px-Vulpes_vulpes_laying_in_snow.jpg",
+    "license": "Attribution",
+    "license_url": null,
+    "sha256": "4092ca5ff98c73cc9c6c8300bb9b221ba628b6898289b6298098f51a30df3873",
+    "modifications": "Wikimedia thumbnail where provided; otherwise original file. No local pixel edits.",
+    "author": "Shiretoko-Shari Tourist Association"
+  },
+  {
+    "id": "deer",
+    "image": "images/deer.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:White-tailed_deer.jpg",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/White-tailed_deer.jpg/960px-White-tailed_deer.jpg",
+    "license": "Public domain",
+    "license_url": null,
+    "sha256": "516aea07e0d649166b96b56944f117f18398b164115a19f5341c0fa62a2dd3ff",
+    "modifications": "Wikimedia thumbnail where provided; otherwise original file. No local pixel edits.",
+    "author": "USDA / Scott Bauer"
+  },
+  {
+    "id": "horse",
+    "image": "images/horse.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Friesian_Stallion.jpg",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Friesian_Stallion.jpg",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sha256": "5247c813d0b000081e6be500ee22b33afe280e09980bd655d7c585ae11f232aa",
+    "modifications": "Wikimedia thumbnail where provided; otherwise original file. No local pixel edits.",
+    "author": "Larissa Allen"
+  },
+  {
+    "id": "rabbit",
+    "image": "images/rabbit.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Oryctolagus_cuniculus_Rcdo.jpg",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Oryctolagus_cuniculus_Rcdo.jpg/960px-Oryctolagus_cuniculus_Rcdo.jpg",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "sha256": "228df13d917406804eb7488e3fddf6b6631ddb4514f5d97ed790a9eb1eaa8721",
+    "modifications": "Wikimedia thumbnail where provided; otherwise original file. No local pixel edits.",
+    "author": "JM Ligero Loarte"
+  },
+  {
+    "id": "bird",
+    "image": "images/bird.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Passer_domesticus_male_(15).jpg",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Passer_domesticus_male_%2815%29.jpg",
+    "license": "CC BY 2.0 de",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/de/deed.en",
+    "sha256": "1f7ef7234fd33faf806931d252fbd45354a9e235dcccc6d3c1079dd01fc30515",
+    "modifications": "Wikimedia thumbnail where provided; otherwise original file. No local pixel edits.",
+    "author": "Adamo"
+  },
+  {
+    "id": "coffee",
+    "image": "images/coffee.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:A_small_cup_of_coffee.JPG",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/960px-A_small_cup_of_coffee.JPG",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "sha256": "f639ce191da7ece0d4eb44eeafb60ab417d025f27a073965d5e1ee0c7ad384c0",
+    "modifications": "Wikimedia thumbnail where provided; otherwise original file. No local pixel edits.",
+    "author": "Julius Schorzman"
+  },
+  {
+    "id": "stop",
+    "image": "images/stop.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Stop_sign.jpg",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Stop_sign.jpg",
+    "license": "Public domain",
+    "license_url": null,
+    "sha256": "9c90f631261200152f8f963c6dad14dcdb665aec59ca509e6e60f15988834f1a",
+    "modifications": "Wikimedia thumbnail where provided; otherwise original file. No local pixel edits.",
+    "author": "Eranb (Hebrew Wikipedia)"
+  }
+]

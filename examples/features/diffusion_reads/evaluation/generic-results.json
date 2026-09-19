@@ -1,0 +1,447 @@
+{
+  "metrics": {
+    "images": 2,
+    "labelled_decisions": 16,
+    "scored_decisions": 16,
+    "skipped_decisions": 0,
+    "accuracy": 1.0,
+    "brier": 1.2438544971336635e-05,
+    "nll": 0.0009283249972171044,
+    "ece_10_bins": 0.000925037684435262,
+    "threshold": 0.9,
+    "coverage": 1.0,
+    "selective_accuracy": 1.0,
+    "latency_p50_ms": 1034.718368027825,
+    "latency_p95_ms": 1264.3424900015816
+  },
+  "records": [
+    {
+      "probabilities": {
+        "main_object": {
+          "animal": 1.9751765447490234e-06,
+          "drink": 0.999955628294301,
+          "traffic_sign": 6.14866187679356e-07,
+          "other": 4.1781662966750425e-05
+        },
+        "contains_animal": {
+          "yes": 1.379128312383333e-05,
+          "no": 0.9999862087168762
+        },
+        "contains_person": {
+          "yes": 4.901467343514134e-06,
+          "no": 0.9999950985326564
+        },
+        "cup_visible": {
+          "yes": 0.999999856475527,
+          "no": 1.435244729730556e-07
+        },
+        "spoon_visible": {
+          "yes": 0.9999999617879624,
+          "no": 3.82120376452022e-08
+        },
+        "sign_shape": {
+          "octagon": 5.621695326877072e-07,
+          "triangle": 1.3076923552158937e-07,
+          "circle": 3.4807769536848684e-07,
+          "rectangle": 2.512792333347964e-05,
+          "no_sign": 0.9999738310602029
+        },
+        "hand_symbol": {
+          "yes": 3.152430507500454e-06,
+          "no": 0.9999968475694925
+        },
+        "stop_word": {
+          "yes": 1.9856590829755347e-05,
+          "no": 0.9999801434091703
+        }
+      },
+      "latency_ms": 1264.3424900015816,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "main_object",
+            "contains_animal",
+            "contains_person",
+            "cup_visible",
+            "spoon_visible",
+            "sign_shape",
+            "hand_symbol",
+            "stop_word"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "main_object",
+            "contains_animal",
+            "contains_person",
+            "cup_visible",
+            "spoon_visible",
+            "sign_shape",
+            "hand_symbol",
+            "stop_word"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "main_object": [
+                "B",
+                0.999955628294301,
+                0.0010723701948051273
+              ],
+              "contains_animal": [
+                "no",
+                0.999986208716876,
+                0.00034868541287615926
+              ],
+              "contains_person": [
+                "no",
+                0.9999950985326563,
+                0.00039138228883599637
+              ],
+              "cup_visible": [
+                "yes",
+                0.999999856475527,
+                0.0001453197599245879
+              ],
+              "spoon_visible": [
+                "yes",
+                0.9999999617879624,
+                0.0001671056007891596
+              ],
+              "sign_shape": [
+                "E",
+                0.9999738310602029,
+                0.0011093434460404744
+              ],
+              "hand_symbol": [
+                "no",
+                0.9999968475694925,
+                0.0003801830846662957
+              ],
+              "stop_word": [
+                "no",
+                0.9999801434091703,
+                0.0006942126470201224
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 374.24731254577637,
+          "reads": 1
+        },
+        "prompt_tokens": 560,
+        "questions": {
+          "main_object": {
+            "pos": 8,
+            "entropy": [
+              0.0010723701948051273
+            ],
+            "label_mass": 0.9995989480527142,
+            "argmax_is_label": true
+          },
+          "contains_animal": {
+            "pos": 14,
+            "entropy": [
+              0.00034868541287615926
+            ],
+            "label_mass": 0.9998224945307651,
+            "argmax_is_label": true
+          },
+          "contains_person": {
+            "pos": 20,
+            "entropy": [
+              0.00039138228883599637
+            ],
+            "label_mass": 0.99967384610435,
+            "argmax_is_label": true
+          },
+          "cup_visible": {
+            "pos": 26,
+            "entropy": [
+              0.0001453197599245879
+            ],
+            "label_mass": 0.9998642633879092,
+            "argmax_is_label": true
+          },
+          "spoon_visible": {
+            "pos": 32,
+            "entropy": [
+              0.0001671056007891596
+            ],
+            "label_mass": 0.9998349606016552,
+            "argmax_is_label": true
+          },
+          "sign_shape": {
+            "pos": 38,
+            "entropy": [
+              0.0011093434460404744
+            ],
+            "label_mass": 0.9995709855170122,
+            "argmax_is_label": true
+          },
+          "hand_symbol": {
+            "pos": 44,
+            "entropy": [
+              0.0003801830846662957
+            ],
+            "label_mass": 0.9996637585462524,
+            "argmax_is_label": true
+          },
+          "stop_word": {
+            "pos": 50,
+            "entropy": [
+              0.0006942126470201224
+            ],
+            "label_mass": 0.9995420466620654,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 560,
+        "output_tokens": 52
+      },
+      "image": "images/coffee.jpg",
+      "expected": {
+        "main_object": "drink",
+        "contains_animal": "no",
+        "contains_person": "no",
+        "cup_visible": "yes",
+        "spoon_visible": "yes",
+        "sign_shape": "no_sign",
+        "hand_symbol": "no",
+        "stop_word": "no"
+      }
+    },
+    {
+      "probabilities": {
+        "main_object": {
+          "animal": 0.000625440269708268,
+          "drink": 0.000246034663572438,
+          "traffic_sign": 0.9985910211440935,
+          "other": 0.000537503922625755
+        },
+        "contains_animal": {
+          "yes": 3.823304226760128e-06,
+          "no": 0.9999961766957732
+        },
+        "contains_person": {
+          "yes": 6.036103344655589e-06,
+          "no": 0.9999939638966553
+        },
+        "cup_visible": {
+          "yes": 9.019791455788312e-07,
+          "no": 0.9999990980208544
+        },
+        "spoon_visible": {
+          "yes": 1.107821819121189e-06,
+          "no": 0.9999988921781808
+        },
+        "sign_shape": {
+          "octagon": 0.99607714867315,
+          "triangle": 8.11774889436512e-05,
+          "circle": 0.0004137547410962454,
+          "rectangle": 0.0021541816647311298,
+          "no_sign": 0.0012737374320788892
+        },
+        "hand_symbol": {
+          "yes": 0.9999950869964277,
+          "no": 4.9130035723043974e-06
+        },
+        "stop_word": {
+          "yes": 0.009339566402287688,
+          "no": 0.9906604335977123
+        }
+      },
+      "latency_ms": 1034.718368027825,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "main_object",
+            "contains_animal",
+            "contains_person",
+            "cup_visible",
+            "spoon_visible",
+            "sign_shape",
+            "hand_symbol",
+            "stop_word"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "main_object",
+            "contains_animal",
+            "contains_person",
+            "cup_visible",
+            "spoon_visible",
+            "sign_shape",
+            "hand_symbol",
+            "stop_word"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "main_object": [
+                "C",
+                0.9985910211440935,
+                0.01280112103045136
+              ],
+              "contains_animal": [
+                "no",
+                0.9999961766957733,
+                0.00016439942028069842
+              ],
+              "contains_person": [
+                "no",
+                0.9999939638966554,
+                0.00019555449564741427
+              ],
+              "cup_visible": [
+                "no",
+                0.9999990980208544,
+                0.00021752067689899125
+              ],
+              "spoon_visible": [
+                "no",
+                0.9999988921781808,
+                0.00022710412096824687
+              ],
+              "sign_shape": [
+                "A",
+                0.99607714867315,
+                0.03872774910645827
+              ],
+              "hand_symbol": [
+                "yes",
+                0.9999950869964277,
+                0.000696541408004763
+              ],
+              "stop_word": [
+                "no",
+                0.9906604335977123,
+                0.05379818967853876
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 213.8369083404541,
+          "reads": 1
+        },
+        "prompt_tokens": 546,
+        "questions": {
+          "main_object": {
+            "pos": 8,
+            "entropy": [
+              0.01280112103045136
+            ],
+            "label_mass": 0.9994837520349086,
+            "argmax_is_label": true
+          },
+          "contains_animal": {
+            "pos": 14,
+            "entropy": [
+              0.00016439942028069842
+            ],
+            "label_mass": 0.99989201707856,
+            "argmax_is_label": true
+          },
+          "contains_person": {
+            "pos": 20,
+            "entropy": [
+              0.00019555449564741427
+            ],
+            "label_mass": 0.9998857677057126,
+            "argmax_is_label": true
+          },
+          "cup_visible": {
+            "pos": 26,
+            "entropy": [
+              0.00021752067689899125
+            ],
+            "label_mass": 0.9998006702944523,
+            "argmax_is_label": true
+          },
+          "spoon_visible": {
+            "pos": 32,
+            "entropy": [
+              0.00022710412096824687
+            ],
+            "label_mass": 0.9997902708207838,
+            "argmax_is_label": true
+          },
+          "sign_shape": {
+            "pos": 38,
+            "entropy": [
+              0.03872774910645827
+            ],
+            "label_mass": 0.9908371186422603,
+            "argmax_is_label": true
+          },
+          "hand_symbol": {
+            "pos": 44,
+            "entropy": [
+              0.000696541408004763
+            ],
+            "label_mass": 0.999541282451733,
+            "argmax_is_label": true
+          },
+          "stop_word": {
+            "pos": 50,
+            "entropy": [
+              0.05379818967853876
+            ],
+            "label_mass": 0.9991217339124194,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 546,
+        "output_tokens": 52
+      },
+      "image": "images/stop.jpg",
+      "expected": {
+        "main_object": "traffic_sign",
+        "contains_animal": "no",
+        "contains_person": "no",
+        "cup_visible": "no",
+        "spoon_visible": "no",
+        "sign_shape": "octagon",
+        "hand_symbol": "yes",
+        "stop_word": "no"
+      }
+    }
+  ]
+}

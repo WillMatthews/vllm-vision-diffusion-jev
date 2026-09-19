@@ -15,10 +15,21 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
 import pybase64 as base64
+from structured_server import answer_text, parse_schema
 from visual_client import distributions, metrics, read_image
 
 
 class VisualClientTests(unittest.TestCase):
+    def test_many_named_questions_keep_a_delimiter_before_labels(self):
+        questions = [
+            {"id": f"has_collar_{i}", "type": "noul", "instructions": "Collar visible?"}
+            for i in range(12)
+        ]
+        schema = parse_schema({"questions": questions})
+        text = answer_text(schema["questions"], [1] * 12, schema["format"])
+        self.assertEqual(text.splitlines()[0], "has_collar_0: no")
+        self.assertEqual(text.splitlines()[-1], "has_collar_11: no")
+
     def test_image_bytes_and_context_reach_server_and_diagnostics_survive(self):
         captured = {}
 

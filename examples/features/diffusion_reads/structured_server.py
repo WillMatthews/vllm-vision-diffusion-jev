@@ -53,8 +53,8 @@ null); and "alone": true for a read of its own. Questions run in stages
 by these dependencies, each stage one joint read, later stages continuing
 the earlier answers (prefilled for a text state, restated for an image).
 
-Up to ten questions answer as "id: label" lines. Past that the id runs
-straight into the label, space separated, at one row fewer a question. A
+Named questions answer as "id: label" lines. Past ten questions, numeric ids
+run straight into the label, space separated, saving answer rows. A
 schema whose answer template does not fit the canvas is split into chunks
 that run together, each with its own question list ("chunk_rows" sets the
 rows per chunk, "ask" picks a subset of question ids for one read).
@@ -249,12 +249,18 @@ def parse_schema(value):
         "chunk_rows": chunk_rows,
         "chunk_prompt": chunk_prompt,
         "sequential": sequential,
-        "format": "lines" if len(qs) <= 10 else "indexed",
+        "format": (
+            "indexed"
+            if len(qs) > 10
+            and all(q["id"].isascii() and q["id"].isdecimal() for q in qs)
+            else "lines"
+        ),
     }
 
 
 # Answer template shape: (join between questions, what precedes the label,
 # reply instruction). "lines" is readable and is what a small schema gets.
+# Numeric ids keep indexed labels separate; named ids can merge with yes/no.
 # "indexed" ("0yes 1no") costs three tokens a question against four or five
 # and agreed with lines on every set measured: 42 booleans, ten 26-way
 # choices, twenty 5-level scores. Past ten questions the saved rows are what

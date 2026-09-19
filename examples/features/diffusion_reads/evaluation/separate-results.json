@@ -1,0 +1,3320 @@
+{
+  "summary": [
+    {
+      "image": "dog",
+      "requests": 24,
+      "http_total_ms": 18786.744776181877,
+      "server_total_ms": 3067.3999786376953
+    },
+    {
+      "image": "cat",
+      "requests": 24,
+      "http_total_ms": 21558.323485136498,
+      "server_total_ms": 3128.1025409698486
+    }
+  ],
+  "records": [
+    {
+      "image": "dog",
+      "question": "species",
+      "probabilities": {
+        "species": {
+          "dog": 0.9995769159299454,
+          "cat": 0.00020683698204022644,
+          "fox": 1.4585471008211024e-05,
+          "raccoon": 1.4585471008211024e-05,
+          "opossum": 1.105727311693338e-05,
+          "skunk": 3.886935412174359e-06,
+          "coyote": 7.601553086165791e-06,
+          "badger": 2.379868525944946e-06,
+          "hedgehog": 2.510931235370809e-05,
+          "squirrel": 1.598338940772117e-05,
+          "rabbit_hare": 5.193413362860797e-06,
+          "rodent": 3.905553257451336e-05,
+          "deer": 3.1980102966764365e-06,
+          "wild_boar": 7.601553086165791e-06,
+          "bear": 2.050393499428493e-06,
+          "big_cat": 1.6787317407898005e-06,
+          "monkey_primate": 3.905553257451336e-05,
+          "kangaroo": 4.7170542097962105e-06,
+          "horse": 1.443499018953423e-06,
+          "livestock": 6.9149986823002604e-06,
+          "bird": 2.264759303730535e-06,
+          "reptile": 4.903302154121734e-07,
+          "other": 2.899133674510568e-06,
+          "unknown": 4.494871855678705e-06
+        }
+      },
+      "latency_ms": 1050.7619709824212,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "species"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "species"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "species": [
+                "A",
+                0.9995769159299454,
+                0.06331215458579599
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 138.46874237060547,
+          "reads": 1
+        },
+        "prompt_tokens": 596,
+        "questions": {
+          "species": {
+            "pos": 6,
+            "entropy": [
+              0.06331215458579599
+            ],
+            "label_mass": 0.9390789215434132,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 596,
+        "output_tokens": 8
+      }
+    },
+    {
+      "image": "dog",
+      "question": "coat_colour",
+      "probabilities": {
+        "coat_colour": {
+          "black": 0.0004701960487480282,
+          "white": 4.7135504024681545e-05,
+          "gray": 3.951682257343674e-05,
+          "tan_cream": 0.9988906798155432,
+          "brown": 0.0004701960487480282,
+          "red_ginger": 2.1055146462200306e-05,
+          "other": 6.122061390045278e-05
+        }
+      },
+      "latency_ms": 807.5786120025441,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "coat_colour"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "coat_colour"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "coat_colour": [
+                "D",
+                0.9988906798155432,
+                0.3288079036381704
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 134.15217399597168,
+          "reads": 1
+        },
+        "prompt_tokens": 435,
+        "questions": {
+          "coat_colour": {
+            "pos": 8,
+            "entropy": [
+              0.3288079036381704
+            ],
+            "label_mass": 0.5636124441461059,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 435,
+        "output_tokens": 10
+      }
+    },
+    {
+      "image": "dog",
+      "question": "coat_pattern",
+      "probabilities": {
+        "coat_pattern": {
+          "solid": 0.996871721657149,
+          "bicolour": 0.0015211159757412176,
+          "tabby_striped": 0.00038421415342024403,
+          "spotted": 0.00035596951952175914,
+          "patched": 0.0001622913568311697,
+          "merle": 0.0005193907758088813,
+          "brindle": 7.734587027642488e-05,
+          "other": 0.00010795069125133935
+        }
+      },
+      "latency_ms": 1227.5964749860577,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "coat_pattern"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "coat_pattern"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "coat_pattern": [
+                "A",
+                0.996871721657149,
+                0.10793217977399154
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 269.2890167236328,
+          "reads": 1
+        },
+        "prompt_tokens": 449,
+        "questions": {
+          "coat_pattern": {
+            "pos": 8,
+            "entropy": [
+              0.10793217977399154
+            ],
+            "label_mass": 0.9116609438171253,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 449,
+        "output_tokens": 10
+      }
+    },
+    {
+      "image": "dog",
+      "question": "posture",
+      "probabilities": {
+        "posture": {
+          "standing": 0.9891565344362621,
+          "sitting": 0.0063280107960048,
+          "lying": 0.00047895580437859757,
+          "walking_running": 0.003784506236488672,
+          "climbing_jumping": 0.00012599636343289494,
+          "other": 0.00012599636343289494
+        }
+      },
+      "latency_ms": 877.9033460305072,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "posture"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "posture"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "posture": [
+                "A",
+                0.9891565344362621,
+                0.09444589257623351
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 125.04220008850098,
+          "reads": 1
+        },
+        "prompt_tokens": 419,
+        "questions": {
+          "posture": {
+            "pos": 7,
+            "entropy": [
+              0.09444589257623351
+            ],
+            "label_mass": 0.973167696158406,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 419,
+        "output_tokens": 9
+      }
+    },
+    {
+      "image": "dog",
+      "question": "view",
+      "probabilities": {
+        "view": {
+          "front": 0.020573396687814587,
+          "front_three_quarter": 0.5409681655769898,
+          "side": 0.4323830213615353,
+          "rear_three_quarter": 0.0026665206187733302,
+          "rear": 5.9081281626937515e-05,
+          "top": 0.000894620048679915,
+          "other": 0.00044517282014110116,
+          "unknown": 0.0020100216044390963
+        }
+      },
+      "latency_ms": 755.0752490060404,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "view"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "view"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "view": [
+                "B",
+                0.5409681655769898,
+                1.0585942047789154
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 130.3699016571045,
+          "reads": 1
+        },
+        "prompt_tokens": 443,
+        "questions": {
+          "view": {
+            "pos": 6,
+            "entropy": [
+              1.0585942047789154
+            ],
+            "label_mass": 0.40052363690014403,
+            "argmax_is_label": false
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 443,
+        "output_tokens": 8
+      }
+    },
+    {
+      "image": "dog",
+      "question": "has_collar",
+      "probabilities": {
+        "has_collar": {
+          "yes": 3.165629835871128e-05,
+          "no": 0.9999683437016413
+        }
+      },
+      "latency_ms": 739.7485130350105,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "has_collar"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "has_collar"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "has_collar": [
+                "no",
+                0.9999683437016412,
+                0.009006211645714976
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 115.57459831237793,
+          "reads": 1
+        },
+        "prompt_tokens": 375,
+        "questions": {
+          "has_collar": {
+            "pos": 8,
+            "entropy": [
+              0.009006211645714976
+            ],
+            "label_mass": 0.9913124507105698,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 375,
+        "output_tokens": 10
+      }
+    },
+    {
+      "image": "dog",
+      "question": "has_harness",
+      "probabilities": {
+        "has_harness": {
+          "yes": 3.5039773453588355e-05,
+          "no": 0.9999649602265465
+        }
+      },
+      "latency_ms": 690.2398180100136,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "has_harness"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "has_harness"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "has_harness": [
+                "no",
+                0.9999649602265464,
+                0.0037623184953785526
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 120.6204891204834,
+          "reads": 1
+        },
+        "prompt_tokens": 373,
+        "questions": {
+          "has_harness": {
+            "pos": 9,
+            "entropy": [
+              0.0037623184953785526
+            ],
+            "label_mass": 0.9966251620369321,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 373,
+        "output_tokens": 11
+      }
+    },
+    {
+      "image": "dog",
+      "question": "on_leash",
+      "probabilities": {
+        "on_leash": {
+          "yes": 0.0001219062167664795,
+          "no": 0.9998780937832336
+        }
+      },
+      "latency_ms": 690.2638539904729,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "on_leash"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "on_leash"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "on_leash": [
+                "no",
+                0.9998780937832334,
+                0.022017951887441753
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 121.80900573730469,
+          "reads": 1
+        },
+        "prompt_tokens": 375,
+        "questions": {
+          "on_leash": {
+            "pos": 9,
+            "entropy": [
+              0.022017951887441753
+            ],
+            "label_mass": 0.9789538693421966,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 375,
+        "output_tokens": 11
+      }
+    },
+    {
+      "image": "dog",
+      "question": "tethered_or_tied",
+      "probabilities": {
+        "tethered_or_tied": {
+          "yes": 4.336655060128248e-05,
+          "no": 0.9999566334493987
+        }
+      },
+      "latency_ms": 688.5581359965727,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "tethered_or_tied"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "tethered_or_tied"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "tethered_or_tied": [
+                "no",
+                0.9999566334493987,
+                0.054328448698396696
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 120.46217918395996,
+          "reads": 1
+        },
+        "prompt_tokens": 381,
+        "questions": {
+          "tethered_or_tied": {
+            "pos": 12,
+            "entropy": [
+              0.054328448698396696
+            ],
+            "label_mass": 0.9445578795873624,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 381,
+        "output_tokens": 14
+      }
+    },
+    {
+      "image": "dog",
+      "question": "has_ear_tag",
+      "probabilities": {
+        "has_ear_tag": {
+          "yes": 0.0011205885799486885,
+          "no": 0.9988794114200513
+        }
+      },
+      "latency_ms": 633.8238369789906,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "has_ear_tag"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "has_ear_tag"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "has_ear_tag": [
+                "no",
+                0.9988794114200513,
+                0.01924756070143041
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 116.57309532165527,
+          "reads": 1
+        },
+        "prompt_tokens": 373,
+        "questions": {
+          "has_ear_tag": {
+            "pos": 10,
+            "entropy": [
+              0.01924756070143041
+            ],
+            "label_mass": 0.9893353617450319,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 373,
+        "output_tokens": 12
+      }
+    },
+    {
+      "image": "dog",
+      "question": "muzzled",
+      "probabilities": {
+        "muzzled": {
+          "yes": 2.8124307882398396e-05,
+          "no": 0.9999718756921177
+        }
+      },
+      "latency_ms": 693.31893598428,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "muzzled"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "muzzled"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "muzzled": [
+                "no",
+                0.9999718756921175,
+                0.03565867953591575
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 119.3993091583252,
+          "reads": 1
+        },
+        "prompt_tokens": 372,
+        "questions": {
+          "muzzled": {
+            "pos": 8,
+            "entropy": [
+              0.03565867953591575
+            ],
+            "label_mass": 0.9639964843531734,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 372,
+        "output_tokens": 10
+      }
+    },
+    {
+      "image": "dog",
+      "question": "wearing_service_or_working_vest",
+      "probabilities": {
+        "wearing_service_or_working_vest": {
+          "yes": 0.0003391072768062178,
+          "no": 0.9996608927231938
+        }
+      },
+      "latency_ms": 711.8432230199687,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "wearing_service_or_working_vest"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "wearing_service_or_working_vest"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "wearing_service_or_working_vest": [
+                "no",
+                0.9996608927231939,
+                0.6027899789720688
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 121.1235523223877,
+          "reads": 1
+        },
+        "prompt_tokens": 381,
+        "questions": {
+          "wearing_service_or_working_vest": {
+            "pos": 14,
+            "entropy": [
+              0.6027899789720688
+            ],
+            "label_mass": 0.11974924739010522,
+            "argmax_is_label": false
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 381,
+        "output_tokens": 16
+      }
+    },
+    {
+      "image": "dog",
+      "question": "wearing_coat_or_clothing",
+      "probabilities": {
+        "wearing_coat_or_clothing": {
+          "yes": 0.00011482644904843468,
+          "no": 0.9998851735509515
+        }
+      },
+      "latency_ms": 715.0790170417167,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "wearing_coat_or_clothing"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "wearing_coat_or_clothing"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "wearing_coat_or_clothing": [
+                "no",
+                0.9998851735509515,
+                0.011273051161322363
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 118.02887916564941,
+          "reads": 1
+        },
+        "prompt_tokens": 378,
+        "questions": {
+          "wearing_coat_or_clothing": {
+            "pos": 12,
+            "entropy": [
+              0.011273051161322363
+            ],
+            "label_mass": 0.989819714715266,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 378,
+        "output_tokens": 14
+      }
+    },
+    {
+      "image": "dog",
+      "question": "saddled_or_ridden",
+      "probabilities": {
+        "saddled_or_ridden": {
+          "yes": 2.521800204178694e-05,
+          "no": 0.9999747819979582
+        }
+      },
+      "latency_ms": 899.3570579914376,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "saddled_or_ridden"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "saddled_or_ridden"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "saddled_or_ridden": [
+                "no",
+                0.9999747819979582,
+                0.026667772075006226
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 118.32928657531738,
+          "reads": 1
+        },
+        "prompt_tokens": 377,
+        "questions": {
+          "saddled_or_ridden": {
+            "pos": 12,
+            "entropy": [
+              0.026667772075006226
+            ],
+            "label_mass": 0.9732557791415378,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 377,
+        "output_tokens": 14
+      }
+    },
+    {
+      "image": "dog",
+      "question": "carrying_object_or_prey",
+      "probabilities": {
+        "carrying_object_or_prey": {
+          "yes": 8.078952436470945e-05,
+          "no": 0.9999192104756353
+        }
+      },
+      "latency_ms": 1089.8860020097345,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "carrying_object_or_prey"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "carrying_object_or_prey"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "carrying_object_or_prey": [
+                "no",
+                0.9999192104756351,
+                0.11083736113446212
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 128.9658546447754,
+          "reads": 1
+        },
+        "prompt_tokens": 379,
+        "questions": {
+          "carrying_object_or_prey": {
+            "pos": 13,
+            "entropy": [
+              0.11083736113446212
+            ],
+            "label_mass": 0.8827461531798767,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 379,
+        "output_tokens": 15
+      }
+    },
+    {
+      "image": "dog",
+      "question": "is_juvenile",
+      "probabilities": {
+        "is_juvenile": {
+          "yes": 4.684607367178582e-05,
+          "no": 0.9999531539263282
+        }
+      },
+      "latency_ms": 966.6211700532585,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "is_juvenile"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "is_juvenile"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "is_juvenile": [
+                "no",
+                0.9999531539263283,
+                0.004515217598114472
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 122.02072143554688,
+          "reads": 1
+        },
+        "prompt_tokens": 373,
+        "questions": {
+          "is_juvenile": {
+            "pos": 9,
+            "entropy": [
+              0.004515217598114472
+            ],
+            "label_mass": 0.9959885010814549,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 373,
+        "output_tokens": 11
+      }
+    },
+    {
+      "image": "dog",
+      "question": "not_truncated",
+      "probabilities": {
+        "not_truncated": {
+          "yes": 0.9987981340822532,
+          "no": 0.0012018659177468471
+        }
+      },
+      "latency_ms": 797.2316680243239,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "not_truncated"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "not_truncated"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "not_truncated": [
+                "yes",
+                0.9987981340822532,
+                0.09002647331834673
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 117.63763427734375,
+          "reads": 1
+        },
+        "prompt_tokens": 374,
+        "questions": {
+          "not_truncated": {
+            "pos": 8,
+            "entropy": [
+              0.09002647331834673
+            ],
+            "label_mass": 0.9147199099334927,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 374,
+        "output_tokens": 10
+      }
+    },
+    {
+      "image": "dog",
+      "question": "not_occluded",
+      "probabilities": {
+        "not_occluded": {
+          "yes": 0.9988002864033385,
+          "no": 0.0011997135966614891
+        }
+      },
+      "latency_ms": 741.1001730361022,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "not_occluded"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "not_occluded"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "not_occluded": [
+                "yes",
+                0.9988002864033385,
+                0.028112936411685274
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 117.29168891906738,
+          "reads": 1
+        },
+        "prompt_tokens": 377,
+        "questions": {
+          "not_occluded": {
+            "pos": 9,
+            "entropy": [
+              0.028112936411685274
+            ],
+            "label_mass": 0.9807912323251035,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 377,
+        "output_tokens": 11
+      }
+    },
+    {
+      "image": "dog",
+      "question": "sharpness",
+      "probabilities": {
+        "sharpness": {
+          "yes": 0.9574926517353126,
+          "no": 0.042507348264687383
+        }
+      },
+      "latency_ms": 686.7155520012602,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "sharpness"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "sharpness"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "sharpness": [
+                "yes",
+                0.9574926517353126,
+                0.19755850195681357
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 116.2710189819336,
+          "reads": 1
+        },
+        "prompt_tokens": 373,
+        "questions": {
+          "sharpness": {
+            "pos": 7,
+            "entropy": [
+              0.19755850195681357
+            ],
+            "label_mass": 0.9731989768224703,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 373,
+        "output_tokens": 9
+      }
+    },
+    {
+      "image": "dog",
+      "question": "exposure",
+      "probabilities": {
+        "exposure": {
+          "yes": 0.9983528038116296,
+          "no": 0.0016471961883703923
+        }
+      },
+      "latency_ms": 693.4649419854395,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "exposure"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "exposure"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "exposure": [
+                "yes",
+                0.9983528038116296,
+                0.18444509493557298
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 117.74730682373047,
+          "reads": 1
+        },
+        "prompt_tokens": 374,
+        "questions": {
+          "exposure": {
+            "pos": 6,
+            "entropy": [
+              0.18444509493557298
+            ],
+            "label_mass": 0.8049904484348873,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 374,
+        "output_tokens": 8
+      }
+    },
+    {
+      "image": "dog",
+      "question": "species_legibility",
+      "probabilities": {
+        "species_legibility": {
+          "yes": 0.9996915331606258,
+          "no": 0.000308466839374244
+        }
+      },
+      "latency_ms": 688.9637730200775,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "species_legibility"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "species_legibility"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "species_legibility": [
+                "yes",
+                0.9996915331606258,
+                0.017755460009535862
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 121.47378921508789,
+          "reads": 1
+        },
+        "prompt_tokens": 373,
+        "questions": {
+          "species_legibility": {
+            "pos": 9,
+            "entropy": [
+              0.017755460009535862
+            ],
+            "label_mass": 0.9848894898451294,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 373,
+        "output_tokens": 11
+      }
+    },
+    {
+      "image": "dog",
+      "question": "outdoors",
+      "probabilities": {
+        "outdoors": {
+          "yes": 0.9991032009466934,
+          "no": 0.0008967990533066406
+        }
+      },
+      "latency_ms": 674.8256779974326,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "outdoors"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "outdoors"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "outdoors": [
+                "yes",
+                0.9991032009466934,
+                0.050023097682532124
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 120.56112289428711,
+          "reads": 1
+        },
+        "prompt_tokens": 368,
+        "questions": {
+          "outdoors": {
+            "pos": 7,
+            "entropy": [
+              0.050023097682532124
+            ],
+            "label_mass": 0.9558596853077264,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 368,
+        "output_tokens": 9
+      }
+    },
+    {
+      "image": "dog",
+      "question": "visible_people",
+      "probabilities": {
+        "visible_people": {
+          "yes": 0.00015708561969120406,
+          "no": 0.9998429143803088
+        }
+      },
+      "latency_ms": 633.170484972652,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "visible_people"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "visible_people"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "visible_people": [
+                "no",
+                0.9998429143803088,
+                0.023644666421638084
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 117.68317222595215,
+          "reads": 1
+        },
+        "prompt_tokens": 371,
+        "questions": {
+          "visible_people": {
+            "pos": 8,
+            "entropy": [
+              0.023644666421638084
+            ],
+            "label_mass": 0.9776011921748439,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 371,
+        "output_tokens": 10
+      }
+    },
+    {
+      "image": "dog",
+      "question": "multiple_animals",
+      "probabilities": {
+        "multiple_animals": {
+          "yes": 0.0020825105442090846,
+          "no": 0.997917489455791
+        }
+      },
+      "latency_ms": 633.6172880255617,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "multiple_animals"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "multiple_animals"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "multiple_animals": [
+                "no",
+                0.9979174894557908,
+                0.06944287072269392
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 118.50523948669434,
+          "reads": 1
+        },
+        "prompt_tokens": 371,
+        "questions": {
+          "multiple_animals": {
+            "pos": 8,
+            "entropy": [
+              0.06944287072269392
+            ],
+            "label_mass": 0.9429865246221875,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 371,
+        "output_tokens": 10
+      }
+    },
+    {
+      "image": "cat",
+      "question": "species",
+      "probabilities": {
+        "species": {
+          "dog": 0.0009656190627542514,
+          "cat": 0.9963050462585482,
+          "fox": 0.00015707803559043062,
+          "raccoon": 3.382190545685675e-05,
+          "opossum": 3.382190545685675e-05,
+          "skunk": 4.904383824071602e-05,
+          "coyote": 0.00013189934921958816,
+          "badger": 2.317915496981273e-05,
+          "hedgehog": 0.00047025789996594147,
+          "squirrel": 0.0007041535204526573,
+          "rabbit_hare": 8.463120478277819e-05,
+          "rodent": 0.0002627633539466151,
+          "deer": 4.471914650299705e-05,
+          "wild_boar": 0.00011057998187381114,
+          "bear": 9.684484166115073e-06,
+          "big_cat": 3.382190545685675e-05,
+          "monkey_primate": 0.00012079433310417336,
+          "kangaroo": 4.471914650299705e-05,
+          "horse": 1.5040733384724276e-05,
+          "livestock": 3.713642633814145e-05,
+          "bird": 6.454023552482263e-05,
+          "reptile": 2.470635161003878e-06,
+          "other": 5.376558085796728e-05,
+          "unknown": 0.00024141190174172005
+        }
+      },
+      "latency_ms": 1027.584168012254,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "species"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "species"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "species": [
+                "B",
+                0.9963050462585482,
+                0.3224551780421052
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 133.66937637329102,
+          "reads": 1
+        },
+        "prompt_tokens": 592,
+        "questions": {
+          "species": {
+            "pos": 6,
+            "entropy": [
+              0.3224551780421052
+            ],
+            "label_mass": 0.6086083196651239,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 592,
+        "output_tokens": 8
+      }
+    },
+    {
+      "image": "cat",
+      "question": "coat_colour",
+      "probabilities": {
+        "coat_colour": {
+          "black": 0.0022587347465021887,
+          "white": 9.394652364271002e-05,
+          "gray": 0.032155022983163105,
+          "tan_cream": 0.029231893913745907,
+          "brown": 0.9347842432766033,
+          "red_ginger": 0.00022339008297933934,
+          "other": 0.001252768473363559
+        }
+      },
+      "latency_ms": 964.2688040039502,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "coat_colour"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "coat_colour"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "coat_colour": [
+                "E",
+                0.9347842432766033,
+                0.44683665030078074
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 127.78854370117188,
+          "reads": 1
+        },
+        "prompt_tokens": 431,
+        "questions": {
+          "coat_colour": {
+            "pos": 8,
+            "entropy": [
+              0.44683665030078074
+            ],
+            "label_mass": 0.7380943384179229,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 431,
+        "output_tokens": 10
+      }
+    },
+    {
+      "image": "cat",
+      "question": "coat_pattern",
+      "probabilities": {
+        "coat_pattern": {
+          "solid": 0.0003784227786529803,
+          "bicolour": 0.0011755648395730114,
+          "tabby_striped": 0.9937589394054391,
+          "spotted": 0.003127350530861913,
+          "patched": 0.00018363034124540433,
+          "merle": 0.0003784227786529803,
+          "brindle": 0.0008764997052946957,
+          "other": 0.00012116962027987106
+        }
+      },
+      "latency_ms": 915.9209490171634,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "coat_pattern"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "coat_pattern"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "coat_pattern": [
+                "C",
+                0.9937589394054391,
+                0.38110646140168786
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 131.55341148376465,
+          "reads": 1
+        },
+        "prompt_tokens": 445,
+        "questions": {
+          "coat_pattern": {
+            "pos": 8,
+            "entropy": [
+              0.38110646140168786
+            ],
+            "label_mass": 0.44579392832068193,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 445,
+        "output_tokens": 10
+      }
+    },
+    {
+      "image": "cat",
+      "question": "posture",
+      "probabilities": {
+        "posture": {
+          "standing": 0.0004041540852658772,
+          "sitting": 0.9992684882461998,
+          "lying": 0.00014977665513255672,
+          "walking_running": 7.24181409557436e-05,
+          "climbing_jumping": 4.38147119859971e-05,
+          "other": 6.134816045989131e-05
+        }
+      },
+      "latency_ms": 908.8971129967831,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "posture"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "posture"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "posture": [
+                "B",
+                0.9992684882461998,
+                0.03873232223595168
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 123.29888343811035,
+          "reads": 1
+        },
+        "prompt_tokens": 415,
+        "questions": {
+          "posture": {
+            "pos": 7,
+            "entropy": [
+              0.03873232223595168
+            ],
+            "label_mass": 0.9674392342211313,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 415,
+        "output_tokens": 9
+      }
+    },
+    {
+      "image": "cat",
+      "question": "view",
+      "probabilities": {
+        "view": {
+          "front": 0.615426956999086,
+          "front_three_quarter": 0.37964705486161976,
+          "side": 0.0023253992683470023,
+          "rear_three_quarter": 0.0004050097149810112,
+          "rear": 4.5910049394663225e-05,
+          "top": 0.0005021015992419782,
+          "other": 0.0005021015992419782,
+          "unknown": 0.0011454659080876763
+        }
+      },
+      "latency_ms": 967.5546910148114,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "view"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "view"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "view": [
+                "A",
+                0.615426956999086,
+                0.7282547273677176
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 127.46787071228027,
+          "reads": 1
+        },
+        "prompt_tokens": 439,
+        "questions": {
+          "view": {
+            "pos": 6,
+            "entropy": [
+              0.7282547273677176
+            ],
+            "label_mass": 0.8791081510752357,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 439,
+        "output_tokens": 8
+      }
+    },
+    {
+      "image": "cat",
+      "question": "has_collar",
+      "probabilities": {
+        "has_collar": {
+          "yes": 0.0002868673152920315,
+          "no": 0.999713132684708
+        }
+      },
+      "latency_ms": 914.664771000389,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "has_collar"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "has_collar"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "has_collar": [
+                "no",
+                0.999713132684708,
+                0.02827049978945611
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 130.43642044067383,
+          "reads": 1
+        },
+        "prompt_tokens": 371,
+        "questions": {
+          "has_collar": {
+            "pos": 8,
+            "entropy": [
+              0.02827049978945611
+            ],
+            "label_mass": 0.9739453099473072,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 371,
+        "output_tokens": 10
+      }
+    },
+    {
+      "image": "cat",
+      "question": "has_harness",
+      "probabilities": {
+        "has_harness": {
+          "yes": 0.0001158585282377198,
+          "no": 0.9998841414717623
+        }
+      },
+      "latency_ms": 915.0613789679483,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "has_harness"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "has_harness"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "has_harness": [
+                "no",
+                0.9998841414717623,
+                0.01932976431324745
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 132.48109817504883,
+          "reads": 1
+        },
+        "prompt_tokens": 369,
+        "questions": {
+          "has_harness": {
+            "pos": 9,
+            "entropy": [
+              0.01932976431324745
+            ],
+            "label_mass": 0.9816452411824436,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 369,
+        "output_tokens": 11
+      }
+    },
+    {
+      "image": "cat",
+      "question": "on_leash",
+      "probabilities": {
+        "on_leash": {
+          "yes": 9.639272370460227e-06,
+          "no": 0.9999903607276296
+        }
+      },
+      "latency_ms": 869.6284400066361,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "on_leash"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "on_leash"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "on_leash": [
+                "no",
+                0.9999903607276296,
+                0.01358100843515111
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 139.31894302368164,
+          "reads": 1
+        },
+        "prompt_tokens": 371,
+        "questions": {
+          "on_leash": {
+            "pos": 9,
+            "entropy": [
+              0.01358100843515111
+            ],
+            "label_mass": 0.9864460489118687,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 371,
+        "output_tokens": 11
+      }
+    },
+    {
+      "image": "cat",
+      "question": "tethered_or_tied",
+      "probabilities": {
+        "tethered_or_tied": {
+          "yes": 5.151565189998931e-05,
+          "no": 0.9999484843481
+        }
+      },
+      "latency_ms": 855.3438410162926,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "tethered_or_tied"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "tethered_or_tied"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "tethered_or_tied": [
+                "no",
+                0.9999484843481,
+                0.04670813450271791
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 136.34037971496582,
+          "reads": 1
+        },
+        "prompt_tokens": 377,
+        "questions": {
+          "tethered_or_tied": {
+            "pos": 12,
+            "entropy": [
+              0.04670813450271791
+            ],
+            "label_mass": 0.952688242426632,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 377,
+        "output_tokens": 14
+      }
+    },
+    {
+      "image": "cat",
+      "question": "has_ear_tag",
+      "probabilities": {
+        "has_ear_tag": {
+          "yes": 0.00456299706657404,
+          "no": 0.995437002933426
+        }
+      },
+      "latency_ms": 800.7916730130091,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "has_ear_tag"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "has_ear_tag"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "has_ear_tag": [
+                "no",
+                0.9954370029334259,
+                0.06013405518408092
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 126.34754180908203,
+          "reads": 1
+        },
+        "prompt_tokens": 369,
+        "questions": {
+          "has_ear_tag": {
+            "pos": 10,
+            "entropy": [
+              0.06013405518408092
+            ],
+            "label_mass": 0.9675329018963282,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 369,
+        "output_tokens": 12
+      }
+    },
+    {
+      "image": "cat",
+      "question": "muzzled",
+      "probabilities": {
+        "muzzled": {
+          "yes": 7.485860987057077e-06,
+          "no": 0.9999925141390129
+        }
+      },
+      "latency_ms": 807.4066889821552,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "muzzled"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "muzzled"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "muzzled": [
+                "no",
+                0.9999925141390129,
+                0.02223940677831375
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 128.94034385681152,
+          "reads": 1
+        },
+        "prompt_tokens": 368,
+        "questions": {
+          "muzzled": {
+            "pos": 8,
+            "entropy": [
+              0.02223940677831375
+            ],
+            "label_mass": 0.977601544763311,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 368,
+        "output_tokens": 10
+      }
+    },
+    {
+      "image": "cat",
+      "question": "wearing_service_or_working_vest",
+      "probabilities": {
+        "wearing_service_or_working_vest": {
+          "yes": 0.00013767537427072948,
+          "no": 0.9998623246257292
+        }
+      },
+      "latency_ms": 887.2575599816628,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "wearing_service_or_working_vest"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "wearing_service_or_working_vest"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "wearing_service_or_working_vest": [
+                "no",
+                0.9998623246257293,
+                0.631643199527899
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 130.87129592895508,
+          "reads": 1
+        },
+        "prompt_tokens": 377,
+        "questions": {
+          "wearing_service_or_working_vest": {
+            "pos": 14,
+            "entropy": [
+              0.631643199527899
+            ],
+            "label_mass": 0.13936180855108168,
+            "argmax_is_label": false
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 377,
+        "output_tokens": 16
+      }
+    },
+    {
+      "image": "cat",
+      "question": "wearing_coat_or_clothing",
+      "probabilities": {
+        "wearing_coat_or_clothing": {
+          "yes": 9.289366805067644e-05,
+          "no": 0.9999071063319493
+        }
+      },
+      "latency_ms": 862.3272620025091,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "wearing_coat_or_clothing"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "wearing_coat_or_clothing"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "wearing_coat_or_clothing": [
+                "no",
+                0.9999071063319492,
+                0.0831925229519887
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 129.73976135253906,
+          "reads": 1
+        },
+        "prompt_tokens": 374,
+        "questions": {
+          "wearing_coat_or_clothing": {
+            "pos": 12,
+            "entropy": [
+              0.0831925229519887
+            ],
+            "label_mass": 0.913858996252326,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 374,
+        "output_tokens": 14
+      }
+    },
+    {
+      "image": "cat",
+      "question": "saddled_or_ridden",
+      "probabilities": {
+        "saddled_or_ridden": {
+          "yes": 6.82043251371763e-05,
+          "no": 0.9999317956748628
+        }
+      },
+      "latency_ms": 913.7125259730965,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "saddled_or_ridden"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "saddled_or_ridden"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "saddled_or_ridden": [
+                "no",
+                0.9999317956748627,
+                0.3681430849833513
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 129.59742546081543,
+          "reads": 1
+        },
+        "prompt_tokens": 373,
+        "questions": {
+          "saddled_or_ridden": {
+            "pos": 12,
+            "entropy": [
+              0.3681430849833513
+            ],
+            "label_mass": 0.3694303385838147,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 373,
+        "output_tokens": 14
+      }
+    },
+    {
+      "image": "cat",
+      "question": "carrying_object_or_prey",
+      "probabilities": {
+        "carrying_object_or_prey": {
+          "yes": 0.0007987677773253747,
+          "no": 0.9992012322226747
+        }
+      },
+      "latency_ms": 916.3615110446699,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "carrying_object_or_prey"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "carrying_object_or_prey"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "carrying_object_or_prey": [
+                "no",
+                0.9992012322226747,
+                0.21225305675538744
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 129.655122756958,
+          "reads": 1
+        },
+        "prompt_tokens": 375,
+        "questions": {
+          "carrying_object_or_prey": {
+            "pos": 13,
+            "entropy": [
+              0.21225305675538744
+            ],
+            "label_mass": 0.7617433871903072,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 375,
+        "output_tokens": 15
+      }
+    },
+    {
+      "image": "cat",
+      "question": "is_juvenile",
+      "probabilities": {
+        "is_juvenile": {
+          "yes": 0.00016526079731299945,
+          "no": 0.999834739202687
+        }
+      },
+      "latency_ms": 858.4296820336021,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "is_juvenile"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "is_juvenile"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "is_juvenile": [
+                "no",
+                0.999834739202687,
+                0.045225221050394226
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 129.10795211791992,
+          "reads": 1
+        },
+        "prompt_tokens": 369,
+        "questions": {
+          "is_juvenile": {
+            "pos": 9,
+            "entropy": [
+              0.045225221050394226
+            ],
+            "label_mass": 0.9552927868246055,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 369,
+        "output_tokens": 11
+      }
+    },
+    {
+      "image": "cat",
+      "question": "not_truncated",
+      "probabilities": {
+        "not_truncated": {
+          "yes": 0.9964651806976639,
+          "no": 0.003534819302336123
+        }
+      },
+      "latency_ms": 861.021900025662,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "not_truncated"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "not_truncated"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "not_truncated": [
+                "yes",
+                0.9964651806976639,
+                0.12427373175427348
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 132.1887969970703,
+          "reads": 1
+        },
+        "prompt_tokens": 370,
+        "questions": {
+          "not_truncated": {
+            "pos": 8,
+            "entropy": [
+              0.12427373175427348
+            ],
+            "label_mass": 0.8903966362308098,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 370,
+        "output_tokens": 10
+      }
+    },
+    {
+      "image": "cat",
+      "question": "not_occluded",
+      "probabilities": {
+        "not_occluded": {
+          "yes": 0.9988779178325052,
+          "no": 0.0011220821674947645
+        }
+      },
+      "latency_ms": 1032.0504839764908,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "not_occluded"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "not_occluded"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "not_occluded": [
+                "yes",
+                0.9988779178325052,
+                0.03877382608850796
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 132.09104537963867,
+          "reads": 1
+        },
+        "prompt_tokens": 373,
+        "questions": {
+          "not_occluded": {
+            "pos": 9,
+            "entropy": [
+              0.03877382608850796
+            ],
+            "label_mass": 0.9692217589308085,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 373,
+        "output_tokens": 11
+      }
+    },
+    {
+      "image": "cat",
+      "question": "sharpness",
+      "probabilities": {
+        "sharpness": {
+          "yes": 0.999586005496294,
+          "no": 0.00041399450370604995
+        }
+      },
+      "latency_ms": 971.9421790214255,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "sharpness"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "sharpness"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "sharpness": [
+                "yes",
+                0.999586005496294,
+                0.08026838910304156
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 130.00798225402832,
+          "reads": 1
+        },
+        "prompt_tokens": 369,
+        "questions": {
+          "sharpness": {
+            "pos": 7,
+            "entropy": [
+              0.08026838910304156
+            ],
+            "label_mass": 0.9197703607499483,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 369,
+        "output_tokens": 9
+      }
+    },
+    {
+      "image": "cat",
+      "question": "exposure",
+      "probabilities": {
+        "exposure": {
+          "yes": 0.9993147737813007,
+          "no": 0.0006852262186992641
+        }
+      },
+      "latency_ms": 966.1099380464293,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "exposure"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "exposure"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "exposure": [
+                "yes",
+                0.9993147737813007,
+                0.0897475260941479
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 127.55894660949707,
+          "reads": 1
+        },
+        "prompt_tokens": 370,
+        "questions": {
+          "exposure": {
+            "pos": 6,
+            "entropy": [
+              0.0897475260941479
+            ],
+            "label_mass": 0.9113783931365305,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 370,
+        "output_tokens": 8
+      }
+    },
+    {
+      "image": "cat",
+      "question": "species_legibility",
+      "probabilities": {
+        "species_legibility": {
+          "yes": 0.9830066657150301,
+          "no": 0.016993334284969852
+        }
+      },
+      "latency_ms": 864.2507180338725,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "species_legibility"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "species_legibility"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "species_legibility": [
+                "yes",
+                0.9830066657150301,
+                0.24557763668065652
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 131.55627250671387,
+          "reads": 1
+        },
+        "prompt_tokens": 369,
+        "questions": {
+          "species_legibility": {
+            "pos": 9,
+            "entropy": [
+              0.24557763668065652
+            ],
+            "label_mass": 0.8026185527814985,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 369,
+        "output_tokens": 11
+      }
+    },
+    {
+      "image": "cat",
+      "question": "outdoors",
+      "probabilities": {
+        "outdoors": {
+          "yes": 0.997027136229744,
+          "no": 0.0029728637702559624
+        }
+      },
+      "latency_ms": 862.9962140112184,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "outdoors"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "outdoors"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "outdoors": [
+                "yes",
+                0.997027136229744,
+                0.057694285941434345
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 128.95512580871582,
+          "reads": 1
+        },
+        "prompt_tokens": 364,
+        "questions": {
+          "outdoors": {
+            "pos": 7,
+            "entropy": [
+              0.057694285941434345
+            ],
+            "label_mass": 0.9610106705658034,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 364,
+        "output_tokens": 9
+      }
+    },
+    {
+      "image": "cat",
+      "question": "visible_people",
+      "probabilities": {
+        "visible_people": {
+          "yes": 3.2332209465202726e-05,
+          "no": 0.9999676677905348
+        }
+      },
+      "latency_ms": 807.7933389577083,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "visible_people"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "visible_people"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "visible_people": [
+                "no",
+                0.9999676677905347,
+                0.05828581365905956
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 129.25362586975098,
+          "reads": 1
+        },
+        "prompt_tokens": 367,
+        "questions": {
+          "visible_people": {
+            "pos": 8,
+            "entropy": [
+              0.05828581365905956
+            ],
+            "label_mass": 0.9402363799994811,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 367,
+        "output_tokens": 10
+      }
+    },
+    {
+      "image": "cat",
+      "question": "multiple_animals",
+      "probabilities": {
+        "multiple_animals": {
+          "yes": 0.0001249718398599562,
+          "no": 0.9998750281601401
+        }
+      },
+      "latency_ms": 806.9476539967582,
+      "diagnostics": {
+        "steps": 1,
+        "stages": [
+          [
+            "multiple_animals"
+          ]
+        ],
+        "skipped": {},
+        "chunks": [
+          [
+            "multiple_animals"
+          ]
+        ],
+        "chunk_prompt": "own",
+        "sequential": false,
+        "conditioning": null,
+        "thought": null,
+        "samples": {
+          "n": 1,
+          "tops": [
+            {
+              "multiple_animals": [
+                "no",
+                0.99987502816014,
+                0.2746066746304794
+              ]
+            }
+          ],
+          "policy": {
+            "mode": "fixed",
+            "n": 1,
+            "extended": null,
+            "first_read_entropy": null
+          }
+        },
+        "timing": {
+          "total_ms": 129.87637519836426,
+          "reads": 1
+        },
+        "prompt_tokens": 367,
+        "questions": {
+          "multiple_animals": {
+            "pos": 8,
+            "entropy": [
+              0.2746066746304794
+            ],
+            "label_mass": 0.6607832592985455,
+            "argmax_is_label": true
+          }
+        },
+        "engine": "vllm"
+      },
+      "usage": {
+        "input_tokens": 367,
+        "output_tokens": 10
+      }
+    }
+  ]
+}

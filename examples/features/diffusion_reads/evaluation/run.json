@@ -1,0 +1,39 @@
+{
+  "date": "2026-09-19",
+  "model": "nvidia/diffusiongemma-26B-A4B-it-NVFP4",
+  "model_revision": "ffc65bb9103ef37ba010cdfe259c2cde5401c579",
+  "source_base": "d31ae59513fb283b860618d7991faa3a89d377cb",
+  "adapter_sha256": "9b27fe366b0d31053cf38ac57533f4a9c02f3cbe4629b4abbdde4f7ffece1e25",
+  "adapter_patch": "Retain line delimiters for named question IDs above ten questions",
+  "instance": {
+    "id": 51578607,
+    "start_date": 1789817729.8179295,
+    "gpu_name": "RTX 5090",
+    "gpu_ram": 32607,
+    "num_gpus": 1,
+    "dph_total": 0.8277777777777777,
+    "driver_version": "595.71.05",
+    "geolocation": "Alberta, CA"
+  },
+  "settings": {
+    "canvas": 64,
+    "max_model_len": 4096,
+    "max_num_seqs": 1,
+    "enforce_eager": true,
+    "attention_backend": "TRITON_ATTN",
+    "enable_prefix_caching": true,
+    "samples": 1,
+    "think": 0,
+    "transport": "SSH tunnel from client to loopback-only adapter"
+  },
+  "recorded_at": "2026-09-19T11:55:14.225033+00:00",
+  "teardown": {
+    "confirmed_at": "2026-09-19T11:56:51.528273+00:00",
+    "remaining_account_instances": 0,
+    "instance_destroyed": true,
+    "elapsed_minutes_to_confirmation": 21.361839008331298,
+    "rental_time_estimate_usd": 0.2947142603927188,
+    "credit_change_usd": 0.3545090352000013,
+    "billing_note": "Credit snapshot may lag final billing; time estimate excludes bandwidth."
+  }
+}

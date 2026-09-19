@@ -1,0 +1,86 @@
+{
+  "schema_version": "animal_metadata.v1",
+  "species": [
+    "dog",
+    "cat",
+    "fox",
+    "raccoon",
+    "opossum",
+    "skunk",
+    "coyote",
+    "badger",
+    "hedgehog",
+    "squirrel",
+    "rabbit_hare",
+    "rodent",
+    "deer",
+    "wild_boar",
+    "bear",
+    "big_cat",
+    "monkey_primate",
+    "kangaroo",
+    "horse",
+    "livestock",
+    "bird",
+    "reptile",
+    "other",
+    "unknown"
+  ],
+  "coat_colours": [
+    "black",
+    "white",
+    "gray",
+    "tan_cream",
+    "brown",
+    "red_ginger",
+    "other"
+  ],
+  "coat_patterns": [
+    "solid",
+    "bicolour",
+    "tabby_striped",
+    "spotted",
+    "patched",
+    "merle",
+    "brindle",
+    "other"
+  ],
+  "context": [
+    "has_collar",
+    "has_harness",
+    "on_leash",
+    "tethered_or_tied",
+    "has_ear_tag",
+    "muzzled",
+    "wearing_service_or_working_vest",
+    "wearing_coat_or_clothing",
+    "saddled_or_ridden",
+    "carrying_object_or_prey",
+    "is_juvenile"
+  ],
+  "postures": [
+    "standing",
+    "sitting",
+    "lying",
+    "walking_running",
+    "climbing_jumping",
+    "other"
+  ],
+  "views": [
+    "front",
+    "front_three_quarter",
+    "side",
+    "rear_three_quarter",
+    "rear",
+    "top",
+    "other",
+    "unknown"
+  ],
+  "quality": [
+    "not_truncated",
+    "not_occluded",
+    "sharpness",
+    "exposure",
+    "species_legibility"
+  ]
+}

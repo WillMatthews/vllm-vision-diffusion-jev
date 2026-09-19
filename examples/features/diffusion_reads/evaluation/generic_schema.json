@@ -1,0 +1,54 @@
+{
+  "state": {
+    "task": "Inspect the supplied photograph. Judge only visible evidence."
+  },
+  "samples": 1,
+  "think": 0,
+  "questions": {
+    "main_object": {
+      "type": "choice",
+      "instructions": "What is the main object?",
+      "criteria": {
+        "animal": "animal",
+        "drink": "drink",
+        "traffic_sign": "traffic sign",
+        "other": "other"
+      }
+    },
+    "contains_animal": {
+      "type": "noul",
+      "instructions": "Is a real animal visible?"
+    },
+    "contains_person": {
+      "type": "noul",
+      "instructions": "Is a real person visible?"
+    },
+    "cup_visible": {
+      "type": "noul",
+      "instructions": "Is a cup visible?"
+    },
+    "spoon_visible": {
+      "type": "noul",
+      "instructions": "Is a spoon visible?"
+    },
+    "sign_shape": {
+      "type": "choice",
+      "instructions": "What shape is the main road sign?",
+      "criteria": {
+        "octagon": "octagon",
+        "triangle": "triangle",
+        "circle": "circle",
+        "rectangle": "rectangle",
+        "no_sign": "no sign"
+      }
+    },
+    "hand_symbol": {
+      "type": "noul",
+      "instructions": "Is a hand symbol visible?"
+    },
+    "stop_word": {
+      "type": "noul",
+      "instructions": "Is the literal word STOP visible?"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{"image": "images/dog.jpg", "expected": {"species": "dog", "coat_colour": "tan_cream", "posture": "standing", "outdoors": "yes", "visible_people": "no", "multiple_animals": "no"}}
+{"image": "images/cat.jpg", "expected": {"species": "cat", "coat_colour": "brown", "posture": "sitting", "outdoors": "yes", "visible_people": "no", "multiple_animals": "no", "coat_pattern": "tabby_striped"}}
+{"image": "images/fox.jpg", "expected": {"species": "fox", "coat_colour": "red_ginger", "posture": "lying", "outdoors": "yes", "visible_people": "no", "multiple_animals": "no"}}
+{"image": "images/deer.jpg", "expected": {"species": "deer", "coat_colour": "brown", "posture": "standing", "outdoors": "yes", "visible_people": "no", "multiple_animals": "no"}}
+{"image": "images/horse.jpg", "expected": {"species": "horse", "coat_colour": "black", "posture": "walking_running", "outdoors": "yes", "visible_people": "no", "multiple_animals": "no"}}
+{"image": "images/rabbit.jpg", "expected": {"species": "rabbit_hare", "coat_colour": "brown", "posture": "sitting", "outdoors": "yes", "visible_people": "no", "multiple_animals": "no"}}
+{"image": "images/bird.jpg", "expected": {"species": "bird", "coat_colour": "other", "posture": "standing", "outdoors": "yes", "visible_people": "no", "multiple_animals": "no"}}
