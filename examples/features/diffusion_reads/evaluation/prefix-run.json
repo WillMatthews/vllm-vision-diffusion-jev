@@ -1,0 +1,48 @@
+{
+  "date": "2026-09-19",
+  "budget_usd": 5,
+  "model": "nvidia/diffusiongemma-26B-A4B-it-NVFP4",
+  "model_revision": "ffc65bb9103ef37ba010cdfe259c2cde5401c579",
+  "source_base": "f5d5e55948d4566755b8eceb84514932c37e021f",
+  "adapter_sha256": "f936f0500b0b63a6b2bacb9cff94416f56e2ee10414e00074c1e3d0ad9d7c2ec",
+  "instance": {
+    "id": 51581231,
+    "start_date": 1789819373.2195115,
+    "gpu_name": "RTX 5090",
+    "gpu_ram": 32607,
+    "num_gpus": 1,
+    "dph_total": 0.8277777777777777,
+    "driver_version": "595.71.05",
+    "geolocation": "Alberta, CA"
+  },
+  "settings": {
+    "canvas": 64,
+    "max_model_len": 4096,
+    "max_num_seqs": 1,
+    "enforce_eager": true,
+    "attention_backend": "TRITON_ATTN",
+    "enable_prefix_caching": true,
+    "enable_prompt_tokens_details": true,
+    "research_only_dev_endpoints": true,
+    "bind": "127.0.0.1",
+    "samples": 1,
+    "think": 0,
+    "transport": "server localhost",
+    "initial_kv_cache_dtype": "fp8_e4m3"
+  },
+  "precision_followup": {
+    "kv_cache_dtype": "bfloat16",
+    "weights": "unchanged NVFP4",
+    "moe_backend": "FLASHINFER_CUTLASS (unchanged)",
+    "result": "prefix-bf16-results.json"
+  },
+  "teardown": {
+    "confirmed_at": "2026-09-19T12:24:34.010579+00:00",
+    "remaining_account_instances": 0,
+    "instance_destroyed": true,
+    "elapsed_minutes_to_confirmation": 21.679851047197978,
+    "rental_time_estimate_usd": 0.2991016487067128,
+    "credit_change_usd": 0.3835848595000009,
+    "billing_note": "Credit snapshot may lag final billing; time estimate excludes bandwidth."
+  }
+}

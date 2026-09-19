@@ -1,0 +1,1674 @@
+{
+  "prefix-results.json": {
+    "summary": [
+      {
+        "questions": 1,
+        "mode": "empty",
+        "requests": 21,
+        "mean_http_ms": 190.38740350376992,
+        "mean_server_ms": 187.89193743751161,
+        "mean_prompt_tokens": 591.4285714285714,
+        "mean_cached_tokens": 0,
+        "labelled_decisions": 21,
+        "correct": 21,
+        "server_median_ms": 189.0280246734619
+      },
+      {
+        "questions": 1,
+        "mode": "different_image",
+        "requests": 21,
+        "mean_http_ms": 189.89118489636374,
+        "mean_server_ms": 187.53986131577264,
+        "mean_prompt_tokens": 591.4285714285714,
+        "mean_cached_tokens": 288,
+        "labelled_decisions": 21,
+        "correct": 21,
+        "server_median_ms": 187.14284896850586
+      },
+      {
+        "questions": 1,
+        "mode": "same_image",
+        "requests": 21,
+        "mean_http_ms": 127.24305922719871,
+        "mean_server_ms": 124.67899776640392,
+        "mean_prompt_tokens": 591.4285714285714,
+        "mean_cached_tokens": 576,
+        "labelled_decisions": 21,
+        "correct": 21,
+        "server_median_ms": 122.52569198608398
+      },
+      {
+        "questions": 8,
+        "mode": "empty",
+        "requests": 21,
+        "mean_http_ms": 230.08842238535485,
+        "mean_server_ms": 227.3999055226644,
+        "mean_prompt_tokens": 989.4285714285714,
+        "mean_cached_tokens": 0,
+        "labelled_decisions": 66,
+        "correct": 59,
+        "server_median_ms": 225.24237632751465
+      },
+      {
+        "questions": 8,
+        "mode": "different_image",
+        "requests": 21,
+        "mean_http_ms": 230.36489885167353,
+        "mean_server_ms": 227.406070345924,
+        "mean_prompt_tokens": 989.4285714285714,
+        "mean_cached_tokens": 672,
+        "labelled_decisions": 66,
+        "correct": 58,
+        "server_median_ms": 225.70514678955078
+      },
+      {
+        "questions": 8,
+        "mode": "same_image",
+        "requests": 21,
+        "mean_http_ms": 167.0269907585212,
+        "mean_server_ms": 164.20410928272065,
+        "mean_prompt_tokens": 989.4285714285714,
+        "mean_cached_tokens": 969.1428571428571,
+        "labelled_decisions": 66,
+        "correct": 58,
+        "server_median_ms": 165.11178016662598
+      },
+      {
+        "questions": 24,
+        "mode": "empty",
+        "requests": 21,
+        "mean_http_ms": 421.4003320084885,
+        "mean_server_ms": 418.242511295137,
+        "mean_prompt_tokens": 2033.2857142857142,
+        "mean_cached_tokens": 64,
+        "labelled_decisions": 129,
+        "correct": 121,
+        "server_median_ms": 411.6661548614502
+      },
+      {
+        "questions": 24,
+        "mode": "different_image",
+        "requests": 21,
+        "mean_http_ms": 418.06009526009717,
+        "mean_server_ms": 414.7556395757766,
+        "mean_prompt_tokens": 2033.2857142857142,
+        "mean_cached_tokens": 1120,
+        "labelled_decisions": 129,
+        "correct": 118,
+        "server_median_ms": 413.03062438964844
+      },
+      {
+        "questions": 24,
+        "mode": "same_image",
+        "requests": 21,
+        "mean_http_ms": 349.33328842522485,
+        "mean_server_ms": 345.96817834036693,
+        "mean_prompt_tokens": 2033.2857142857142,
+        "mean_cached_tokens": 1984,
+        "labelled_decisions": 129,
+        "correct": 119,
+        "server_median_ms": 339.1861915588379
+      }
+    ],
+    "cache_top_answer_changes": [
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "cat",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.11654563249698702
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "bird",
+        "mode": "same_image",
+        "question": "posture",
+        "empty_answer": "sitting",
+        "cached_answer": "other",
+        "max_probability_delta": 0.3766792880085881
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "bird",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "front",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.49989584377097973
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "bird",
+        "mode": "different_image",
+        "question": "posture",
+        "empty_answer": "sitting",
+        "cached_answer": "standing",
+        "max_probability_delta": 0.041714312803492526
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "bird",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.4194812631486635
+      },
+      {
+        "repeat": 1,
+        "questions": 8,
+        "image": "rabbit",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.5189887800537358
+      },
+      {
+        "repeat": 1,
+        "questions": 8,
+        "image": "rabbit",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.45588592156931096
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "rabbit",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.5544540685305341
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "bird",
+        "mode": "same_image",
+        "question": "posture",
+        "empty_answer": "sitting",
+        "cached_answer": "standing",
+        "max_probability_delta": 0.34252394525139374
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "bird",
+        "mode": "same_image",
+        "question": "outdoors",
+        "empty_answer": "yes",
+        "cached_answer": "no",
+        "max_probability_delta": 0.644382127847527
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "bird",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.2632514240655076
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "bird",
+        "mode": "different_image",
+        "question": "outdoors",
+        "empty_answer": "yes",
+        "cached_answer": "no",
+        "max_probability_delta": 0.6175063265632984
+      },
+      {
+        "repeat": 2,
+        "questions": 8,
+        "image": "fox",
+        "mode": "different_image",
+        "question": "coat_colour",
+        "empty_answer": "tan_cream",
+        "cached_answer": "brown",
+        "max_probability_delta": 0.487200531559649
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "rabbit",
+        "mode": "different_image",
+        "question": "coat_pattern",
+        "empty_answer": "other",
+        "cached_answer": "solid",
+        "max_probability_delta": 0.493297287460318
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "rabbit",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.4057506850622736
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "rabbit",
+        "mode": "same_image",
+        "question": "coat_pattern",
+        "empty_answer": "other",
+        "cached_answer": "solid",
+        "max_probability_delta": 0.7584257074886418
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "fox",
+        "mode": "different_image",
+        "question": "coat_colour",
+        "empty_answer": "tan_cream",
+        "cached_answer": "brown",
+        "max_probability_delta": 0.4006015073219134
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "fox",
+        "mode": "same_image",
+        "question": "coat_colour",
+        "empty_answer": "tan_cream",
+        "cached_answer": "red_ginger",
+        "max_probability_delta": 0.5901033036441052
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "fox",
+        "mode": "same_image",
+        "question": "not_truncated",
+        "empty_answer": "no",
+        "cached_answer": "yes",
+        "max_probability_delta": 0.9385981489589763
+      },
+      {
+        "repeat": 0,
+        "questions": 8,
+        "image": "horse",
+        "mode": "different_image",
+        "question": "has_collar",
+        "empty_answer": "no",
+        "cached_answer": "yes",
+        "max_probability_delta": 0.3132450575210346
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "bird",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "front",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.25326792123667324
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "bird",
+        "mode": "different_image",
+        "question": "posture",
+        "empty_answer": "sitting",
+        "cached_answer": "standing",
+        "max_probability_delta": 0.13375680928152023
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "bird",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.20990862043224856
+      },
+      {
+        "repeat": 1,
+        "questions": 8,
+        "image": "cat",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.2115272602510298
+      },
+      {
+        "repeat": 1,
+        "questions": 8,
+        "image": "cat",
+        "mode": "different_image",
+        "question": "coat_colour",
+        "empty_answer": "brown",
+        "cached_answer": "gray",
+        "max_probability_delta": 0.7435137758947212
+      },
+      {
+        "repeat": 1,
+        "questions": 8,
+        "image": "cat",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.15635417921714695
+      },
+      {
+        "repeat": 2,
+        "questions": 8,
+        "image": "horse",
+        "mode": "different_image",
+        "question": "has_collar",
+        "empty_answer": "no",
+        "cached_answer": "yes",
+        "max_probability_delta": 0.4718509470929668
+      },
+      {
+        "repeat": 2,
+        "questions": 8,
+        "image": "bird",
+        "mode": "different_image",
+        "question": "posture",
+        "empty_answer": "other",
+        "cached_answer": "standing",
+        "max_probability_delta": 0.22350823102511272
+      },
+      {
+        "repeat": 2,
+        "questions": 8,
+        "image": "bird",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "side",
+        "max_probability_delta": 0.30625926609786136
+      },
+      {
+        "repeat": 2,
+        "questions": 8,
+        "image": "bird",
+        "mode": "same_image",
+        "question": "posture",
+        "empty_answer": "other",
+        "cached_answer": "standing",
+        "max_probability_delta": 0.024724767261359387
+      },
+      {
+        "repeat": 0,
+        "questions": 8,
+        "image": "deer",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "side",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.1590438972592676
+      },
+      {
+        "repeat": 2,
+        "questions": 8,
+        "image": "deer",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "side",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.3922215494487415
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "fox",
+        "mode": "different_image",
+        "question": "not_truncated",
+        "empty_answer": "no",
+        "cached_answer": "yes",
+        "max_probability_delta": 0.30882717750423516
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "fox",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "front",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.6016212619947723
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "fox",
+        "mode": "same_image",
+        "question": "not_truncated",
+        "empty_answer": "no",
+        "cached_answer": "yes",
+        "max_probability_delta": 0.4087675906527374
+      },
+      {
+        "repeat": 1,
+        "questions": 8,
+        "image": "dog",
+        "mode": "different_image",
+        "question": "posture",
+        "empty_answer": "other",
+        "cached_answer": "standing",
+        "max_probability_delta": 0.2981618997709673
+      },
+      {
+        "repeat": 1,
+        "questions": 8,
+        "image": "dog",
+        "mode": "same_image",
+        "question": "posture",
+        "empty_answer": "other",
+        "cached_answer": "walking_running",
+        "max_probability_delta": 0.19107504170646444
+      },
+      {
+        "repeat": 2,
+        "questions": 8,
+        "image": "cat",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.13182891304954952
+      },
+      {
+        "repeat": 0,
+        "questions": 8,
+        "image": "rabbit",
+        "mode": "different_image",
+        "question": "coat_colour",
+        "empty_answer": "brown",
+        "cached_answer": "other",
+        "max_probability_delta": 0.5160752930324154
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "dog",
+        "mode": "same_image",
+        "question": "posture",
+        "empty_answer": "standing",
+        "cached_answer": "walking_running",
+        "max_probability_delta": 0.15642723081342802
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "dog",
+        "mode": "same_image",
+        "question": "posture",
+        "empty_answer": "standing",
+        "cached_answer": "walking_running",
+        "max_probability_delta": 0.38614903832905284
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "dog",
+        "mode": "different_image",
+        "question": "posture",
+        "empty_answer": "standing",
+        "cached_answer": "walking_running",
+        "max_probability_delta": 0.31782300706214356
+      },
+      {
+        "repeat": 0,
+        "questions": 8,
+        "image": "bird",
+        "mode": "same_image",
+        "question": "posture",
+        "empty_answer": "standing",
+        "cached_answer": "other",
+        "max_probability_delta": 0.24162826987321268
+      },
+      {
+        "repeat": 0,
+        "questions": 8,
+        "image": "bird",
+        "mode": "different_image",
+        "question": "posture",
+        "empty_answer": "standing",
+        "cached_answer": "sitting",
+        "max_probability_delta": 0.25913769816283233
+      },
+      {
+        "repeat": 0,
+        "questions": 8,
+        "image": "bird",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "side",
+        "max_probability_delta": 0.32101251079908055
+      },
+      {
+        "repeat": 2,
+        "questions": 8,
+        "image": "dog",
+        "mode": "same_image",
+        "question": "posture",
+        "empty_answer": "walking_running",
+        "cached_answer": "other",
+        "max_probability_delta": 0.35510051002857446
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "fox",
+        "mode": "different_image",
+        "question": "coat_colour",
+        "empty_answer": "tan_cream",
+        "cached_answer": "brown",
+        "max_probability_delta": 0.7436956308644582
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "fox",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.24909885083457523
+      },
+      {
+        "repeat": 1,
+        "questions": 8,
+        "image": "bird",
+        "mode": "same_image",
+        "question": "posture",
+        "empty_answer": "other",
+        "cached_answer": "sitting",
+        "max_probability_delta": 0.10067985718922828
+      },
+      {
+        "repeat": 1,
+        "questions": 8,
+        "image": "bird",
+        "mode": "different_image",
+        "question": "posture",
+        "empty_answer": "other",
+        "cached_answer": "standing",
+        "max_probability_delta": 0.19552937220580668
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "deer",
+        "mode": "different_image",
+        "question": "posture",
+        "empty_answer": "standing",
+        "cached_answer": "walking_running",
+        "max_probability_delta": 0.3139938913141945
+      },
+      {
+        "repeat": 0,
+        "questions": 8,
+        "image": "cat",
+        "mode": "different_image",
+        "question": "coat_colour",
+        "empty_answer": "brown",
+        "cached_answer": "gray",
+        "max_probability_delta": 0.6411637283311894
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "dog",
+        "mode": "different_image",
+        "question": "posture",
+        "empty_answer": "standing",
+        "cached_answer": "walking_running",
+        "max_probability_delta": 0.15969670387088367
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "dog",
+        "mode": "same_image",
+        "question": "posture",
+        "empty_answer": "standing",
+        "cached_answer": "walking_running",
+        "max_probability_delta": 0.2651189909938735
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "cat",
+        "mode": "different_image",
+        "question": "coat_colour",
+        "empty_answer": "brown",
+        "cached_answer": "gray",
+        "max_probability_delta": 0.5327475151410517
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "cat",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.1964344919282917
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "cat",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "front",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.3136333060744873
+      },
+      {
+        "repeat": 0,
+        "questions": 8,
+        "image": "dog",
+        "mode": "same_image",
+        "question": "posture",
+        "empty_answer": "standing",
+        "cached_answer": "walking_running",
+        "max_probability_delta": 0.311641682213116
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "rabbit",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.568179060748627
+      }
+    ],
+    "max_probability_delta": 0.9385981489589763,
+    "within_condition_repeats": {
+      "empty": {
+        "max_probability_delta": 0.4637411086044446,
+        "mean_absolute_probability_delta": 0.008659242301553386,
+        "top_answer_changes": 10,
+        "question_comparisons": 462
+      },
+      "different_image": {
+        "max_probability_delta": 0.9823706955863202,
+        "mean_absolute_probability_delta": 0.013917334966005168,
+        "top_answer_changes": 21,
+        "question_comparisons": 462
+      },
+      "same_image": {
+        "max_probability_delta": 0.6912641177308804,
+        "mean_absolute_probability_delta": 0.010896365844287154,
+        "top_answer_changes": 15,
+        "question_comparisons": 462
+      }
+    },
+    "cross_condition_question_comparisons": 1386,
+    "species_correct": 189,
+    "target_requests": 189
+  },
+  "prefix-shared-results.json": {
+    "summary": [
+      {
+        "questions": 24,
+        "mode": "empty",
+        "requests": 21,
+        "mean_http_ms": 429.62433357301745,
+        "mean_server_ms": 426.33011227562315,
+        "mean_prompt_tokens": 4009.285714285714,
+        "mean_cached_tokens": 2624,
+        "labelled_decisions": 129,
+        "correct": 118,
+        "server_median_ms": 421.5993881225586
+      },
+      {
+        "questions": 24,
+        "mode": "different_image",
+        "requests": 21,
+        "mean_http_ms": 416.4346756602061,
+        "mean_server_ms": 413.11522892543246,
+        "mean_prompt_tokens": 4009.285714285714,
+        "mean_cached_tokens": 2624,
+        "labelled_decisions": 129,
+        "correct": 120,
+        "server_median_ms": 409.0092182159424
+      },
+      {
+        "questions": 24,
+        "mode": "same_image",
+        "requests": 21,
+        "mean_http_ms": 353.2172886687996,
+        "mean_server_ms": 349.9503930409749,
+        "mean_prompt_tokens": 4009.285714285714,
+        "mean_cached_tokens": 3936,
+        "labelled_decisions": 129,
+        "correct": 119,
+        "server_median_ms": 343.7323570251465
+      }
+    ],
+    "cache_top_answer_changes": [
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "rabbit",
+        "mode": "different_image",
+        "question": "coat_pattern",
+        "empty_answer": "solid",
+        "cached_answer": "other",
+        "max_probability_delta": 0.5041101114734907
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "rabbit",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "front",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.08925862881907143
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "rabbit",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.7487949918999638
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "rabbit",
+        "mode": "same_image",
+        "question": "coat_pattern",
+        "empty_answer": "solid",
+        "cached_answer": "tabby_striped",
+        "max_probability_delta": 0.46066381518624927
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "dog",
+        "mode": "different_image",
+        "question": "posture",
+        "empty_answer": "walking_running",
+        "cached_answer": "standing",
+        "max_probability_delta": 0.7316068369391685
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "fox",
+        "mode": "different_image",
+        "question": "coat_colour",
+        "empty_answer": "red_ginger",
+        "cached_answer": "tan_cream",
+        "max_probability_delta": 0.428153688377225
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "fox",
+        "mode": "same_image",
+        "question": "not_truncated",
+        "empty_answer": "no",
+        "cached_answer": "yes",
+        "max_probability_delta": 0.5601116729950008
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "bird",
+        "mode": "different_image",
+        "question": "coat_pattern",
+        "empty_answer": "other",
+        "cached_answer": "solid",
+        "max_probability_delta": 0.2323797620804275
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "bird",
+        "mode": "different_image",
+        "question": "posture",
+        "empty_answer": "sitting",
+        "cached_answer": "standing",
+        "max_probability_delta": 0.10947213482972523
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "bird",
+        "mode": "different_image",
+        "question": "outdoors",
+        "empty_answer": "no",
+        "cached_answer": "yes",
+        "max_probability_delta": 0.2185476316495315
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "cat",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.2500358911370984
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "cat",
+        "mode": "different_image",
+        "question": "coat_colour",
+        "empty_answer": "brown",
+        "cached_answer": "gray",
+        "max_probability_delta": 0.19407196782515668
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "cat",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.2646141948000352
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "bird",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "side",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.4199953123804762
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "bird",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "side",
+        "cached_answer": "front",
+        "max_probability_delta": 0.4362045305311975
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "rabbit",
+        "mode": "same_image",
+        "question": "coat_pattern",
+        "empty_answer": "solid",
+        "cached_answer": "other",
+        "max_probability_delta": 0.5478173033836531
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "rabbit",
+        "mode": "different_image",
+        "question": "coat_pattern",
+        "empty_answer": "solid",
+        "cached_answer": "other",
+        "max_probability_delta": 0.17220734447964775
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "cat",
+        "mode": "same_image",
+        "question": "coat_colour",
+        "empty_answer": "gray",
+        "cached_answer": "brown",
+        "max_probability_delta": 0.5263039050513272
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "cat",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.5546389237730576
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "horse",
+        "mode": "different_image",
+        "question": "has_collar",
+        "empty_answer": "yes",
+        "cached_answer": "no",
+        "max_probability_delta": 0.6973031863340673
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "horse",
+        "mode": "same_image",
+        "question": "has_collar",
+        "empty_answer": "yes",
+        "cached_answer": "no",
+        "max_probability_delta": 0.5764746922195852
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "fox",
+        "mode": "same_image",
+        "question": "coat_colour",
+        "empty_answer": "tan_cream",
+        "cached_answer": "red_ginger",
+        "max_probability_delta": 0.32169542304144116
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "fox",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.2416274080896937
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "fox",
+        "mode": "different_image",
+        "question": "coat_colour",
+        "empty_answer": "tan_cream",
+        "cached_answer": "red_ginger",
+        "max_probability_delta": 0.24507889261582427
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "fox",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.22649360144333258
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "fox",
+        "mode": "different_image",
+        "question": "coat_colour",
+        "empty_answer": "red_ginger",
+        "cached_answer": "tan_cream",
+        "max_probability_delta": 0.5437451479498054
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "fox",
+        "mode": "different_image",
+        "question": "not_truncated",
+        "empty_answer": "no",
+        "cached_answer": "yes",
+        "max_probability_delta": 0.18790541235722125
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "fox",
+        "mode": "same_image",
+        "question": "coat_colour",
+        "empty_answer": "red_ginger",
+        "cached_answer": "tan_cream",
+        "max_probability_delta": 0.7155967404416206
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "dog",
+        "mode": "different_image",
+        "question": "posture",
+        "empty_answer": "standing",
+        "cached_answer": "walking_running",
+        "max_probability_delta": 0.13851365951487943
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "dog",
+        "mode": "same_image",
+        "question": "posture",
+        "empty_answer": "standing",
+        "cached_answer": "walking_running",
+        "max_probability_delta": 0.4523192281697671
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "cat",
+        "mode": "different_image",
+        "question": "coat_colour",
+        "empty_answer": "gray",
+        "cached_answer": "brown",
+        "max_probability_delta": 0.4911970607612687
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "cat",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.38224212089574894
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "cat",
+        "mode": "same_image",
+        "question": "coat_colour",
+        "empty_answer": "gray",
+        "cached_answer": "brown",
+        "max_probability_delta": 0.8464006389631825
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "cat",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.44166319768516416
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "dog",
+        "mode": "different_image",
+        "question": "posture",
+        "empty_answer": "walking_running",
+        "cached_answer": "standing",
+        "max_probability_delta": 0.5541076152593782
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "deer",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "side",
+        "max_probability_delta": 0.4053789857456626
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "deer",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "side",
+        "max_probability_delta": 0.440537012896052
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "bird",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "side",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.5072817604566451
+      }
+    ],
+    "max_probability_delta": 0.8464006389631825,
+    "within_condition_repeats": {
+      "empty": {
+        "max_probability_delta": 0.7970095729211881,
+        "mean_absolute_probability_delta": 0.016066377361338657,
+        "top_answer_changes": 13,
+        "question_comparisons": 336
+      },
+      "different_image": {
+        "max_probability_delta": 0.7366109405565763,
+        "mean_absolute_probability_delta": 0.015571120473707775,
+        "top_answer_changes": 14,
+        "question_comparisons": 336
+      },
+      "same_image": {
+        "max_probability_delta": 0.7302312592748247,
+        "mean_absolute_probability_delta": 0.015612575599538145,
+        "top_answer_changes": 7,
+        "question_comparisons": 336
+      }
+    },
+    "cross_condition_question_comparisons": 1008,
+    "species_correct": 63,
+    "target_requests": 63
+  },
+  "prefix-bf16-results.json": {
+    "summary": [
+      {
+        "questions": 1,
+        "mode": "empty",
+        "requests": 21,
+        "mean_http_ms": 191.76904885430955,
+        "mean_server_ms": 189.38013485499792,
+        "mean_prompt_tokens": 591.4285714285714,
+        "mean_cached_tokens": 0,
+        "labelled_decisions": 21,
+        "correct": 21,
+        "server_median_ms": 187.35146522521973
+      },
+      {
+        "questions": 1,
+        "mode": "different_image",
+        "requests": 21,
+        "mean_http_ms": 191.2655777608355,
+        "mean_server_ms": 188.85132244655065,
+        "mean_prompt_tokens": 591.4285714285714,
+        "mean_cached_tokens": 288,
+        "labelled_decisions": 21,
+        "correct": 21,
+        "server_median_ms": 187.150239944458
+      },
+      {
+        "questions": 1,
+        "mode": "same_image",
+        "requests": 21,
+        "mean_http_ms": 131.181389858414,
+        "mean_server_ms": 128.6937395731608,
+        "mean_prompt_tokens": 591.4285714285714,
+        "mean_cached_tokens": 576,
+        "labelled_decisions": 21,
+        "correct": 21,
+        "server_median_ms": 125.93507766723633
+      },
+      {
+        "questions": 8,
+        "mode": "empty",
+        "requests": 21,
+        "mean_http_ms": 230.36900724816536,
+        "mean_server_ms": 227.79573713030135,
+        "mean_prompt_tokens": 989.4285714285714,
+        "mean_cached_tokens": 0,
+        "labelled_decisions": 66,
+        "correct": 59,
+        "server_median_ms": 226.9299030303955
+      },
+      {
+        "questions": 8,
+        "mode": "different_image",
+        "requests": 21,
+        "mean_http_ms": 231.26975539517366,
+        "mean_server_ms": 228.70526994977678,
+        "mean_prompt_tokens": 989.4285714285714,
+        "mean_cached_tokens": 672,
+        "labelled_decisions": 66,
+        "correct": 62,
+        "server_median_ms": 227.94842720031738
+      },
+      {
+        "questions": 8,
+        "mode": "same_image",
+        "requests": 21,
+        "mean_http_ms": 164.75347008755696,
+        "mean_server_ms": 162.16836656842912,
+        "mean_prompt_tokens": 989.4285714285714,
+        "mean_cached_tokens": 969.1428571428571,
+        "labelled_decisions": 66,
+        "correct": 61,
+        "server_median_ms": 164.69359397888184
+      },
+      {
+        "questions": 24,
+        "mode": "empty",
+        "requests": 21,
+        "mean_http_ms": 427.7983116695569,
+        "mean_server_ms": 424.627803620838,
+        "mean_prompt_tokens": 2033.2857142857142,
+        "mean_cached_tokens": 64,
+        "labelled_decisions": 129,
+        "correct": 117,
+        "server_median_ms": 421.431303024292
+      },
+      {
+        "questions": 24,
+        "mode": "different_image",
+        "requests": 21,
+        "mean_http_ms": 435.5391412862532,
+        "mean_server_ms": 432.44553747631255,
+        "mean_prompt_tokens": 2033.2857142857142,
+        "mean_cached_tokens": 1120,
+        "labelled_decisions": 129,
+        "correct": 117,
+        "server_median_ms": 436.86532974243164
+      },
+      {
+        "questions": 24,
+        "mode": "same_image",
+        "requests": 21,
+        "mean_http_ms": 358.05573271742713,
+        "mean_server_ms": 354.8895858582996,
+        "mean_prompt_tokens": 2033.2857142857142,
+        "mean_cached_tokens": 1984,
+        "labelled_decisions": 129,
+        "correct": 117,
+        "server_median_ms": 345.34215927124023
+      }
+    ],
+    "cache_top_answer_changes": [
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "cat",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.37669859693813906
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "cat",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "front",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.29269857736572386
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "bird",
+        "mode": "same_image",
+        "question": "posture",
+        "empty_answer": "sitting",
+        "cached_answer": "standing",
+        "max_probability_delta": 0.17858337885773343
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "bird",
+        "mode": "different_image",
+        "question": "posture",
+        "empty_answer": "sitting",
+        "cached_answer": "other",
+        "max_probability_delta": 0.15260782976932247
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "bird",
+        "mode": "same_image",
+        "question": "posture",
+        "empty_answer": "sitting",
+        "cached_answer": "other",
+        "max_probability_delta": 0.2833683899214255
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "bird",
+        "mode": "different_image",
+        "question": "posture",
+        "empty_answer": "sitting",
+        "cached_answer": "other",
+        "max_probability_delta": 0.15281627790071267
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "cat",
+        "mode": "same_image",
+        "question": "coat_colour",
+        "empty_answer": "brown",
+        "cached_answer": "gray",
+        "max_probability_delta": 0.5546057942347107
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "cat",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.5927701579382358
+      },
+      {
+        "repeat": 2,
+        "questions": 8,
+        "image": "fox",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.11085236191336006
+      },
+      {
+        "repeat": 2,
+        "questions": 8,
+        "image": "fox",
+        "mode": "different_image",
+        "question": "coat_colour",
+        "empty_answer": "tan_cream",
+        "cached_answer": "red_ginger",
+        "max_probability_delta": 0.4054334270515454
+      },
+      {
+        "repeat": 2,
+        "questions": 8,
+        "image": "fox",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.202434284039674
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "horse",
+        "mode": "same_image",
+        "question": "has_collar",
+        "empty_answer": "yes",
+        "cached_answer": "no",
+        "max_probability_delta": 0.34061647480658097
+      },
+      {
+        "repeat": 1,
+        "questions": 8,
+        "image": "fox",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "front",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.1114329252022585
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "rabbit",
+        "mode": "different_image",
+        "question": "coat_pattern",
+        "empty_answer": "other",
+        "cached_answer": "solid",
+        "max_probability_delta": 0.34202000220466433
+      },
+      {
+        "repeat": 0,
+        "questions": 8,
+        "image": "fox",
+        "mode": "different_image",
+        "question": "coat_colour",
+        "empty_answer": "red_ginger",
+        "cached_answer": "brown",
+        "max_probability_delta": 0.17769729278836055
+      },
+      {
+        "repeat": 0,
+        "questions": 8,
+        "image": "fox",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.17261548521332615
+      },
+      {
+        "repeat": 0,
+        "questions": 8,
+        "image": "horse",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.3277212434459796
+      },
+      {
+        "repeat": 0,
+        "questions": 8,
+        "image": "horse",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.19307318841119359
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "bird",
+        "mode": "different_image",
+        "question": "posture",
+        "empty_answer": "sitting",
+        "cached_answer": "other",
+        "max_probability_delta": 0.4991172430194182
+      },
+      {
+        "repeat": 2,
+        "questions": 8,
+        "image": "deer",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "side",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.4350155585585586
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "fox",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.329961460846835
+      },
+      {
+        "repeat": 2,
+        "questions": 24,
+        "image": "fox",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "front",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.30865127191195774
+      },
+      {
+        "repeat": 1,
+        "questions": 8,
+        "image": "dog",
+        "mode": "different_image",
+        "question": "posture",
+        "empty_answer": "walking_running",
+        "cached_answer": "standing",
+        "max_probability_delta": 0.15815217428764405
+      },
+      {
+        "repeat": 1,
+        "questions": 8,
+        "image": "dog",
+        "mode": "same_image",
+        "question": "posture",
+        "empty_answer": "walking_running",
+        "cached_answer": "standing",
+        "max_probability_delta": 0.26361650134598014
+      },
+      {
+        "repeat": 2,
+        "questions": 8,
+        "image": "cat",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.11690802892627128
+      },
+      {
+        "repeat": 1,
+        "questions": 8,
+        "image": "horse",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.17406105085682005
+      },
+      {
+        "repeat": 1,
+        "questions": 8,
+        "image": "horse",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.25037505354859624
+      },
+      {
+        "repeat": 2,
+        "questions": 8,
+        "image": "dog",
+        "mode": "same_image",
+        "question": "posture",
+        "empty_answer": "walking_running",
+        "cached_answer": "standing",
+        "max_probability_delta": 0.2114568822285075
+      },
+      {
+        "repeat": 2,
+        "questions": 8,
+        "image": "dog",
+        "mode": "different_image",
+        "question": "posture",
+        "empty_answer": "walking_running",
+        "cached_answer": "standing",
+        "max_probability_delta": 0.3162494832419734
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "fox",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.339900419353677
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "fox",
+        "mode": "different_image",
+        "question": "not_truncated",
+        "empty_answer": "yes",
+        "cached_answer": "no",
+        "max_probability_delta": 0.8484907107679974
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "fox",
+        "mode": "same_image",
+        "question": "coat_colour",
+        "empty_answer": "tan_cream",
+        "cached_answer": "brown",
+        "max_probability_delta": 0.21533582588120237
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "fox",
+        "mode": "same_image",
+        "question": "view",
+        "empty_answer": "front_three_quarter",
+        "cached_answer": "front",
+        "max_probability_delta": 0.3063733142642706
+      },
+      {
+        "repeat": 1,
+        "questions": 24,
+        "image": "fox",
+        "mode": "same_image",
+        "question": "not_truncated",
+        "empty_answer": "yes",
+        "cached_answer": "no",
+        "max_probability_delta": 0.8208348564659711
+      },
+      {
+        "repeat": 0,
+        "questions": 24,
+        "image": "cat",
+        "mode": "different_image",
+        "question": "view",
+        "empty_answer": "front",
+        "cached_answer": "front_three_quarter",
+        "max_probability_delta": 0.34536685309642107
+      },
+      {
+        "repeat": 0,
+        "questions": 8,
+        "image": "dog",
+        "mode": "different_image",
+        "question": "posture",
+        "empty_answer": "walking_running",
+        "cached_answer": "standing",
+        "max_probability_delta": 0.21492954353598448
+      }
+    ],
+    "max_probability_delta": 0.8484907107679974,
+    "within_condition_repeats": {
+      "empty": {
+        "max_probability_delta": 0.7388243359181357,
+        "mean_absolute_probability_delta": 0.009357131781821182,
+        "top_answer_changes": 9,
+        "question_comparisons": 462
+      },
+      "different_image": {
+        "max_probability_delta": 0.7967563830164798,
+        "mean_absolute_probability_delta": 0.009338110244617528,
+        "top_answer_changes": 10,
+        "question_comparisons": 462
+      },
+      "same_image": {
+        "max_probability_delta": 0.7544996546241478,
+        "mean_absolute_probability_delta": 0.008575289167731516,
+        "top_answer_changes": 13,
+        "question_comparisons": 462
+      }
+    },
+    "cross_condition_question_comparisons": 1386,
+    "species_correct": 189,
+    "target_requests": 189
+  }
+}

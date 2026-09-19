@@ -24,7 +24,10 @@ Tested on 19 September 2026 with **DiffusionGemma 26B-A4B NVFP4 on one RTX 5090
 (32 GB)**. Each animal photo was sent with **24 questions**, including a species
 question offering **all 24 classes** from `wm_animals/animal_taxonomy.json`.
 The taxonomy supplies labels; the exact question wording below was written for
-this experiment. One sample, no generated thought, eager execution, canvas 64.
+this experiment. One sample, no generated thought, eager execution, canvas 64,
+automatic FP8 KV cache. These are the original single-sweep results; the
+[follow-up stability findings](#score-stability-is-still-unresolved) are important
+when interpreting the attribute probabilities.
 
 ### Animal results
 
@@ -303,6 +306,118 @@ uv pip install pybase64
 - [Exact model revision, adapter hash, hardware, and settings](examples/features/diffusion_reads/evaluation/run.json)
 - [Photo creators and licenses](examples/features/diffusion_reads/evaluation/ATTRIBUTION.md)
 - [Download URLs and image checksums](examples/features/diffusion_reads/evaluation/sources.json)
+
+## Can the prompts be processed once for many images?
+
+**Yes: the fixed question prefix can be reused through the GPU KV cache.**
+The adapter already sends the questions before the image and the bootstrap
+enables prefix caching. Changing the image preserves eligible question-prefix
+blocks, while image-dependent work and answer scoring still run. This follows
+the model’s causal prefill design and was confirmed by actual cached-token counts.
+
+```mermaid
+flowchart LR
+    Q["Fixed questions: cached prefix"] --> P["Image-dependent prefill"]
+    I["New image: vision encoding"] --> P
+    P --> A["Score all answer slots"]
+    Q --> A
+```
+
+It is not literally image-encoder-only inference. New image tokens and answer
+slots still attend to the cached text, and the current HTTP API resends the
+schema. Cache entries can be evicted or lost on restart. See the
+[mechanism and sources](examples/features/diffusion_reads/evaluation/PROMPT_REUSE.md#what-can-be-reused).
+
+### Measured reuse across different images
+
+This follow-up started **after the photo evaluation was pushed and its instance
+destroyed**. A separately budgeted instance ran the benchmark locally, eliminating
+SSH upload time. Each cell below contains 21 target requests: seven photos ×
+three repetitions. Prefix, image-processor, and encoder caches were reset before
+each arm; priming requests and kernel warmups are excluded from target timing.
+
+| Questions | Empty caches | Same prompts, different primer image | Repeated identical image | Cached tokens with different image |
+| --- | --- | --- | --- | --- |
+| 1 | 187.9 ms | 187.5 ms | 124.7 ms | 288 |
+| 8 | 227.4 ms | 227.4 ms | 164.2 ms | 672 |
+| 24 | 418.2 ms | 414.8 ms | 346.0 ms | 1120 |
+
+These are mean adapter times using the checkpoint’s automatic **FP8 KV cache**.
+Cached tokens are summed across reads, not unique tokens. The 24-question empty
+arm already reuses 64 tokens between its own chunks.
+
+**Prompt reuse worked, but produced no meaningful latency improvement in this
+small, eager, concurrency-one workload.** For 24 questions, 418 ms became 415 ms.
+The much larger saving for an identical image includes image reuse and should
+not be used to price a stream of new images. At the quoted $0.82778/hour, 415 ms
+is approximately **$0.095 per 1,000 new-image requests** for occupied server time,
+excluding startup, idle time, transfers, and other rental overhead.
+
+This does not establish that prefix caching is useless for longer prompts or
+batched workloads. Those cases were not measured. A repeated-image benchmark
+alone would have overstated the benefit for this particular use case.
+
+### Score stability is still unresolved
+
+All **441 measured research requests classified species correctly**, but these
+are repeated requests over the same seven photos, not 441 independent test images.
+Some attribute scores changed substantially across cache conditions **and between
+fixed-seed repeats within the same condition**. For example, the fox’s
+`not_truncated: yes` score changed from 3.63% to 97.49% in one cross-condition pair.
+
+The main experiment was repeated with **BF16 KV storage**, keeping the NVFP4 weights
+and MoE backend unchanged. That did not eliminate the instability:
+
+| KV / prompt configuration | Changed top answers across cache arms | Largest probability change |
+| --- | --- | --- |
+| FP8 / own chunks | 59/1386 | 93.86 percentage points |
+| FP8 / shared prompt | 38/1008 | 84.64 percentage points |
+| BF16 / own chunks | 36/1386 | 84.85 percentage points |
+
+Each cached arm is compared with its paired empty-cache arm. These counts include
+all queried attributes, including ones without manual ground truth. They measure
+prediction changes, not errors. Within-condition repeats also vary, so this does
+not isolate prefix caching as the cause. The runtime/numerical source remains
+unresolved; changing KV precision alone is not a demonstrated fix. Treat the
+single-sweep photo results as examples, not stable calibrated confidence.
+
+BF16 also showed no new-image latency benefit: roughly 425 ms empty versus 432 ms
+with a different-image primer for 24 questions. The existing `chunk_prompt: shared`
+mode was tested separately with FP8: roughly 426 ms empty versus 413 ms primed.
+It did not establish a useful improvement over the default. Its 2,624 cached tokens
+were already present in the empty arm through reuse between the three chunks;
+the different-image primer added no reported cached tokens in that configuration.
+
+### Practical direction
+
+For this adapter, keep stable question text and order before each new image, and
+keep prefix caching enabled. It avoids repeated prefix computation where cache
+blocks are available, but these measurements do not justify promising a large
+speedup or invariant attribute scores. Investigate output stability before using
+confidence thresholds for decisions.
+
+For the stricter requirement—**encode the text once, then run only an image
+encoder plus a small scoring operation**—a dual encoder such as SigLIP2 is a
+different architecture worth comparing for fixed species/attribute prompts. It
+stores text embeddings and compares each new image embedding against them. It
+does not provide the same general question-answer behavior or automatically
+calibrated scores; no dual-encoder benchmark was run here. See the
+[alternative and limitations](examples/features/diffusion_reads/evaluation/PROMPT_REUSE.md#if-the-requirement-is-literally-text-encoding-once).
+
+### Research artifacts and cost
+
+The research instance was destroyed after **21.7 minutes**. The observed credit
+decrease was **$0.38**, well within the separate $5 budget; time at the
+quoted rate was about **$0.30**. Billing snapshots can lag. The final account
+check reported **zero instances**.
+
+- [Protocol, architecture, sources, and reproduction commands](examples/features/diffusion_reads/evaluation/PROMPT_REUSE.md)
+- [FP8 cache experiment: all 189 target requests](examples/features/diffusion_reads/evaluation/prefix-results.json)
+- [Shared-prompt experiment: all 63 target requests](examples/features/diffusion_reads/evaluation/prefix-shared-results.json)
+- [BF16 cache experiment: all 189 target requests](examples/features/diffusion_reads/evaluation/prefix-bf16-results.json)
+- [Accuracy and stability analysis](examples/features/diffusion_reads/evaluation/prefix-analysis.json)
+- [Analysis script](examples/features/diffusion_reads/evaluation/analyze_prefix.py)
+- [Research configuration and teardown record](examples/features/diffusion_reads/evaluation/prefix-run.json)
 
 ## First GPU smoke test
 

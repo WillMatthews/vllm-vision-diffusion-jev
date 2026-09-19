@@ -878,6 +878,11 @@ def decide(schema, state_content, seed):
             (b["diagnostics"].get("prompt_tokens") or 0) for b, _ in parts
         )
         or None,
+        "upstream_usage": [
+            usage
+            for body, _ in parts
+            for usage in body["diagnostics"]["upstream_usage"]
+        ],
         "questions": diag_q,
         "engine": "vllm",
     }
@@ -1023,6 +1028,7 @@ def decide_group(schema, sys_text, state_content, seed, prefix=None, lead=""):
             "timing": {"total_ms": elapsed_ms, "reads": n},
             "thought": thought,
             "prompt_tokens": prompt_tokens,
+            "upstream_usage": usages,
             "questions": diag_q,
             "engine": "vllm",
         },

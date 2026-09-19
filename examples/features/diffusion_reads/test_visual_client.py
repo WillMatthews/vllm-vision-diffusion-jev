@@ -13,13 +13,51 @@ import threading
 import unittest
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+from unittest.mock import patch
 
 import pybase64 as base64
-from structured_server import answer_text, parse_schema
+from structured_server import answer_text, decide, parse_schema
 from visual_client import distributions, metrics, read_image
 
 
 class VisualClientTests(unittest.TestCase):
+    def test_cache_usage_keeps_every_sample_from_every_chunk(self):
+        schema = parse_schema(
+            {
+                "samples": 2,
+                "questions": [{"id": str(i), "type": "noul"} for i in range(2)],
+            }
+        )
+        usages = [
+            {"prompt_tokens": 100, "prompt_tokens_details": {"cached_tokens": i * 16}}
+            for i in range(4)
+        ]
+        slot = {
+            "probs": [0.8, 0.2],
+            "entropy": 0.5,
+            "label_mass": 0.9,
+            "argmax_is_label": True,
+        }
+
+        def fake_reads(sub, *args):
+            index = int(sub["questions"][0]["id"]) * 2
+            return [[slot], [slot]], usages[index : index + 2]
+
+        with (
+            patch(
+                "structured_server.chunk_groups",
+                return_value=[[q] for q in schema["questions"]],
+            ),
+            patch(
+                "structured_server.template_for",
+                return_value=([10], [{"pos": 0, "label_ids": [1, 2]}]),
+            ),
+            patch("structured_server.read_many", side_effect=fake_reads),
+        ):
+            result, _ = decide(schema, "test state", 0)
+        self.assertEqual(result["diagnostics"]["upstream_usage"], usages)
+        self.assertEqual(result["diagnostics"]["timing"]["reads"], 4)
+
     def test_many_named_questions_keep_a_delimiter_before_labels(self):
         questions = [
             {"id": f"has_collar_{i}", "type": "noul", "instructions": "Collar visible?"}
