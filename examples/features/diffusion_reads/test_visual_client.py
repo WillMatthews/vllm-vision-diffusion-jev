@@ -16,11 +16,124 @@ from pathlib import Path
 from unittest.mock import patch
 
 import pybase64 as base64
-from structured_server import answer_text, decide, parse_schema
+from evaluation import analyze_cost, cost_benchmark
+from structured_server import answer_text, decide, jev_schema, parse_schema
 from visual_client import distributions, metrics, read_image
 
 
 class VisualClientTests(unittest.TestCase):
+    def test_compact_schema_preserves_question_meanings_and_dependencies(self):
+        schema = {
+            "ask": ["animal", "collar"],
+            "state": {"context": "inspect animal"},
+            "questions": {
+                "animal": {"type": "noul", "instructions": "Animal visible?"},
+                "collar": {
+                    "type": "noul",
+                    "instructions": "Collar visible?",
+                    "depends_on": ["animal"],
+                    "ask_if": {"animal": ["yes"]},
+                },
+            },
+        }
+        original = json.dumps(schema)
+        for layout, first, second in (("numeric", "0", "1"), ("short", "q0", "q1")):
+            with self.subTest(layout=layout):
+                compact, names = cost_benchmark.remap_schema(schema, layout)
+                self.assertEqual(names, {first: "animal", second: "collar"})
+                self.assertEqual(compact["ask"], [first, second])
+                self.assertEqual(compact["state"], schema["state"])
+                self.assertEqual(
+                    compact["questions"][first], schema["questions"]["animal"]
+                )
+                self.assertEqual(
+                    compact["questions"][second],
+                    {
+                        **schema["questions"]["collar"],
+                        "depends_on": [first],
+                        "ask_if": {first: ["yes"]},
+                    },
+                )
+                jev_schema(compact)
+        self.assertEqual(json.dumps(schema), original)
+
+    def test_cost_uses_sweep_wall_time_even_when_request_latencies_overlap(self):
+        records = [
+            {
+                "suite": "toy",
+                "image": str(i),
+                "repeat": 0,
+                "expected": {"animal": "yes"},
+                "probabilities": {"animal": {"yes": 0.8, "no": 0.2}},
+                "latency_ms": 9000,
+                "diagnostics": {"timing": {"total_ms": 8000}},
+            }
+            for i in range(2)
+        ]
+        sweeps = [{"seconds": 10, "images": 2}]
+        offline = analyze_cost.summarize(
+            {
+                "records": records,
+                "sweeps": sweeps,
+                "settings": {"tag": "toy", "repeats": 1, "hourly_usd": 0.72},
+            }
+        )
+        online = cost_benchmark.summarize(records, sweeps, 0.72)
+        for result in (online, offline):
+            self.assertAlmostEqual(result["images_per_second"], 0.2)
+            self.assertAlmostEqual(result["usd_per_million_images"], 1000)
+
+    def test_repeats_are_paired_by_identity_and_first_observation_counts_once(self):
+        records = [
+            {
+                "suite": "toy",
+                "image": "same-image",
+                "repeat": repeat,
+                "expected": {"animal": "yes"},
+                "probabilities": {"animal": {"yes": p, "no": 1 - p}},
+            }
+            for repeat, p in enumerate((0.8, 0.2))
+        ]
+        baseline = {
+            "records": records,
+            "sweeps": [{"seconds": 1, "images": 1}] * 2,
+            "settings": {"tag": "toy", "repeats": 2, "hourly_usd": 1},
+        }
+        summary = analyze_cost.summarize(baseline)
+        self.assertEqual(summary["unique_images"], 1)
+        self.assertEqual(summary["quality_first_observation"]["decisions"], 1)
+        self.assertEqual(summary["quality_first_observation"]["accuracy"], 1)
+        self.assertEqual(summary["quality_all_repeats"]["accuracy"], 0.5)
+        comparison = analyze_cost.paired_comparison(
+            baseline, {"records": list(reversed(records))}
+        )
+        self.assertEqual(comparison["matched_decisions"], 2)
+        self.assertEqual(comparison["mean_candidate_minus_baseline"]["accuracy"], 0)
+        self.assertFalse(comparison["regressions"])
+        self.assertEqual(comparison["max_probability_delta"], 0)
+        with self.assertRaisesRegex(ValueError, "duplicate decision"):
+            analyze_cost.decisions(records * 2)
+
+    def test_cost_summary_accepts_conditionally_skipped_answers(self):
+        records = [
+            {
+                "suite": "toy",
+                "image": "same-image",
+                "repeat": repeat,
+                "expected": {"collar": "yes"},
+                "probabilities": {"collar": probs},
+                "latency_ms": 1,
+                "diagnostics": {"timing": {"total_ms": 1}},
+            }
+            for repeat, probs in enumerate((None, {"yes": 0.8, "no": 0.2}))
+        ]
+        summary = cost_benchmark.summarize(records, [{"seconds": 1, "images": 2}], 1)
+        self.assertEqual(summary["quality"]["skipped_decisions"], 1)
+        self.assertEqual(summary["quality"]["accuracy"], 1)
+        self.assertFalse(summary["errors"])
+        self.assertEqual(summary["repeat_stability"]["question_comparisons"], 0)
+        self.assertEqual(summary["repeat_stability"]["skip_status_changes"], 1)
+
     def test_cache_usage_keeps_every_sample_from_every_chunk(self):
         schema = parse_schema(
             {

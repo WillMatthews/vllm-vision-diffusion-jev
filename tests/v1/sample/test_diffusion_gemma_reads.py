@@ -3,12 +3,15 @@
 """Per-request DiffusionGemma state behind structured reads: seed canvases,
 read-only slots and the per-slot step cap."""
 
+from types import SimpleNamespace
+
 import numpy as np
 import pytest
 import torch
 
 from vllm.model_executor.models.diffusion_gemma import (
     DiffusionGemmaRequestStates,
+    DiffusionSampler,
     _compiled_sample_step,
 )
 from vllm.platforms import current_platform
@@ -38,6 +41,57 @@ def _states() -> DiffusionGemmaRequestStates:
 def _slots(*idx: int) -> tuple[np.ndarray, torch.Tensor]:
     slots = np.array(idx, dtype=np.int64)
     return slots, torch.tensor(slots, device="cuda")
+
+
+@pytest.mark.parametrize("scheduled", [(2, 2), (2, 4), (4, 4)])
+def test_prefill_without_logits_preserves_state_and_rng(scheduled):
+    """Removing unused projection rows must preserve chunk completion and RNG."""
+    snapshots = []
+    with torch.random.fork_rng(devices=[torch.accelerator.current_device_index()]):
+        for rows in (2, 0):
+            torch.manual_seed(123)
+            states = _states()
+            for slot in (2, 0):
+                states.add_request(slot)
+            states.set_seed_canvas(2, list(range(CL)))
+            states.set_read_only(2)
+            sampler = DiffusionSampler.__new__(DiffusionSampler)
+            sampler.diffusion_states = states
+            sampler.canvas_length = CL
+            sampler.req_states = SimpleNamespace(
+                draft_tokens=torch.zeros(MAX_REQS, CL, device="cuda", dtype=torch.int64)
+            )
+            sampler._sampled = torch.ones(2, CL, device="cuda", dtype=torch.int64)
+            sampler._num_sampled = torch.ones(2, device="cuda", dtype=torch.int32)
+            batch = SimpleNamespace(
+                num_reqs=2,
+                num_draft_tokens=0,
+                idx_mapping_np=np.array([2, 0]),
+                num_computed_prefill_tokens_np=np.array([0, 0]),
+                num_scheduled_tokens=np.array(scheduled),
+                prefill_len_np=np.array([4, 4]),
+            )
+            output = sampler(
+                torch.full((rows, VOCAB), float("nan"), device="cuda"), batch
+            )
+            assert output.logprobs_tensors is None
+            assert output.num_nans is None
+            snapshot = {
+                name: value.clone()
+                for name, value in vars(states).items()
+                if isinstance(value, torch.Tensor)
+            }
+            snapshot.update(
+                draft_tokens=sampler.req_states.draft_tokens.clone(),
+                sampled=output.sampled_token_ids.clone(),
+                num_sampled=output.num_sampled.clone(),
+                num_rejected=output.num_rejected.clone(),
+                rng=torch.cuda.get_rng_state(),
+            )
+            snapshots.append(snapshot)
+    assert snapshots[0].keys() == snapshots[1].keys()
+    for name in snapshots[0]:
+        assert torch.equal(snapshots[0][name], snapshots[1][name]), name
 
 
 def test_seed_canvas_replaces_only_seeded_slots():

@@ -1,0 +1,261 @@
+{
+  "date": "2026-09-20",
+  "gpu": "RTX 4090",
+  "disk_gb": 100,
+  "hourly_usd_including_disk": 0.4585185185185185,
+  "candidates_rented": 1,
+  "rejected_candidates": 0,
+  "preflight": {
+    "phase": "preflight",
+    "passed": true,
+    "stages": {
+      "capacity": {
+        "metrics": {
+          "disk_free_gib": 99.65480422973633,
+          "host_memory_total_gib": 251.50951766967773,
+          "host_memory_available_gib": 120.32956314086914,
+          "cgroup_memory_limit_gib": 120.7236328125,
+          "cpu_count": 64
+        },
+        "failures": []
+      },
+      "disk": {
+        "metrics": {
+          "bytes": 1073741824,
+          "write_fsync_mib_s": 3155.143233912947,
+          "advised_cold_read_mib_s": 4960.120054008482,
+          "random_4k_iops": 19193.548978957635,
+          "eviction": "POSIX_FADV_DONTNEED (advisory)",
+          "readback_correct": true
+        },
+        "failures": []
+      },
+      "network": {
+        "metrics": {
+          "bytes": 134217728,
+          "seconds": 0.9345280611887574,
+          "download_mib_s": 136.96752972530203,
+          "http_status": 206,
+          "source_host": "huggingface.co"
+        },
+        "failures": []
+      }
+    },
+    "thresholds": {
+      "capacity": {
+        "disk_free_gib": 30,
+        "host_memory_available_gib": 24
+      },
+      "disk": {
+        "write_fsync_mib_s": 100,
+        "advised_cold_read_mib_s": 150,
+        "random_4k_iops": 500
+      },
+      "network": {
+        "download_mib_s": 25
+      },
+      "gpu": {
+        "total_gib": 22,
+        "bf16_tflops": 50
+      }
+    },
+    "elapsed_seconds": 1.6742243766784668
+  },
+  "full_probe": {
+    "phase": "full",
+    "passed": true,
+    "stages": {
+      "capacity": {
+        "metrics": {
+          "disk_free_gib": 90.56330490112305,
+          "host_memory_total_gib": 251.50951766967773,
+          "host_memory_available_gib": 115.70508193969727,
+          "cgroup_memory_limit_gib": 120.7236328125,
+          "cpu_count": 64
+        },
+        "failures": []
+      },
+      "disk": {
+        "metrics": {
+          "bytes": 1073741824,
+          "write_fsync_mib_s": 2386.6124758538476,
+          "advised_cold_read_mib_s": 2866.0807692536778,
+          "random_4k_iops": 15413.326626062828,
+          "eviction": "POSIX_FADV_DONTNEED (advisory)",
+          "readback_correct": true
+        },
+        "failures": []
+      },
+      "network": {
+        "metrics": {
+          "bytes": 134217728,
+          "seconds": 1.3406533598899841,
+          "download_mib_s": 95.47583576003856,
+          "http_status": 206,
+          "source_host": "huggingface.co"
+        },
+        "failures": []
+      },
+      "gpu": {
+        "metrics": {
+          "name": "NVIDIA GeForce RTX 4090",
+          "torch_version": "2.13.0+cu130",
+          "cuda_version": "13.0",
+          "total_gib": 23.5164794921875,
+          "free_after_probe_gib": 22.861083984375,
+          "correctness_max_abs_error": 0.00390625,
+          "finite": true,
+          "bf16_tflops": 131.57957939420675,
+          "window_min_tflops": 124.85924634625063,
+          "window_max_tflops": 150.036951686718,
+          "seconds": 30.01982177607715,
+          "iterations": 28740
+        },
+        "failures": []
+      }
+    },
+    "thresholds": {
+      "capacity": {
+        "disk_free_gib": 30,
+        "host_memory_available_gib": 24
+      },
+      "disk": {
+        "write_fsync_mib_s": 100,
+        "advised_cold_read_mib_s": 150,
+        "random_4k_iops": 500
+      },
+      "network": {
+        "download_mib_s": 25
+      },
+      "gpu": {
+        "total_gib": 22,
+        "bf16_tflops": 50
+      }
+    },
+    "elapsed_seconds": 36.348297119140625
+  },
+  "training_workload": {
+    "passed": true,
+    "warm_mean_presentation_seconds": 0.11673714841405551,
+    "peak_allocated_gib": 5.016960620880127,
+    "records": [
+      {
+        "presentations": 1,
+        "updates": 1,
+        "mean_loss": 0.20388975739479065,
+        "elapsed_seconds_this_process": 2.4579941034317017,
+        "peak_allocated_gib": 4.762546062469482
+      },
+      {
+        "presentations": 2,
+        "updates": 2,
+        "mean_loss": 1.2535786628723145,
+        "elapsed_seconds_this_process": 2.5826697424054146,
+        "peak_allocated_gib": 5.016723155975342
+      },
+      {
+        "presentations": 3,
+        "updates": 3,
+        "mean_loss": 0.5875078439712524,
+        "elapsed_seconds_this_process": 2.702360974624753,
+        "peak_allocated_gib": 5.016723155975342
+      },
+      {
+        "presentations": 4,
+        "updates": 4,
+        "mean_loss": 0.42888978123664856,
+        "elapsed_seconds_this_process": 2.819032646715641,
+        "peak_allocated_gib": 5.016723155975342
+      },
+      {
+        "presentations": 5,
+        "updates": 5,
+        "mean_loss": 1.75550377368927,
+        "elapsed_seconds_this_process": 2.938412243500352,
+        "peak_allocated_gib": 5.016723155975342
+      },
+      {
+        "presentations": 6,
+        "updates": 6,
+        "mean_loss": 1.8227241039276123,
+        "elapsed_seconds_this_process": 3.0560001898556948,
+        "peak_allocated_gib": 5.016723155975342
+      },
+      {
+        "presentations": 7,
+        "updates": 7,
+        "mean_loss": 0.9265103340148926,
+        "elapsed_seconds_this_process": 3.1741315983235836,
+        "peak_allocated_gib": 5.016960620880127
+      },
+      {
+        "presentations": 8,
+        "updates": 8,
+        "mean_loss": 0.5781499743461609,
+        "elapsed_seconds_this_process": 3.289726414717734,
+        "peak_allocated_gib": 5.016960620880127
+      },
+      {
+        "presentations": 9,
+        "updates": 9,
+        "mean_loss": 1.382475733757019,
+        "elapsed_seconds_this_process": 3.404770194552839,
+        "peak_allocated_gib": 5.016960620880127
+      },
+      {
+        "presentations": 10,
+        "updates": 10,
+        "mean_loss": 0.26217857003211975,
+        "elapsed_seconds_this_process": 3.5193870812654495,
+        "peak_allocated_gib": 5.016960620880127
+      },
+      {
+        "presentations": 11,
+        "updates": 11,
+        "mean_loss": 0.350911408662796,
+        "elapsed_seconds_this_process": 3.640970094129443,
+        "peak_allocated_gib": 5.016960620880127
+      },
+      {
+        "presentations": 12,
+        "updates": 12,
+        "mean_loss": 0.5500167012214661,
+        "elapsed_seconds_this_process": 3.7577596185728908,
+        "peak_allocated_gib": 5.016960620880127
+      },
+      {
+        "presentations": 13,
+        "updates": 13,
+        "mean_loss": 0.32045218348503113,
+        "elapsed_seconds_this_process": 3.873439866118133,
+        "peak_allocated_gib": 5.016960620880127
+      },
+      {
+        "presentations": 14,
+        "updates": 14,
+        "mean_loss": 0.8998836278915405,
+        "elapsed_seconds_this_process": 3.9911680165678263,
+        "peak_allocated_gib": 5.016960620880127
+      },
+      {
+        "presentations": 15,
+        "updates": 15,
+        "mean_loss": 0.22692805528640747,
+        "elapsed_seconds_this_process": 4.106173126026988,
+        "peak_allocated_gib": 5.016960620880127
+      },
+      {
+        "presentations": 16,
+        "updates": 16,
+        "mean_loss": 0.27641332149505615,
+        "elapsed_seconds_this_process": 4.219878427684307,
+        "peak_allocated_gib": 5.016960620880127
+      }
+    ],
+    "thresholds": {
+      "max_seconds": 0.4,
+      "max_peak_gib": 18
+    }
+  },
+  "scope": "Machine admission only; no held-out quality conclusion."
+}

@@ -7,11 +7,15 @@ apt-get update -qq
 apt-get install -y -qq python3.12-dev build-essential ninja-build cmake
 command -v uv >/dev/null || { curl -LsSf https://astral.sh/uv/install.sh | sh; }
 export PATH="$HOME/.local/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-gnu:${LD_LIBRARY_PATH:-}"
+export MAX_JOBS="${MAX_JOBS:-6}"
 if [ ! -x .venv/bin/python ]; then uv venv --python 3.12; fi
 export VLLM_USE_PRECOMPILED=1
 export VLLM_PRECOMPILED_WHEEL_COMMIT=a1bf8ac12d9f1537ff2d233f5ab3d1346fd8bd44
 export VLLM_PRECOMPILED_WHEEL_VARIANT=cu130
 if [ ! -x .venv/bin/vllm ]; then uv pip install -e . --torch-backend=cu130; fi
+uv pip install --no-deps 'flashinfer-jit-cache==0.6.18.post1+cu130' \
+    --index-url https://flashinfer.ai/whl/cu130
 unset VLLM_USE_PRECOMPILED VLLM_PRECOMPILED_WHEEL_COMMIT VLLM_PRECOMPILED_WHEEL_VARIANT
 .venv/bin/python -c 'import torch, vllm; print(torch.__version__, torch.cuda.get_device_name()); print(vllm.__file__)'
 if [ -f /workspace/visjev-kernel-cache.tar.gz ]; then

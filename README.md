@@ -419,6 +419,46 @@ check reported **zero instances**.
 - [Analysis script](examples/features/diffusion_reads/evaluation/analyze_prefix.py)
 - [Research configuration and teardown record](examples/features/diffusion_reads/evaluation/prefix-run.json)
 
+## Inference-cost optimization
+
+The [completed cost experiment report](examples/features/diffusion_reads/evaluation/COST_OPTIMIZATION.md)
+records 74 benchmark runs on RTX 5090 and 4090 rentals with the same NVFP4
+checkpoint. Batching, CUDA graphs and the cheaper 4090 reduced occupied inference
+cost from **$83.86 to $23.08 per million images (72.5%)** on the nine-photo mixed
+workload. These localhost estimates exclude startup and idle time and require
+concurrent demand; p95 request latency increased from 417 ms to 1579 ms.
+
+**This did not preserve measured quality.** The 4090 matched aggregate tuning
+accuracy, but made additional attribute mistakes on the separately annotated
+holdout. Smaller image-token budgets also introduced a bird-to-opossum error.
+Serving defaults remain unchanged. The branch retains an upstream fix that skips
+unused diffusion-prefill vocabulary projection, with focused contract tests.
+An isolated follow-up found only a 0.28% apparent saving, within run variation.
+
+Observed experiment spend was **$2.54 of the $6 budget**; all three rentals were
+destroyed and zero remaining instances confirmed. The report links raw results,
+rejected experiments, reproduction commands and quality limitations.
+
+The subsequent [generic-model feasibility study](examples/features/diffusion_reads/evaluation/GENERIC_FEASIBILITY.md)
+tested a shared Qwen3-VL-2B scorer conditioned on new questions/options, rather
+than fixed per-question heads. LoRA optimizer updates worked in 4.7–6.0 GiB on a
+4090. A batched 24-question diagnostic reached 361 ms (about $48/million occupied
+requests), but failed probability-equivalence checks and is not a validated
+replacement. The reused fixtures scored 89/91 labelled decisions before training;
+they do not establish held-out quality. This separately approved $2 feasibility
+stage used $0.25 observed spending, and both rentals were destroyed.
+
+The subsequent [shared-model training pilot](examples/features/diffusion_reads/evaluation/GENERIC_PILOT.md)
+completed for **$0.88 of the approved $10**, with the rental destroyed. On 4,000
+held-out VQA-derived questions, the trained model scored **90.10%**, versus
+86.63% untrained and 83.18% for the measured DiffusionGemma reference. However,
+four-question requests took about **175 ms versus 180 ms** with unequal HTTP
+overhead: **the 2× cost-reduction target was not met**. This bounded dataset does
+not establish general Jev-level quality. The new [machine screening/retry loop](examples/features/diffusion_reads/vast/README.md)
+checks bandwidth, storage, GPU arithmetic and real training throughput, destroys
+failed hosts before retrying, and enforces attempt, time and spending limits.
+The first $0.4585/hour RTX 4090 passed without retry.
+
 ## First GPU smoke test
 
 On a **32 GB RTX 5090**, using NVIDIA's NVFP4 DiffusionGemma checkpoint, all six

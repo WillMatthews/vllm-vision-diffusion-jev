@@ -1,0 +1,63 @@
+{
+  "branch": "cost-optimization-diffusion",
+  "base_commit": "0323d37edf54cceebdd2cf3203e3d50f10f3efe4",
+  "model": "nvidia/diffusiongemma-26B-A4B-it-NVFP4",
+  "model_revision": "ffc65bb9103ef37ba010cdfe259c2cde5401c579",
+  "benchmark_runs": 66,
+  "validation_runs": 4,
+  "spend_usd_observed": 2.2193425591000002,
+  "billing_note": "Account credit change at teardown; provider posting lag may apply.",
+  "remaining_account_instances": 0,
+  "destroyed_utc": "2026-09-19T23:25:52Z",
+  "quality_preservation_established": false,
+  "frozen_candidates": {
+    "frozen_at": 1789859808.7030792,
+    "configurations": {
+      "5090": {
+        "seqs": 8,
+        "canvas": 64,
+        "memory": 0.8,
+        "graphs": true,
+        "batched_tokens": 4096,
+        "image_only": true,
+        "moe_backend": "auto",
+        "hourly_usd": 0.888888888888889
+      },
+      "4090": {
+        "seqs": 8,
+        "canvas": 64,
+        "memory": 0.94,
+        "graphs": true,
+        "batched_tokens": 2048,
+        "image_only": true,
+        "moe_backend": "marlin",
+        "hourly_usd": 0.4903703703703704
+      }
+    },
+    "image_tokens": 280,
+    "layout": "named",
+    "concurrency": 9,
+    "seeds": [
+      42,
+      43
+    ],
+    "repeats": 5,
+    "source_change": "PR57416 prefill projection only; no sampler or vision compilation patch",
+    "holdout": "unseen predictions; evaluate in mixed ten-image batches; no further tuning after unblinding"
+  },
+  "raw_bundle_sha256": "064da585f8ba15face547a1e369fa40f7a34246ca7dd76e995aae77ba4680303",
+  "followup": {
+    "benchmark_runs": 8,
+    "total_benchmark_runs": 74,
+    "cumulative_spend_usd_observed": 2.523372011100001,
+    "remaining_account_instances": 0,
+    "destroyed_utc": "2026-09-19T23:52:55Z",
+    "bundle_sha256": "b64e697adf76e401fb5b18800ed29998ed64630ebd1aa5a17679874041675824"
+  },
+  "billing_recheck": {
+    "checked_utc": "2026-09-19T23:58:27.284343+00:00",
+    "account_instances": 0,
+    "cumulative_observed_spend_usd": 2.5428737701
+  },
+  "quality_gate_clarification_pending": true
+}

@@ -1,0 +1,1532 @@
+{
+  "unblinded_at": 1789860440.1101992,
+  "unique_tuning_images": 9,
+  "unique_holdout_images": 1,
+  "candidates": {
+    "baseline": {
+      "quality": {
+        "images": 90,
+        "labelled_decisions": 590,
+        "scored_decisions": 590,
+        "skipped_decisions": 0,
+        "accuracy": 0.9508474576271186,
+        "brier": 0.06878500369248884,
+        "nll": 0.1360769194001418,
+        "ece_10_bins": 0.019242032656190816,
+        "threshold": 0.9,
+        "coverage": 0.9169491525423729,
+        "selective_accuracy": 0.9963031423290203,
+        "latency_p50_ms": 373.4337000059895,
+        "latency_p95_ms": 416.79875600675587
+      },
+      "timed_images": 90,
+      "seconds": 30.566593510986422,
+      "images_per_second": 2.9443909072710923,
+      "usd_per_million_images": 83.85896710833039,
+      "animal_only": {
+        "quality": {
+          "images": 35,
+          "labelled_decisions": 215,
+          "scored_decisions": 215,
+          "skipped_decisions": 0,
+          "accuracy": 0.9348837209302325,
+          "brier": 0.0931749673237366,
+          "nll": 0.1573595893639416,
+          "ece_10_bins": 0.030609877056214336,
+          "threshold": 0.9,
+          "coverage": 0.8790697674418605,
+          "selective_accuracy": 0.9947089947089947,
+          "latency_p50_ms": 376.06242499896325,
+          "latency_p95_ms": 423.02902600204106
+        },
+        "images_per_second": 2.6095385985578834,
+        "usd_per_million_images": 94.61963137213841,
+        "mean_server_ms": 377.9969487871443,
+        "suites": {
+          "animals": {
+            "images": 35,
+            "labelled_decisions": 215,
+            "scored_decisions": 215,
+            "skipped_decisions": 0,
+            "accuracy": 0.9348837209302325,
+            "brier": 0.0931749673237366,
+            "nll": 0.1573595893639416,
+            "ece_10_bins": 0.030609877056214336,
+            "threshold": 0.9,
+            "coverage": 0.8790697674418605,
+            "selective_accuracy": 0.9947089947089947,
+            "latency_p50_ms": 376.06242499896325,
+            "latency_p95_ms": 423.02902600204106
+          }
+        },
+        "errors": [
+          {
+            "repeat": 0,
+            "image": "images/fox.jpg",
+            "question": "coat_colour",
+            "expected": "red_ginger",
+            "predicted": "brown",
+            "probability": 0.4100441003433052
+          },
+          {
+            "repeat": 0,
+            "image": "images/bird.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "sitting",
+            "probability": 0.6505002948150252
+          },
+          {
+            "repeat": 0,
+            "image": "images/bird.jpg",
+            "question": "outdoors",
+            "expected": "yes",
+            "predicted": "no",
+            "probability": 0.693694274900365
+          },
+          {
+            "repeat": 0,
+            "image": "images/dog.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "walking_running",
+            "probability": 0.46915140671887934
+          },
+          {
+            "repeat": 1,
+            "image": "images/bird.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "sitting",
+            "probability": 0.3401398514042503
+          },
+          {
+            "repeat": 1,
+            "image": "images/bird.jpg",
+            "question": "outdoors",
+            "expected": "yes",
+            "predicted": "no",
+            "probability": 0.8166121197135991
+          },
+          {
+            "repeat": 1,
+            "image": "images/fox.jpg",
+            "question": "coat_colour",
+            "expected": "red_ginger",
+            "predicted": "brown",
+            "probability": 0.7225409380578495
+          },
+          {
+            "repeat": 2,
+            "image": "images/fox.jpg",
+            "question": "coat_colour",
+            "expected": "red_ginger",
+            "predicted": "tan_cream",
+            "probability": 0.46250330906412623
+          },
+          {
+            "repeat": 2,
+            "image": "images/bird.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "sitting",
+            "probability": 0.6954371893894618
+          },
+          {
+            "repeat": 2,
+            "image": "images/bird.jpg",
+            "question": "outdoors",
+            "expected": "yes",
+            "predicted": "no",
+            "probability": 0.7489229802607003
+          },
+          {
+            "repeat": 3,
+            "image": "images/bird.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "sitting",
+            "probability": 0.4202672518909856
+          },
+          {
+            "repeat": 3,
+            "image": "images/bird.jpg",
+            "question": "outdoors",
+            "expected": "yes",
+            "predicted": "no",
+            "probability": 0.9353023145720363
+          },
+          {
+            "repeat": 4,
+            "image": "images/bird.jpg",
+            "question": "outdoors",
+            "expected": "yes",
+            "predicted": "no",
+            "probability": 0.7983102618212348
+          },
+          {
+            "repeat": 4,
+            "image": "images/fox.jpg",
+            "question": "coat_colour",
+            "expected": "red_ginger",
+            "predicted": "brown",
+            "probability": 0.5424071349833458
+          }
+        ],
+        "repeat_stability": {
+          "top_answer_changes": 19,
+          "question_comparisons": 672,
+          "max_probability_delta": 0.6863556072280087,
+          "skip_status_changes": 0
+        }
+      },
+      "holdout_quality": {
+        "images": 5,
+        "labelled_decisions": 95,
+        "scored_decisions": 95,
+        "skipped_decisions": 0,
+        "accuracy": 0.968421052631579,
+        "brier": 0.050026225424695224,
+        "nll": 0.08806024355010837,
+        "ece_10_bins": 0.0286094717842648,
+        "threshold": 0.9,
+        "coverage": 0.8842105263157894,
+        "selective_accuracy": 1.0,
+        "latency_p50_ms": 441.3832709979033,
+        "latency_p95_ms": 444.1406740079401
+      },
+      "holdout_errors": [
+        {
+          "repeat": 1,
+          "question": "coat_colour",
+          "expected": "other",
+          "answer": "black",
+          "expected_probability": 0.07168139048580502
+        },
+        {
+          "repeat": 2,
+          "question": "coat_colour",
+          "expected": "other",
+          "answer": "black",
+          "expected_probability": 0.11350135691549539
+        },
+        {
+          "repeat": 4,
+          "question": "coat_pattern",
+          "expected": "other",
+          "answer": "solid",
+          "expected_probability": 0.4261877912004265
+        }
+      ],
+      "settings": {
+        "endpoint": "http://127.0.0.1:8011",
+        "upstream": "http://127.0.0.1:8000",
+        "output": "/workspace/results/confirm-baseline-seed42.json",
+        "layout": "named",
+        "concurrency": 1,
+        "repeats": 5,
+        "warmup_sweeps": 2,
+        "seed": 42,
+        "hourly_usd": 0.888888888888889,
+        "tag": "confirm-baseline-seed42",
+        "server_config": {
+          "tag": "confirm-baseline",
+          "cmd": [
+            ".venv/bin/vllm",
+            "serve",
+            "/workspace/model",
+            "--served-model-name",
+            "dgemma",
+            "--host",
+            "127.0.0.1",
+            "--port",
+            "8000",
+            "--max-model-len",
+            "4096",
+            "--diffusion-config",
+            "{\"canvas_length\": 64}",
+            "--max-logprobs",
+            "32",
+            "--max-num-seqs",
+            "1",
+            "--gpu-memory-utilization",
+            "0.9",
+            "--enable-prefix-caching",
+            "--enable-prompt-tokens-details",
+            "--attention-backend",
+            "TRITON_ATTN",
+            "--enforce-eager"
+          ],
+          "pid": 57132,
+          "created": 1789859636.40765,
+          "gpu": "NVIDIA GeForce RTX 5090, 32607 MiB, 595.84"
+        },
+        "suites": [
+          "animals",
+          "generic"
+        ],
+        "transport": "server localhost",
+        "cache_reset": "all three caches before each sweep",
+        "unique_images_per_sweep": 9,
+        "warmup_concurrency": 1,
+        "source_sha256": {
+          "examples/features/diffusion_reads/structured_server.py": "f936f0500b0b63a6b2bacb9cff94416f56e2ee10414e00074c1e3d0ad9d7c2ec",
+          "vllm/model_executor/models/diffusion_gemma.py": "bd51fd54939c8718f49df7f2906327ae364c3f536a90bf2f675fc33aeafa5523",
+          "vllm/v1/worker/gpu/model_runner.py": "2f459b98169a1e5e075226a16c4cc391a4979bc143055099e3be38fb4c02d97f",
+          "examples/features/diffusion_reads/evaluation/cost_benchmark.py": "c68b226a819f3fa599b0d4b09a2be8aa2b9f8ad186f7a09f3c705b4118c0127c"
+        },
+        "input_sha256": {
+          "animal_schema.json": "52572ea05e13a1f67f94a18493d93a00d018a7aff39f69efbbb84a96b877db5e",
+          "animals.jsonl": "44855fd17112080299bc7f95f98f8b18498a94621e9d9a87890a9ca43c9c3234",
+          "generic.jsonl": "9d1c77291c130c845d40fa73cc1f8c830e5cb401686e9db3e5fd6d86f3535dfd",
+          "generic_schema.json": "f4e9aa7e9c4fa657fc948e4e3f776bc6d944f5185cf245603a9f9850bcef20b7",
+          "images/bird.jpg": "1f7ef7234fd33faf806931d252fbd45354a9e235dcccc6d3c1079dd01fc30515",
+          "images/cat.jpg": "9b46595fdf92b4a91d380e6b94721da5a68ec18ace40f4829a29db357d79bda5",
+          "images/coffee.jpg": "f639ce191da7ece0d4eb44eeafb60ab417d025f27a073965d5e1ee0c7ad384c0",
+          "images/deer.jpg": "516aea07e0d649166b96b56944f117f18398b164115a19f5341c0fa62a2dd3ff",
+          "images/dog.jpg": "d4cb12ea8a768582562e1f1c0c930ea6fc4757f5b66551b986b41498efd75ca1",
+          "images/fox.jpg": "4092ca5ff98c73cc9c6c8300bb9b221ba628b6898289b6298098f51a30df3873",
+          "images/horse.jpg": "5247c813d0b000081e6be500ee22b33afe280e09980bd655d7c585ae11f232aa",
+          "images/rabbit.jpg": "228df13d917406804eb7488e3fddf6b6631ddb4514f5d97ed790a9eb1eaa8721",
+          "images/stop.jpg": "9c90f631261200152f8f963c6dad14dcdb665aec59ca509e6e60f15988834f1a"
+        },
+        "adapter_config": {
+          "cmd": [
+            ".venv/bin/python",
+            "examples/features/diffusion_reads/structured_server.py",
+            "--upstream",
+            "http://127.0.0.1:8000",
+            "--model",
+            "dgemma",
+            "--tokenizer",
+            "/workspace/model",
+            "--canvas",
+            "64",
+            "--canvas-step",
+            "16",
+            "--host",
+            "127.0.0.1",
+            "--port",
+            "8011"
+          ],
+          "pid": 58400
+        }
+      }
+    },
+    "5090": {
+      "quality": {
+        "images": 90,
+        "labelled_decisions": 590,
+        "scored_decisions": 590,
+        "skipped_decisions": 0,
+        "accuracy": 0.940677966101695,
+        "brier": 0.07223586801459507,
+        "nll": 0.1355018524694967,
+        "ece_10_bins": 0.029938005623195377,
+        "threshold": 0.9,
+        "coverage": 0.9,
+        "selective_accuracy": 1.0,
+        "latency_p50_ms": 857.9900930053554,
+        "latency_p95_ms": 1009.0279139985796
+      },
+      "timed_images": 90,
+      "seconds": 10.032324800995411,
+      "images_per_second": 8.971001416448376,
+      "usd_per_million_images": 27.52352483126313,
+      "animal_only": {
+        "quality": {
+          "images": 35,
+          "labelled_decisions": 215,
+          "scored_decisions": 215,
+          "skipped_decisions": 0,
+          "accuracy": 0.9116279069767442,
+          "brier": 0.11266035309483627,
+          "nll": 0.19348776512913995,
+          "ece_10_bins": 0.03879470430453521,
+          "threshold": 0.9,
+          "coverage": 0.8604651162790697,
+          "selective_accuracy": 0.9891891891891892,
+          "latency_p50_ms": 775.3628759965068,
+          "latency_p95_ms": 908.0643369961763
+        },
+        "images_per_second": 8.18208478810579,
+        "usd_per_million_images": 30.17734313947091,
+        "mean_server_ms": 723.5383306230817,
+        "suites": {
+          "animals": {
+            "images": 35,
+            "labelled_decisions": 215,
+            "scored_decisions": 215,
+            "skipped_decisions": 0,
+            "accuracy": 0.9116279069767442,
+            "brier": 0.11266035309483627,
+            "nll": 0.19348776512913995,
+            "ece_10_bins": 0.03879470430453521,
+            "threshold": 0.9,
+            "coverage": 0.8604651162790697,
+            "selective_accuracy": 0.9891891891891892,
+            "latency_p50_ms": 775.3628759965068,
+            "latency_p95_ms": 908.0643369961763
+          }
+        },
+        "errors": [
+          {
+            "repeat": 0,
+            "image": "images/deer.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "walking_running",
+            "probability": 0.823657066160017
+          },
+          {
+            "repeat": 0,
+            "image": "images/bird.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "other",
+            "probability": 0.391084153824026
+          },
+          {
+            "repeat": 0,
+            "image": "images/bird.jpg",
+            "question": "outdoors",
+            "expected": "yes",
+            "predicted": "no",
+            "probability": 0.9776561783700264
+          },
+          {
+            "repeat": 0,
+            "image": "images/dog.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "walking_running",
+            "probability": 0.5903379185379221
+          },
+          {
+            "repeat": 1,
+            "image": "images/deer.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "walking_running",
+            "probability": 0.7145882026219702
+          },
+          {
+            "repeat": 1,
+            "image": "images/bird.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "sitting",
+            "probability": 0.4374400737386706
+          },
+          {
+            "repeat": 1,
+            "image": "images/bird.jpg",
+            "question": "outdoors",
+            "expected": "yes",
+            "predicted": "no",
+            "probability": 0.814189038720224
+          },
+          {
+            "repeat": 1,
+            "image": "images/fox.jpg",
+            "question": "coat_colour",
+            "expected": "red_ginger",
+            "predicted": "brown",
+            "probability": 0.5179801607223454
+          },
+          {
+            "repeat": 1,
+            "image": "images/dog.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "walking_running",
+            "probability": 0.3194441476082421
+          },
+          {
+            "repeat": 2,
+            "image": "images/deer.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "walking_running",
+            "probability": 0.48871943372506566
+          },
+          {
+            "repeat": 2,
+            "image": "images/bird.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "sitting",
+            "probability": 0.5815868905782121
+          },
+          {
+            "repeat": 2,
+            "image": "images/bird.jpg",
+            "question": "outdoors",
+            "expected": "yes",
+            "predicted": "no",
+            "probability": 0.9297428934257319
+          },
+          {
+            "repeat": 2,
+            "image": "images/dog.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "walking_running",
+            "probability": 0.3660262309640051
+          },
+          {
+            "repeat": 3,
+            "image": "images/fox.jpg",
+            "question": "coat_colour",
+            "expected": "red_ginger",
+            "predicted": "tan_cream",
+            "probability": 0.6159051258607364
+          },
+          {
+            "repeat": 3,
+            "image": "images/dog.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "walking_running",
+            "probability": 0.7105319117707873
+          },
+          {
+            "repeat": 3,
+            "image": "images/bird.jpg",
+            "question": "outdoors",
+            "expected": "yes",
+            "predicted": "no",
+            "probability": 0.8724102394005112
+          },
+          {
+            "repeat": 3,
+            "image": "images/cat.jpg",
+            "question": "coat_colour",
+            "expected": "brown",
+            "predicted": "gray",
+            "probability": 0.607832821744226
+          },
+          {
+            "repeat": 4,
+            "image": "images/bird.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "sitting",
+            "probability": 0.5530619414309073
+          },
+          {
+            "repeat": 4,
+            "image": "images/fox.jpg",
+            "question": "coat_colour",
+            "expected": "red_ginger",
+            "predicted": "tan_cream",
+            "probability": 0.3973706496749275
+          }
+        ],
+        "repeat_stability": {
+          "top_answer_changes": 24,
+          "question_comparisons": 672,
+          "max_probability_delta": 0.832418417558719,
+          "skip_status_changes": 0
+        }
+      },
+      "holdout_quality": {
+        "images": 5,
+        "labelled_decisions": 95,
+        "scored_decisions": 95,
+        "skipped_decisions": 0,
+        "accuracy": 0.9368421052631579,
+        "brier": 0.09043628521337523,
+        "nll": 0.14405921917940154,
+        "ece_10_bins": 0.052434250240039226,
+        "threshold": 0.9,
+        "coverage": 0.8947368421052632,
+        "selective_accuracy": 0.9882352941176471,
+        "latency_p50_ms": 1049.4525039975997,
+        "latency_p95_ms": 1115.7046299922513
+      },
+      "holdout_errors": [
+        {
+          "repeat": 0,
+          "question": "coat_pattern",
+          "expected": "other",
+          "answer": "solid",
+          "expected_probability": 0.05614066842921256
+        },
+        {
+          "repeat": 1,
+          "question": "exposure",
+          "expected": "yes",
+          "answer": "no",
+          "expected_probability": 0.48804987596333554
+        },
+        {
+          "repeat": 2,
+          "question": "coat_colour",
+          "expected": "other",
+          "answer": "black",
+          "expected_probability": 0.09384666984009331
+        },
+        {
+          "repeat": 2,
+          "question": "coat_pattern",
+          "expected": "other",
+          "answer": "solid",
+          "expected_probability": 0.3053975343666359
+        },
+        {
+          "repeat": 3,
+          "question": "coat_colour",
+          "expected": "other",
+          "answer": "black",
+          "expected_probability": 0.0796214849607274
+        },
+        {
+          "repeat": 4,
+          "question": "coat_pattern",
+          "expected": "other",
+          "answer": "solid",
+          "expected_probability": 0.10604838060095471
+        }
+      ],
+      "settings": {
+        "endpoint": "http://127.0.0.1:8011",
+        "upstream": "http://127.0.0.1:8000",
+        "output": "/workspace/results/confirm-5090-seed42.json",
+        "layout": "named",
+        "concurrency": 9,
+        "repeats": 5,
+        "warmup_sweeps": 2,
+        "seed": 42,
+        "hourly_usd": 0.888888888888889,
+        "tag": "confirm-5090-seed42",
+        "server_config": {
+          "tag": "confirm-5090",
+          "cmd": [
+            ".venv/bin/vllm",
+            "serve",
+            "/workspace/model",
+            "--served-model-name",
+            "dgemma",
+            "--host",
+            "127.0.0.1",
+            "--port",
+            "8000",
+            "--max-model-len",
+            "4096",
+            "--diffusion-config",
+            "{\"canvas_length\": 64}",
+            "--max-logprobs",
+            "32",
+            "--max-num-seqs",
+            "8",
+            "--gpu-memory-utilization",
+            "0.8",
+            "--enable-prefix-caching",
+            "--enable-prompt-tokens-details",
+            "--attention-backend",
+            "TRITON_ATTN",
+            "--max-num-batched-tokens",
+            "4096",
+            "--limit-mm-per-prompt",
+            "{\"image\": 1, \"video\": 0}"
+          ],
+          "pid": 60157,
+          "created": 1789859903.727937,
+          "gpu": "NVIDIA GeForce RTX 5090, 32607 MiB, 595.84"
+        },
+        "suites": [
+          "animals",
+          "generic"
+        ],
+        "transport": "server localhost",
+        "cache_reset": "all three caches before each sweep",
+        "unique_images_per_sweep": 9,
+        "warmup_concurrency": 9,
+        "source_sha256": {
+          "examples/features/diffusion_reads/structured_server.py": "f936f0500b0b63a6b2bacb9cff94416f56e2ee10414e00074c1e3d0ad9d7c2ec",
+          "vllm/model_executor/models/diffusion_gemma.py": "bd51fd54939c8718f49df7f2906327ae364c3f536a90bf2f675fc33aeafa5523",
+          "vllm/v1/worker/gpu/model_runner.py": "16bc45a41afbd0c8660ccf1f8f7c7199f4404dd2a70c46705c8d6e7fa21d03da",
+          "examples/features/diffusion_reads/evaluation/cost_benchmark.py": "c68b226a819f3fa599b0d4b09a2be8aa2b9f8ad186f7a09f3c705b4118c0127c"
+        },
+        "input_sha256": {
+          "animal_schema.json": "52572ea05e13a1f67f94a18493d93a00d018a7aff39f69efbbb84a96b877db5e",
+          "animals.jsonl": "44855fd17112080299bc7f95f98f8b18498a94621e9d9a87890a9ca43c9c3234",
+          "generic.jsonl": "9d1c77291c130c845d40fa73cc1f8c830e5cb401686e9db3e5fd6d86f3535dfd",
+          "generic_schema.json": "f4e9aa7e9c4fa657fc948e4e3f776bc6d944f5185cf245603a9f9850bcef20b7",
+          "images/bird.jpg": "1f7ef7234fd33faf806931d252fbd45354a9e235dcccc6d3c1079dd01fc30515",
+          "images/cat.jpg": "9b46595fdf92b4a91d380e6b94721da5a68ec18ace40f4829a29db357d79bda5",
+          "images/coffee.jpg": "f639ce191da7ece0d4eb44eeafb60ab417d025f27a073965d5e1ee0c7ad384c0",
+          "images/deer.jpg": "516aea07e0d649166b96b56944f117f18398b164115a19f5341c0fa62a2dd3ff",
+          "images/dog.jpg": "d4cb12ea8a768582562e1f1c0c930ea6fc4757f5b66551b986b41498efd75ca1",
+          "images/fox.jpg": "4092ca5ff98c73cc9c6c8300bb9b221ba628b6898289b6298098f51a30df3873",
+          "images/horse.jpg": "5247c813d0b000081e6be500ee22b33afe280e09980bd655d7c585ae11f232aa",
+          "images/rabbit.jpg": "228df13d917406804eb7488e3fddf6b6631ddb4514f5d97ed790a9eb1eaa8721",
+          "images/stop.jpg": "9c90f631261200152f8f963c6dad14dcdb665aec59ca509e6e60f15988834f1a"
+        },
+        "adapter_config": {
+          "cmd": [
+            ".venv/bin/python",
+            "examples/features/diffusion_reads/structured_server.py",
+            "--upstream",
+            "http://127.0.0.1:8000",
+            "--model",
+            "dgemma",
+            "--tokenizer",
+            "/workspace/model",
+            "--canvas",
+            "64",
+            "--canvas-step",
+            "16",
+            "--host",
+            "127.0.0.1",
+            "--port",
+            "8011"
+          ],
+          "pid": 61250
+        }
+      },
+      "paired_by_seed": {
+        "42": {
+          "matched_decisions": 295,
+          "matched_scored_decisions": 295,
+          "baseline_only_decisions": 0,
+          "candidate_only_decisions": 0,
+          "mean_candidate_minus_baseline": {
+            "accuracy": 0,
+            "brier": -0.014776851337458588,
+            "nll": -0.03275502566069079
+          },
+          "max_probability_delta": 0.7709758627008301,
+          "regressions": [
+            {
+              "suite": "animals",
+              "image": "images/cat.jpg",
+              "question": "coat_colour",
+              "repeat": 1,
+              "expected": "brown",
+              "baseline_answer": "brown",
+              "candidate_answer": "gray"
+            },
+            {
+              "suite": "animals",
+              "image": "images/cat.jpg",
+              "question": "coat_colour",
+              "repeat": 3,
+              "expected": "brown",
+              "baseline_answer": "brown",
+              "candidate_answer": "gray"
+            },
+            {
+              "suite": "animals",
+              "image": "images/fox.jpg",
+              "question": "coat_colour",
+              "repeat": 1,
+              "expected": "red_ginger",
+              "baseline_answer": "red_ginger",
+              "candidate_answer": "tan_cream"
+            },
+            {
+              "suite": "animals",
+              "image": "images/fox.jpg",
+              "question": "coat_colour",
+              "repeat": 4,
+              "expected": "red_ginger",
+              "baseline_answer": "red_ginger",
+              "candidate_answer": "tan_cream"
+            }
+          ],
+          "improvements": [
+            {
+              "suite": "animals",
+              "image": "images/bird.jpg",
+              "question": "outdoors",
+              "repeat": 3,
+              "expected": "yes",
+              "baseline_answer": "no",
+              "candidate_answer": "yes"
+            },
+            {
+              "suite": "animals",
+              "image": "images/deer.jpg",
+              "question": "posture",
+              "repeat": 0,
+              "expected": "standing",
+              "baseline_answer": "walking_running",
+              "candidate_answer": "standing"
+            },
+            {
+              "suite": "animals",
+              "image": "images/dog.jpg",
+              "question": "posture",
+              "repeat": 3,
+              "expected": "standing",
+              "baseline_answer": "walking_running",
+              "candidate_answer": "standing"
+            },
+            {
+              "suite": "animals",
+              "image": "images/fox.jpg",
+              "question": "coat_colour",
+              "repeat": 3,
+              "expected": "red_ginger",
+              "baseline_answer": "tan_cream",
+              "candidate_answer": "red_ginger"
+            }
+          ],
+          "skip_changes": []
+        },
+        "43": {
+          "matched_decisions": 295,
+          "matched_scored_decisions": 295,
+          "baseline_only_decisions": 0,
+          "candidate_only_decisions": 0,
+          "mean_candidate_minus_baseline": {
+            "accuracy": -0.020338983050847456,
+            "brier": 0.021678579981671043,
+            "nll": 0.031604891799400577
+          },
+          "max_probability_delta": 0.7804072893598799,
+          "regressions": [
+            {
+              "suite": "animals",
+              "image": "images/bird.jpg",
+              "question": "outdoors",
+              "repeat": 2,
+              "expected": "yes",
+              "baseline_answer": "yes",
+              "candidate_answer": "no"
+            },
+            {
+              "suite": "animals",
+              "image": "images/bird.jpg",
+              "question": "outdoors",
+              "repeat": 4,
+              "expected": "yes",
+              "baseline_answer": "yes",
+              "candidate_answer": "no"
+            },
+            {
+              "suite": "animals",
+              "image": "images/cat.jpg",
+              "question": "coat_colour",
+              "repeat": 3,
+              "expected": "brown",
+              "baseline_answer": "brown",
+              "candidate_answer": "gray"
+            },
+            {
+              "suite": "animals",
+              "image": "images/deer.jpg",
+              "question": "posture",
+              "repeat": 0,
+              "expected": "standing",
+              "baseline_answer": "standing",
+              "candidate_answer": "other"
+            },
+            {
+              "suite": "animals",
+              "image": "images/dog.jpg",
+              "question": "posture",
+              "repeat": 0,
+              "expected": "standing",
+              "baseline_answer": "standing",
+              "candidate_answer": "walking_running"
+            },
+            {
+              "suite": "animals",
+              "image": "images/dog.jpg",
+              "question": "posture",
+              "repeat": 2,
+              "expected": "standing",
+              "baseline_answer": "standing",
+              "candidate_answer": "walking_running"
+            },
+            {
+              "suite": "animals",
+              "image": "images/dog.jpg",
+              "question": "posture",
+              "repeat": 3,
+              "expected": "standing",
+              "baseline_answer": "standing",
+              "candidate_answer": "walking_running"
+            },
+            {
+              "suite": "animals",
+              "image": "images/fox.jpg",
+              "question": "coat_colour",
+              "repeat": 1,
+              "expected": "red_ginger",
+              "baseline_answer": "red_ginger",
+              "candidate_answer": "tan_cream"
+            }
+          ],
+          "improvements": [
+            {
+              "suite": "animals",
+              "image": "images/fox.jpg",
+              "question": "coat_colour",
+              "repeat": 0,
+              "expected": "red_ginger",
+              "baseline_answer": "tan_cream",
+              "candidate_answer": "red_ginger"
+            },
+            {
+              "suite": "animals",
+              "image": "images/fox.jpg",
+              "question": "coat_colour",
+              "repeat": 3,
+              "expected": "red_ginger",
+              "baseline_answer": "tan_cream",
+              "candidate_answer": "red_ginger"
+            }
+          ],
+          "skip_changes": []
+        }
+      },
+      "paired_holdout": {
+        "matched_decisions": 95,
+        "matched_scored_decisions": 95,
+        "baseline_only_decisions": 0,
+        "candidate_only_decisions": 0,
+        "mean_candidate_minus_baseline": {
+          "accuracy": -0.031578947368421054,
+          "brier": 0.04041005978868,
+          "nll": 0.05599897562929317
+        },
+        "max_probability_delta": 0.8646630225724268,
+        "regressions": [
+          {
+            "suite": "holdout",
+            "image": "../../../../tests/v1/ec_connector/integration/hato.jpg",
+            "question": "coat_colour",
+            "repeat": 3,
+            "expected": "other",
+            "baseline_answer": "other",
+            "candidate_answer": "black"
+          },
+          {
+            "suite": "holdout",
+            "image": "../../../../tests/v1/ec_connector/integration/hato.jpg",
+            "question": "coat_pattern",
+            "repeat": 0,
+            "expected": "other",
+            "baseline_answer": "other",
+            "candidate_answer": "solid"
+          },
+          {
+            "suite": "holdout",
+            "image": "../../../../tests/v1/ec_connector/integration/hato.jpg",
+            "question": "coat_pattern",
+            "repeat": 2,
+            "expected": "other",
+            "baseline_answer": "other",
+            "candidate_answer": "solid"
+          },
+          {
+            "suite": "holdout",
+            "image": "../../../../tests/v1/ec_connector/integration/hato.jpg",
+            "question": "exposure",
+            "repeat": 1,
+            "expected": "yes",
+            "baseline_answer": "yes",
+            "candidate_answer": "no"
+          }
+        ],
+        "improvements": [
+          {
+            "suite": "holdout",
+            "image": "../../../../tests/v1/ec_connector/integration/hato.jpg",
+            "question": "coat_colour",
+            "repeat": 1,
+            "expected": "other",
+            "baseline_answer": "black",
+            "candidate_answer": "other"
+          }
+        ],
+        "skip_changes": []
+      }
+    },
+    "4090": {
+      "quality": {
+        "images": 90,
+        "labelled_decisions": 590,
+        "scored_decisions": 590,
+        "skipped_decisions": 0,
+        "accuracy": 0.9508474576271186,
+        "brier": 0.06116679624031642,
+        "nll": 0.11158276701919075,
+        "ece_10_bins": 0.020084717347506303,
+        "threshold": 0.9,
+        "coverage": 0.9169491525423729,
+        "selective_accuracy": 1.0,
+        "latency_p50_ms": 1284.9067272618413,
+        "latency_p95_ms": 1579.3424034491181
+      },
+      "timed_images": 90,
+      "seconds": 15.252490899525583,
+      "images_per_second": 5.900675541645422,
+      "usd_per_million_images": 23.08447410947859,
+      "animal_only": {
+        "quality": {
+          "images": 35,
+          "labelled_decisions": 215,
+          "scored_decisions": 215,
+          "skipped_decisions": 0,
+          "accuracy": 0.9116279069767442,
+          "brier": 0.09086975038673419,
+          "nll": 0.156747457552672,
+          "ece_10_bins": 0.04603836586098626,
+          "threshold": 0.9,
+          "coverage": 0.8883720930232558,
+          "selective_accuracy": 1.0,
+          "latency_p50_ms": 1246.4576978236437,
+          "latency_p95_ms": 1390.661052428186
+        },
+        "images_per_second": 5.21713509631222,
+        "usd_per_million_images": 26.108963876713,
+        "mean_server_ms": 1105.7673454284668,
+        "suites": {
+          "animals": {
+            "images": 35,
+            "labelled_decisions": 215,
+            "scored_decisions": 215,
+            "skipped_decisions": 0,
+            "accuracy": 0.9116279069767442,
+            "brier": 0.09086975038673419,
+            "nll": 0.156747457552672,
+            "ece_10_bins": 0.04603836586098626,
+            "threshold": 0.9,
+            "coverage": 0.8883720930232558,
+            "selective_accuracy": 1.0,
+            "latency_p50_ms": 1246.4576978236437,
+            "latency_p95_ms": 1390.661052428186
+          }
+        },
+        "errors": [
+          {
+            "repeat": 0,
+            "image": "images/fox.jpg",
+            "question": "coat_colour",
+            "expected": "red_ginger",
+            "predicted": "tan_cream",
+            "probability": 0.5075726066389731
+          },
+          {
+            "repeat": 0,
+            "image": "images/bird.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "other",
+            "probability": 0.4084276733318626
+          },
+          {
+            "repeat": 0,
+            "image": "images/bird.jpg",
+            "question": "outdoors",
+            "expected": "yes",
+            "predicted": "no",
+            "probability": 0.5665090150809787
+          },
+          {
+            "repeat": 0,
+            "image": "images/dog.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "walking_running",
+            "probability": 0.5890232641946687
+          },
+          {
+            "repeat": 1,
+            "image": "images/bird.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "other",
+            "probability": 0.5846677628859425
+          },
+          {
+            "repeat": 1,
+            "image": "images/bird.jpg",
+            "question": "outdoors",
+            "expected": "yes",
+            "predicted": "no",
+            "probability": 0.5911955300906564
+          },
+          {
+            "repeat": 1,
+            "image": "images/fox.jpg",
+            "question": "coat_colour",
+            "expected": "red_ginger",
+            "predicted": "tan_cream",
+            "probability": 0.6542098772887016
+          },
+          {
+            "repeat": 1,
+            "image": "images/dog.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "walking_running",
+            "probability": 0.7905321853194051
+          },
+          {
+            "repeat": 1,
+            "image": "images/cat.jpg",
+            "question": "coat_colour",
+            "expected": "brown",
+            "predicted": "gray",
+            "probability": 0.5525901734756611
+          },
+          {
+            "repeat": 2,
+            "image": "images/fox.jpg",
+            "question": "coat_colour",
+            "expected": "red_ginger",
+            "predicted": "tan_cream",
+            "probability": 0.5675587033602957
+          },
+          {
+            "repeat": 2,
+            "image": "images/bird.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "other",
+            "probability": 0.39289598563606143
+          },
+          {
+            "repeat": 2,
+            "image": "images/dog.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "walking_running",
+            "probability": 0.2883379931815264
+          },
+          {
+            "repeat": 3,
+            "image": "images/fox.jpg",
+            "question": "coat_colour",
+            "expected": "red_ginger",
+            "predicted": "tan_cream",
+            "probability": 0.4576096153164501
+          },
+          {
+            "repeat": 3,
+            "image": "images/dog.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "walking_running",
+            "probability": 0.4622065287873241
+          },
+          {
+            "repeat": 3,
+            "image": "images/bird.jpg",
+            "question": "outdoors",
+            "expected": "yes",
+            "predicted": "no",
+            "probability": 0.693694274900365
+          },
+          {
+            "repeat": 4,
+            "image": "images/bird.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "other",
+            "probability": 0.3897178906315458
+          },
+          {
+            "repeat": 4,
+            "image": "images/bird.jpg",
+            "question": "outdoors",
+            "expected": "yes",
+            "predicted": "no",
+            "probability": 0.7008784152777384
+          },
+          {
+            "repeat": 4,
+            "image": "images/dog.jpg",
+            "question": "posture",
+            "expected": "standing",
+            "predicted": "walking_running",
+            "probability": 0.8148744531546328
+          },
+          {
+            "repeat": 4,
+            "image": "images/fox.jpg",
+            "question": "coat_colour",
+            "expected": "red_ginger",
+            "predicted": "tan_cream",
+            "probability": 0.639489573519634
+          }
+        ],
+        "repeat_stability": {
+          "top_answer_changes": 7,
+          "question_comparisons": 672,
+          "max_probability_delta": 0.5419149872940215,
+          "skip_status_changes": 0
+        }
+      },
+      "holdout_quality": {
+        "images": 5,
+        "labelled_decisions": 95,
+        "scored_decisions": 95,
+        "skipped_decisions": 0,
+        "accuracy": 0.9368421052631579,
+        "brier": 0.06097616543587689,
+        "nll": 0.09522401483508747,
+        "ece_10_bins": 0.045050121154055385,
+        "threshold": 0.9,
+        "coverage": 0.8631578947368421,
+        "selective_accuracy": 1.0,
+        "latency_p50_ms": 1610.1203113794327,
+        "latency_p95_ms": 1687.1200129389763
+      },
+      "holdout_errors": [
+        {
+          "repeat": 0,
+          "question": "coat_colour",
+          "expected": "other",
+          "answer": "black",
+          "expected_probability": 0.1714268830400028
+        },
+        {
+          "repeat": 1,
+          "question": "coat_colour",
+          "expected": "other",
+          "answer": "black",
+          "expected_probability": 0.4631718800717976
+        },
+        {
+          "repeat": 2,
+          "question": "coat_colour",
+          "expected": "other",
+          "answer": "black",
+          "expected_probability": 0.43182703028812797
+        },
+        {
+          "repeat": 3,
+          "question": "coat_colour",
+          "expected": "other",
+          "answer": "black",
+          "expected_probability": 0.3945837617169374
+        },
+        {
+          "repeat": 4,
+          "question": "coat_colour",
+          "expected": "other",
+          "answer": "black",
+          "expected_probability": 0.2524203398424378
+        },
+        {
+          "repeat": 4,
+          "question": "coat_pattern",
+          "expected": "other",
+          "answer": "solid",
+          "expected_probability": 0.4499173377095734
+        }
+      ],
+      "settings": {
+        "endpoint": "http://127.0.0.1:8011",
+        "upstream": "http://127.0.0.1:8000",
+        "output": "/workspace/results/confirm-4090-seed42.json",
+        "layout": "named",
+        "concurrency": 9,
+        "repeats": 5,
+        "warmup_sweeps": 2,
+        "seed": 42,
+        "hourly_usd": 0.4903703703703704,
+        "tag": "confirm-4090-seed42",
+        "server_config": {
+          "tag": "confirm-4090",
+          "cmd": [
+            ".venv/bin/vllm",
+            "serve",
+            "/workspace/model",
+            "--served-model-name",
+            "dgemma",
+            "--host",
+            "127.0.0.1",
+            "--port",
+            "8000",
+            "--max-model-len",
+            "4096",
+            "--diffusion-config",
+            "{\"canvas_length\": 64}",
+            "--max-logprobs",
+            "32",
+            "--max-num-seqs",
+            "8",
+            "--gpu-memory-utilization",
+            "0.94",
+            "--enable-prefix-caching",
+            "--enable-prompt-tokens-details",
+            "--attention-backend",
+            "TRITON_ATTN",
+            "--max-num-batched-tokens",
+            "2048",
+            "--limit-mm-per-prompt",
+            "{\"image\": 1, \"video\": 0}",
+            "--moe-backend",
+            "marlin"
+          ],
+          "pid": 10242,
+          "created": 1789859831.5461438,
+          "gpu": "NVIDIA GeForce RTX 4090, 24564 MiB, 590.48.01"
+        },
+        "suites": [
+          "animals",
+          "generic"
+        ],
+        "transport": "server localhost",
+        "cache_reset": "all three caches before each sweep",
+        "unique_images_per_sweep": 9,
+        "warmup_concurrency": 9,
+        "source_sha256": {
+          "examples/features/diffusion_reads/structured_server.py": "f936f0500b0b63a6b2bacb9cff94416f56e2ee10414e00074c1e3d0ad9d7c2ec",
+          "vllm/model_executor/models/diffusion_gemma.py": "bd51fd54939c8718f49df7f2906327ae364c3f536a90bf2f675fc33aeafa5523",
+          "vllm/v1/worker/gpu/model_runner.py": "16bc45a41afbd0c8660ccf1f8f7c7199f4404dd2a70c46705c8d6e7fa21d03da",
+          "examples/features/diffusion_reads/evaluation/cost_benchmark.py": "c68b226a819f3fa599b0d4b09a2be8aa2b9f8ad186f7a09f3c705b4118c0127c"
+        },
+        "input_sha256": {
+          "animal_schema.json": "52572ea05e13a1f67f94a18493d93a00d018a7aff39f69efbbb84a96b877db5e",
+          "animals.jsonl": "44855fd17112080299bc7f95f98f8b18498a94621e9d9a87890a9ca43c9c3234",
+          "generic.jsonl": "9d1c77291c130c845d40fa73cc1f8c830e5cb401686e9db3e5fd6d86f3535dfd",
+          "generic_schema.json": "f4e9aa7e9c4fa657fc948e4e3f776bc6d944f5185cf245603a9f9850bcef20b7",
+          "images/bird.jpg": "1f7ef7234fd33faf806931d252fbd45354a9e235dcccc6d3c1079dd01fc30515",
+          "images/cat.jpg": "9b46595fdf92b4a91d380e6b94721da5a68ec18ace40f4829a29db357d79bda5",
+          "images/coffee.jpg": "f639ce191da7ece0d4eb44eeafb60ab417d025f27a073965d5e1ee0c7ad384c0",
+          "images/deer.jpg": "516aea07e0d649166b96b56944f117f18398b164115a19f5341c0fa62a2dd3ff",
+          "images/dog.jpg": "d4cb12ea8a768582562e1f1c0c930ea6fc4757f5b66551b986b41498efd75ca1",
+          "images/fox.jpg": "4092ca5ff98c73cc9c6c8300bb9b221ba628b6898289b6298098f51a30df3873",
+          "images/horse.jpg": "5247c813d0b000081e6be500ee22b33afe280e09980bd655d7c585ae11f232aa",
+          "images/rabbit.jpg": "228df13d917406804eb7488e3fddf6b6631ddb4514f5d97ed790a9eb1eaa8721",
+          "images/stop.jpg": "9c90f631261200152f8f963c6dad14dcdb665aec59ca509e6e60f15988834f1a"
+        },
+        "adapter_config": {
+          "cmd": [
+            ".venv/bin/python",
+            "examples/features/diffusion_reads/structured_server.py",
+            "--upstream",
+            "http://127.0.0.1:8000",
+            "--model",
+            "dgemma",
+            "--tokenizer",
+            "/workspace/model",
+            "--canvas",
+            "64",
+            "--canvas-step",
+            "16",
+            "--host",
+            "127.0.0.1",
+            "--port",
+            "8011"
+          ],
+          "pid": 11251
+        }
+      },
+      "paired_by_seed": {
+        "42": {
+          "matched_decisions": 295,
+          "matched_scored_decisions": 295,
+          "baseline_only_decisions": 0,
+          "candidate_only_decisions": 0,
+          "mean_candidate_minus_baseline": {
+            "accuracy": 0.010169491525423728,
+            "brier": -0.022947658502507295,
+            "nll": -0.04987814800618804
+          },
+          "max_probability_delta": 0.6705051297145941,
+          "regressions": [
+            {
+              "suite": "animals",
+              "image": "images/dog.jpg",
+              "question": "posture",
+              "repeat": 1,
+              "expected": "standing",
+              "baseline_answer": "standing",
+              "candidate_answer": "walking_running"
+            },
+            {
+              "suite": "animals",
+              "image": "images/fox.jpg",
+              "question": "coat_colour",
+              "repeat": 1,
+              "expected": "red_ginger",
+              "baseline_answer": "red_ginger",
+              "candidate_answer": "brown"
+            },
+            {
+              "suite": "animals",
+              "image": "images/fox.jpg",
+              "question": "coat_colour",
+              "repeat": 4,
+              "expected": "red_ginger",
+              "baseline_answer": "red_ginger",
+              "candidate_answer": "tan_cream"
+            }
+          ],
+          "improvements": [
+            {
+              "suite": "animals",
+              "image": "images/bird.jpg",
+              "question": "outdoors",
+              "repeat": 1,
+              "expected": "yes",
+              "baseline_answer": "no",
+              "candidate_answer": "yes"
+            },
+            {
+              "suite": "animals",
+              "image": "images/bird.jpg",
+              "question": "outdoors",
+              "repeat": 2,
+              "expected": "yes",
+              "baseline_answer": "no",
+              "candidate_answer": "yes"
+            },
+            {
+              "suite": "animals",
+              "image": "images/bird.jpg",
+              "question": "outdoors",
+              "repeat": 3,
+              "expected": "yes",
+              "baseline_answer": "no",
+              "candidate_answer": "yes"
+            },
+            {
+              "suite": "animals",
+              "image": "images/deer.jpg",
+              "question": "posture",
+              "repeat": 0,
+              "expected": "standing",
+              "baseline_answer": "walking_running",
+              "candidate_answer": "standing"
+            },
+            {
+              "suite": "animals",
+              "image": "images/dog.jpg",
+              "question": "posture",
+              "repeat": 2,
+              "expected": "standing",
+              "baseline_answer": "walking_running",
+              "candidate_answer": "standing"
+            },
+            {
+              "suite": "animals",
+              "image": "images/dog.jpg",
+              "question": "posture",
+              "repeat": 4,
+              "expected": "standing",
+              "baseline_answer": "walking_running",
+              "candidate_answer": "standing"
+            }
+          ],
+          "skip_changes": []
+        },
+        "43": {
+          "matched_decisions": 295,
+          "matched_scored_decisions": 295,
+          "baseline_only_decisions": 0,
+          "candidate_only_decisions": 0,
+          "mean_candidate_minus_baseline": {
+            "accuracy": -0.010169491525423728,
+            "brier": 0.007711243598162444,
+            "nll": 0.0008898432442859505
+          },
+          "max_probability_delta": 0.8959661186800371,
+          "regressions": [
+            {
+              "suite": "animals",
+              "image": "images/bird.jpg",
+              "question": "outdoors",
+              "repeat": 0,
+              "expected": "yes",
+              "baseline_answer": "yes",
+              "candidate_answer": "no"
+            },
+            {
+              "suite": "animals",
+              "image": "images/dog.jpg",
+              "question": "posture",
+              "repeat": 0,
+              "expected": "standing",
+              "baseline_answer": "standing",
+              "candidate_answer": "walking_running"
+            },
+            {
+              "suite": "animals",
+              "image": "images/dog.jpg",
+              "question": "posture",
+              "repeat": 3,
+              "expected": "standing",
+              "baseline_answer": "standing",
+              "candidate_answer": "walking_running"
+            },
+            {
+              "suite": "animals",
+              "image": "images/fox.jpg",
+              "question": "coat_colour",
+              "repeat": 1,
+              "expected": "red_ginger",
+              "baseline_answer": "red_ginger",
+              "candidate_answer": "brown"
+            }
+          ],
+          "improvements": [
+            {
+              "suite": "animals",
+              "image": "images/bird.jpg",
+              "question": "outdoors",
+              "repeat": 1,
+              "expected": "yes",
+              "baseline_answer": "no",
+              "candidate_answer": "yes"
+            }
+          ],
+          "skip_changes": []
+        }
+      },
+      "paired_holdout": {
+        "matched_decisions": 95,
+        "matched_scored_decisions": 95,
+        "baseline_only_decisions": 0,
+        "candidate_only_decisions": 0,
+        "mean_candidate_minus_baseline": {
+          "accuracy": -0.031578947368421054,
+          "brier": 0.010949940011181662,
+          "nll": 0.007163771284979094
+        },
+        "max_probability_delta": 0.5422926350565638,
+        "regressions": [
+          {
+            "suite": "holdout",
+            "image": "../../../../tests/v1/ec_connector/integration/hato.jpg",
+            "question": "coat_colour",
+            "repeat": 0,
+            "expected": "other",
+            "baseline_answer": "other",
+            "candidate_answer": "black"
+          },
+          {
+            "suite": "holdout",
+            "image": "../../../../tests/v1/ec_connector/integration/hato.jpg",
+            "question": "coat_colour",
+            "repeat": 3,
+            "expected": "other",
+            "baseline_answer": "other",
+            "candidate_answer": "black"
+          },
+          {
+            "suite": "holdout",
+            "image": "../../../../tests/v1/ec_connector/integration/hato.jpg",
+            "question": "coat_colour",
+            "repeat": 4,
+            "expected": "other",
+            "baseline_answer": "other",
+            "candidate_answer": "black"
+          }
+        ],
+        "improvements": [],
+        "skip_changes": []
+      }
+    }
+  }
+}

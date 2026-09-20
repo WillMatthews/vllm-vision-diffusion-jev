@@ -1,0 +1,104 @@
+{
+  "seed": 20260920,
+  "excluded_image_ids": [
+    482201,
+    557342,
+    572165
+  ],
+  "base_manifest_sha256": "de59ac12ad9a5b0b4e8c0d429a41f8454fb403191da93d2c2ba25db95065962f",
+  "sources": [
+    {
+      "url": "https://cvmlp.s3.amazonaws.com/vqa/mscoco/vqa/v2_Questions_Train_mscoco.zip",
+      "sha256": "05a64b6e2582d06d7585f5429674a9a33851878be1bff9f8668cdcf792df611e",
+      "bytes": 7239401
+    },
+    {
+      "url": "https://cvmlp.s3.amazonaws.com/vqa/mscoco/vqa/v2_Annotations_Train_mscoco.zip",
+      "sha256": "fb101bcefe91422c543c2bb6d70af11eb3119d0ff745ae283d09acdf66250853",
+      "bytes": 21708861
+    },
+    {
+      "url": "https://cvmlp.s3.amazonaws.com/vqa/mscoco/vqa/v2_Questions_Val_mscoco.zip",
+      "sha256": "e71f6c5c3e97a51d050f28243e262b28cd0c48d11a6b4632d769d30d3f93222a",
+      "bytes": 3494929
+    },
+    {
+      "url": "https://cvmlp.s3.amazonaws.com/vqa/mscoco/vqa/v2_Annotations_Val_mscoco.zip",
+      "sha256": "0caae7c8d1dafd852727f5ac046bc1efca9b72026bd6ffa34fc489f3a7b3291e",
+      "bytes": 10518930
+    }
+  ],
+  "splits": {
+    "train": {
+      "images": 5000,
+      "questions": 20000,
+      "families": {
+        "boolean": 13824,
+        "count": 3544,
+        "other": 937,
+        "colour": 1695
+      },
+      "primitives": {
+        "noul": 13824,
+        "score": 3544,
+        "choice": 2632
+      },
+      "sha256": "7653b08f52c7f08dfa3d95e36a13e574016b94507395a511bb4e4ceb4afe5157"
+    },
+    "validation": {
+      "images": 500,
+      "questions": 2000,
+      "families": {
+        "count": 335,
+        "colour": 175,
+        "boolean": 1394,
+        "other": 96
+      },
+      "primitives": {
+        "score": 335,
+        "choice": 271,
+        "noul": 1394
+      },
+      "sha256": "18dbcadfc8d1aa0f8aa505b7349acfcfe9d88f73edab82600305ed4e41876b43"
+    },
+    "test": {
+      "images": 1000,
+      "questions": 4000,
+      "families": {
+        "spatial_reserved": 257,
+        "boolean": 2606,
+        "other": 164,
+        "count": 639,
+        "colour": 334
+      },
+      "primitives": {
+        "noul": 2828,
+        "choice": 504,
+        "score": 668
+      },
+      "sha256": "0377c4286eea452f46004a24a38bd37339943a77e60818e3048edf153591f10d"
+    }
+  },
+  "training_candidate_source_images": 60000,
+  "option_vocabulary": "fixed semantic categories; no empirical answer pools",
+  "status": "ready_for_bounded_research_pilot_with_documented_limits",
+  "annotation_attribution": "VQA Consortium; Goyal et al. CVPR 2017",
+  "annotation_license": "https://creativecommons.org/licenses/by/4.0/",
+  "reserved_task_family": "spatial_reserved",
+  "limitations": [
+    "Consensus and vocabulary filters bias the sample toward easier items",
+    "Test labels read solely by deterministic construction, not model tuning",
+    "Counts are an ordinal proxy, not subjective rubric supervision",
+    "Template marker requires distinct wrappers in the model runner",
+    "Image licenses include noncommercial and no-derivative terms; this is not a commercially cleared image corpus",
+    "dHash duplicate screening may miss crops and other perceptual duplicates",
+    "AI textual distractor audit is not independent human image-ground-truth verification",
+    "Fixed semantic answer categories are narrower than arbitrary user schemas"
+  ],
+  "preparation_source_sha256": "afc0636377646e8955c1a2c06789962aa62395da6413bfd9df3c31580f2ba535",
+  "audits": {
+    "image-audit.json": "fa000f1b069e769bc7586a2f3f0d97e2cb9f45217d0baf70e02f88efa1a3d0ab",
+    "image-provenance.jsonl": "c0ec005ac8fb90be9874e4ead1d9319211f6ab8e3721e6c8c8839ce2f61545ad",
+    "schema-audit.json": "b71d0f4bb7ad585723ba3972f4c6813e2dab57511eca6fcefdf37105e4c62591"
+  }
+}

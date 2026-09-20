@@ -4,6 +4,7 @@
 import contextlib
 from types import SimpleNamespace
 
+import numpy as np
 import pytest
 import torch
 
@@ -19,6 +20,82 @@ from vllm.v1.kv_cache_interface import (
 )
 from vllm.v1.worker.gpu.block_table import BlockTables
 from vllm.v1.worker.gpu.model_runner import GPUModelRunner
+
+
+@pytest.mark.parametrize(
+    ("sampled_per_step", "drafts", "expected_offsets"),
+    [(0, {}, [0, 0, 0]), (1, {}, [0, 1, 2]), (0, {"b": [7, 8]}, [0, 0, 2])],
+)
+def test_logits_selection_honors_model_contract_on_prefill_and_decode(
+    monkeypatch, sampled_per_step, drafts, expected_offsets
+):
+    """Diffusion prefills select no projection rows; AR and draft rows survive."""
+    runner = GPUModelRunner.__new__(GPUModelRunner)
+    runner.device = torch.device("cpu")
+    runner.max_num_reqs = 2
+    runner.decode_query_len = 2
+    runner.model_state = SimpleNamespace(
+        num_new_sampled_tokens_per_step=sampled_per_step
+    )
+    runner.input_buffers = SimpleNamespace(
+        is_padding=torch.zeros(4, dtype=torch.bool),
+        query_start_loc=torch.empty(3, dtype=torch.int32),
+        input_ids=None,
+        positions=None,
+        seq_lens=torch.tensor([2, 2]),
+    )
+    runner.req_states = SimpleNamespace(
+        next_prefill_tokens=None,
+        all_token_ids=SimpleNamespace(gpu=None),
+        prefill_len=SimpleNamespace(gpu=None),
+        num_computed_tokens=SimpleNamespace(gpu=None),
+        last_sampled_tokens=None,
+        draft_tokens=None,
+    )
+    # An adaptive manager may exist without any primed draft budget.
+    runner.adaptive_verification = None if drafts else SimpleNamespace()
+    batch = SimpleNamespace(
+        num_tokens=4,
+        req_ids=["a", "b"],
+        num_scheduled_tokens=np.array([2, 2], dtype=np.int32),
+        idx_mapping_np=np.array([0, 1], dtype=np.int32),
+        has_prefill=True,
+    )
+
+    def cpu_copy(values, device=None, out=None):
+        source = torch.as_tensor(values)
+        return source if out is None else out.copy_(source)
+
+    monkeypatch.setattr(model_runner_module, "async_tensor_h2d", cpu_copy)
+    monkeypatch.setattr(model_runner_module, "prepare_prefill_inputs", lambda *a: None)
+    monkeypatch.setattr(model_runner_module, "prepare_pos_seq_lens", lambda *a: None)
+    monkeypatch.setattr(model_runner_module.envs, "VLLM_MOE_SKIP_PADDING", False)
+    monkeypatch.setattr(
+        model_runner_module,
+        "expand_idx_mapping",
+        lambda *a: (None, None),
+    )
+
+    class LogitsSelected(Exception):
+        pass
+
+    def check_projection_rows(*args):
+        offsets, num_logits, model_rows = args[-3:]
+        assert offsets.tolist() == expected_offsets
+        assert num_logits == expected_offsets[-1]
+        assert model_rows == sampled_per_step
+        raise LogitsSelected
+
+    monkeypatch.setattr(
+        model_runner_module, "combine_sampled_and_draft_tokens", check_projection_rows
+    )
+    with pytest.raises(LogitsSelected):
+        runner.prepare_inputs(
+            SimpleNamespace(scheduled_spec_decode_tokens=drafts),
+            batch,
+            SimpleNamespace(num_tokens=4, num_reqs=2),
+            num_active_loras=0,
+        )
 
 
 def test_prepare_padding_mask_marks_sequence_parallel_padding():

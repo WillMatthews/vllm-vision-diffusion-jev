@@ -1,0 +1,37 @@
+{
+  "status": "feasibility_complete_not_quality_accepted",
+  "spend": {
+    "checked_at": "2026-09-20T01:18:05.255128+00:00",
+    "observed_stage_credit_delta": 0.24865411089999867,
+    "remaining_scoped_instances": 0,
+    "account_instance_count": 0,
+    "budget_usd": 2,
+    "destroyed_instance_ids": [
+      51663192,
+      51664711
+    ],
+    "latest_billing_check_at": "2026-09-20T01:23:00.586231+00:00"
+  },
+  "pins": {
+    "model": "89644892e4d85e24eaac8bacfd4f463576704203",
+    "peft": "0.21.0"
+  },
+  "hourly_usd": 0.48111111111111116,
+  "gpu": "RTX 4090",
+  "container": "nvidia/cuda:13.0.2-runtime-ubuntu24.04",
+  "source_sha256": {
+    "generic_feasibility.original.py": "486ce152c82e7fc73329674a2d72a1165da6e95f8510987c0800a4efee24fafc",
+    "generic_batch.original.py": "561ad1297cbe92845a6bd0f8c951ddb8879fcf96181a0b07dd5c5475fcf33c32",
+    "generic_feasibility.py": "67a088ae988c8b45b1a0518e858a63ff4490d93f7624b2b6066cdcb73ec2893b",
+    "generic_batch_feasibility.py": "99af0a9259ca50f3154cea6053be953b8b67272661bb7cc958a34763a3940cf8",
+    "analyze_generic_feasibility.py": "66b3f2d0ea1e273944e6bc566d0c9cedab308e1751b5b3993d02a70329345543",
+    "make_feasibility_fixtures.py": "b2bc03277f489c5cc2009038ab183bd0526729683714543bab14c27e5e090b97"
+  },
+  "failures": [
+    "First rental cancelled during prolonged container pull; destroyed before replacement.",
+    "Replacement injected authorized_keys with unsafe modes; fixed via onstart update and container recycle.",
+    "Runtime image required build-essential and python3.12-dev for Triton.",
+    "Original batched reuse equivalence failed at 8 questions; subsequent batching runs explicitly diagnose drift.",
+    "Initial hard-label optimizer test saturated at zero loss; repeated with 0.1 label smoothing and verified adapter updates."
+  ]
+}

@@ -1,0 +1,378 @@
+[
+  {
+    "suite": "synthetic",
+    "image": "feasibility-fixtures/red-1-circle.png",
+    "schema": {
+      "questions": {
+        "colour": {
+          "type": "choice",
+          "instructions": "What colour are the shapes?",
+          "criteria": {
+            "red": "red",
+            "blue": "blue",
+            "green": "green",
+            "yellow": "yellow"
+          }
+        },
+        "shape": {
+          "type": "choice",
+          "instructions": "Which geometric shape is shown?",
+          "criteria": {
+            "circle": "circles",
+            "square": "squares",
+            "triangle": "triangles"
+          }
+        },
+        "count": {
+          "type": "score",
+          "instructions": "How many coloured shapes are visible?",
+          "criteria": [
+            "zero shapes",
+            "one shape",
+            "two shapes",
+            "three shapes"
+          ]
+        },
+        "multiple": {
+          "type": "noul",
+          "instructions": "Are there at least two coloured shapes?"
+        }
+      }
+    },
+    "expected": {
+      "colour": "red",
+      "shape": "circle",
+      "count": "1",
+      "multiple": "no"
+    }
+  },
+  {
+    "suite": "synthetic",
+    "image": "feasibility-fixtures/red-2-square.png",
+    "schema": {
+      "questions": {
+        "colour": {
+          "type": "choice",
+          "instructions": "What colour are the shapes?",
+          "criteria": {
+            "red": "red",
+            "blue": "blue",
+            "green": "green",
+            "yellow": "yellow"
+          }
+        },
+        "shape": {
+          "type": "choice",
+          "instructions": "Which geometric shape is shown?",
+          "criteria": {
+            "circle": "circles",
+            "square": "squares",
+            "triangle": "triangles"
+          }
+        },
+        "count": {
+          "type": "score",
+          "instructions": "How many coloured shapes are visible?",
+          "criteria": [
+            "zero shapes",
+            "one shape",
+            "two shapes",
+            "three shapes"
+          ]
+        },
+        "multiple": {
+          "type": "noul",
+          "instructions": "Are there at least two coloured shapes?"
+        }
+      }
+    },
+    "expected": {
+      "colour": "red",
+      "shape": "square",
+      "count": "2",
+      "multiple": "yes"
+    }
+  },
+  {
+    "suite": "synthetic",
+    "image": "feasibility-fixtures/blue-1-square.png",
+    "schema": {
+      "questions": {
+        "colour": {
+          "type": "choice",
+          "instructions": "What colour are the shapes?",
+          "criteria": {
+            "red": "red",
+            "blue": "blue",
+            "green": "green",
+            "yellow": "yellow"
+          }
+        },
+        "shape": {
+          "type": "choice",
+          "instructions": "Which geometric shape is shown?",
+          "criteria": {
+            "circle": "circles",
+            "square": "squares",
+            "triangle": "triangles"
+          }
+        },
+        "count": {
+          "type": "score",
+          "instructions": "How many coloured shapes are visible?",
+          "criteria": [
+            "zero shapes",
+            "one shape",
+            "two shapes",
+            "three shapes"
+          ]
+        },
+        "multiple": {
+          "type": "noul",
+          "instructions": "Are there at least two coloured shapes?"
+        }
+      }
+    },
+    "expected": {
+      "colour": "blue",
+      "shape": "square",
+      "count": "1",
+      "multiple": "no"
+    }
+  },
+  {
+    "suite": "synthetic",
+    "image": "feasibility-fixtures/blue-2-circle.png",
+    "schema": {
+      "questions": {
+        "colour": {
+          "type": "choice",
+          "instructions": "What colour are the shapes?",
+          "criteria": {
+            "red": "red",
+            "blue": "blue",
+            "green": "green",
+            "yellow": "yellow"
+          }
+        },
+        "shape": {
+          "type": "choice",
+          "instructions": "Which geometric shape is shown?",
+          "criteria": {
+            "circle": "circles",
+            "square": "squares",
+            "triangle": "triangles"
+          }
+        },
+        "count": {
+          "type": "score",
+          "instructions": "How many coloured shapes are visible?",
+          "criteria": [
+            "zero shapes",
+            "one shape",
+            "two shapes",
+            "three shapes"
+          ]
+        },
+        "multiple": {
+          "type": "noul",
+          "instructions": "Are there at least two coloured shapes?"
+        }
+      }
+    },
+    "expected": {
+      "colour": "blue",
+      "shape": "circle",
+      "count": "2",
+      "multiple": "yes"
+    }
+  },
+  {
+    "suite": "synthetic",
+    "image": "feasibility-fixtures/green-1-circle.png",
+    "schema": {
+      "questions": {
+        "colour": {
+          "type": "choice",
+          "instructions": "What colour are the shapes?",
+          "criteria": {
+            "red": "red",
+            "blue": "blue",
+            "green": "green",
+            "yellow": "yellow"
+          }
+        },
+        "shape": {
+          "type": "choice",
+          "instructions": "Which geometric shape is shown?",
+          "criteria": {
+            "circle": "circles",
+            "square": "squares",
+            "triangle": "triangles"
+          }
+        },
+        "count": {
+          "type": "score",
+          "instructions": "How many coloured shapes are visible?",
+          "criteria": [
+            "zero shapes",
+            "one shape",
+            "two shapes",
+            "three shapes"
+          ]
+        },
+        "multiple": {
+          "type": "noul",
+          "instructions": "Are there at least two coloured shapes?"
+        }
+      }
+    },
+    "expected": {
+      "colour": "green",
+      "shape": "circle",
+      "count": "1",
+      "multiple": "no"
+    }
+  },
+  {
+    "suite": "synthetic",
+    "image": "feasibility-fixtures/green-2-square.png",
+    "schema": {
+      "questions": {
+        "colour": {
+          "type": "choice",
+          "instructions": "What colour are the shapes?",
+          "criteria": {
+            "red": "red",
+            "blue": "blue",
+            "green": "green",
+            "yellow": "yellow"
+          }
+        },
+        "shape": {
+          "type": "choice",
+          "instructions": "Which geometric shape is shown?",
+          "criteria": {
+            "circle": "circles",
+            "square": "squares",
+            "triangle": "triangles"
+          }
+        },
+        "count": {
+          "type": "score",
+          "instructions": "How many coloured shapes are visible?",
+          "criteria": [
+            "zero shapes",
+            "one shape",
+            "two shapes",
+            "three shapes"
+          ]
+        },
+        "multiple": {
+          "type": "noul",
+          "instructions": "Are there at least two coloured shapes?"
+        }
+      }
+    },
+    "expected": {
+      "colour": "green",
+      "shape": "square",
+      "count": "2",
+      "multiple": "yes"
+    }
+  },
+  {
+    "suite": "synthetic",
+    "image": "feasibility-fixtures/yellow-1-square.png",
+    "schema": {
+      "questions": {
+        "colour": {
+          "type": "choice",
+          "instructions": "What colour are the shapes?",
+          "criteria": {
+            "red": "red",
+            "blue": "blue",
+            "green": "green",
+            "yellow": "yellow"
+          }
+        },
+        "shape": {
+          "type": "choice",
+          "instructions": "Which geometric shape is shown?",
+          "criteria": {
+            "circle": "circles",
+            "square": "squares",
+            "triangle": "triangles"
+          }
+        },
+        "count": {
+          "type": "score",
+          "instructions": "How many coloured shapes are visible?",
+          "criteria": [
+            "zero shapes",
+            "one shape",
+            "two shapes",
+            "three shapes"
+          ]
+        },
+        "multiple": {
+          "type": "noul",
+          "instructions": "Are there at least two coloured shapes?"
+        }
+      }
+    },
+    "expected": {
+      "colour": "yellow",
+      "shape": "square",
+      "count": "1",
+      "multiple": "no"
+    }
+  },
+  {
+    "suite": "synthetic",
+    "image": "feasibility-fixtures/yellow-2-circle.png",
+    "schema": {
+      "questions": {
+        "colour": {
+          "type": "choice",
+          "instructions": "What colour are the shapes?",
+          "criteria": {
+            "red": "red",
+            "blue": "blue",
+            "green": "green",
+            "yellow": "yellow"
+          }
+        },
+        "shape": {
+          "type": "choice",
+          "instructions": "Which geometric shape is shown?",
+          "criteria": {
+            "circle": "circles",
+            "square": "squares",
+            "triangle": "triangles"
+          }
+        },
+        "count": {
+          "type": "score",
+          "instructions": "How many coloured shapes are visible?",
+          "criteria": [
+            "zero shapes",
+            "one shape",
+            "two shapes",
+            "three shapes"
+          ]
+        },
+        "multiple": {
+          "type": "noul",
+          "instructions": "Are there at least two coloured shapes?"
+        }
+      }
+    },
+    "expected": {
+      "colour": "yellow",
+      "shape": "circle",
+      "count": "2",
+      "multiple": "yes"
+    }
+  }
+]

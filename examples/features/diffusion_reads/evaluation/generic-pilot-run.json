@@ -1,0 +1,82 @@
+{
+  "date": "2026-09-20",
+  "branch": "cost-optimization-diffusion",
+  "budget_usd": 10,
+  "observed_spend_usd": 0.8793204890000084,
+  "budget_excludes": "Completed earlier $2 feasibility and $6 diffusion experiments",
+  "rented_candidates": 1,
+  "rejected_candidates": 0,
+  "gpu": "RTX 4090",
+  "hourly_usd_including_disk": 0.4585185185185185,
+  "remaining_scoped_instances": 0,
+  "remaining_account_instances": 0,
+  "cleanup_timer": "inactive after verified deletion",
+  "student_model": "Qwen/Qwen3-VL-2B-Instruct",
+  "student_revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "teacher_model": "nvidia/diffusiongemma-26B-A4B-it-NVFP4",
+  "teacher_revision": "ffc65bb9103ef37ba010cdfe259c2cde5401c579",
+  "training": {
+    "manifest_sha256": "7653b08f52c7f08dfa3d95e36a13e574016b94507395a511bb4e4ceb4afe5157",
+    "model": "/workspace/model",
+    "pixels": 262144,
+    "epochs": 2,
+    "seed": 42,
+    "gradient_accumulation": 8,
+    "learning_rate": 0.0001,
+    "label_smoothing": 0.0,
+    "max_presentations": 40000,
+    "source_sha256": "2b7081be5ba51a16194de9bac200d6f8fddbfb16819e7e817528c8c10af80492",
+    "questions": 20000,
+    "images": 5000,
+    "trainable_parameters": 3211264,
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "torch": "2.13.0+cu130",
+    "total_presentations": 40000
+  },
+  "training_completion": {
+    "presentations": 40000,
+    "updates": 5000,
+    "checkpoint": "training/checkpoint-040000",
+    "complete": true,
+    "adapter_parameter_l1_change": 15546.104351043701
+  },
+  "teacher_deployment": {
+    "public_base_repository": "https://github.com/WillMatthews/vllm-vision-diffusion-jev.git",
+    "base_commit": "0323d37edf54cceebdd2cf3203e3d50f10f3efe4",
+    "model_revision": "ffc65bb9103ef37ba010cdfe259c2cde5401c579",
+    "source_overlay_sha256": {
+      "vllm/v1/worker/gpu/model_runner.py": "16bc45a41afbd0c8660ccf1f8f7c7199f4404dd2a70c46705c8d6e7fa21d03da",
+      "examples/features/diffusion_reads/structured_server.py": "f936f0500b0b63a6b2bacb9cff94416f56e2ee10414e00074c1e3d0ad9d7c2ec",
+      "examples/features/diffusion_reads/visual_client.py": "402c45d3644d4cee83276230e255c80894739aae85d71fbc41fedb0943a5476c",
+      "examples/features/diffusion_reads/evaluation/generic_feasibility.py": "67a088ae988c8b45b1a0518e858a63ff4490d93f7624b2b6066cdcb73ec2893b",
+      "examples/features/diffusion_reads/evaluation/train_generic_pilot.py": "2b7081be5ba51a16194de9bac200d6f8fddbfb16819e7e817528c8c10af80492",
+      "examples/features/diffusion_reads/evaluation/predict_generic_pilot.py": "9ba86231cb9f2e8dc0676ca6d09806671460ab38a1038afa02c66693134a95b2",
+      "examples/features/diffusion_reads/evaluation/benchmark_generic_inputs.py": "46a71cd5bb720ecc35aafeabf9569a9a067508bb8181fa7581bc71f4bf910991",
+      "examples/features/diffusion_reads/evaluation/evaluate_generic_teacher.py": "4a6da4b00c09d1a340049909835062efc6ac6895efca401add9737db96534904"
+    },
+    "overlay_archive_sha256": "666739c77911713866d79e10f3bf8e7f9880536a8225aa890584029c3f184bc1",
+    "remote_script_sha256": "aa871877a026a842164660f030ddc74644a46549aadc82d24b6820e7c11b51a5",
+    "max_minutes": 90,
+    "configuration": "seqs1/canvas64/eager/memory0.9/TRITON_ATTN/prefixcache/marlin",
+    "generic_input_benchmark": {
+      "selection": "First three validation images in manifest order",
+      "questions_per_image": 4,
+      "models": [
+        "base",
+        "training/checkpoint-040000/adapter"
+      ],
+      "timed_repeats": 3,
+      "reuse_equivalence_check": true,
+      "representative_images": 100,
+      "representative_repeats": 2,
+      "representative_warmups": 3,
+      "representative_model_loads": "One per base/adapter worker",
+      "timeout_minutes": 10
+    }
+  },
+  "final_adapter_archive_sha256": "e6b2ad9a419b9f011e113cdc9bc38a1b21b33af4ddfa6c366d9a875563b5d9c0",
+  "raw_student_archive_sha256": "209b60cc68fbac96916ecd424082bb2ffa997b263a9cc360448f74715b5f96fc",
+  "raw_teacher_archive_sha256": "db1bde010b49745a9edd702d7f250096d052a6cb3bdf1171bcf34dac4bbb4eda",
+  "validation": "35 focused CPU tests, 7 fake-API lifecycle tests, pre-commit; actual GPU training/evaluations and generic-schema benchmark complete",
+  "goal_status": "Shared training feasible and improved measured quality; 2x occupied-cost target not met; no universal quality preservation claim."
+}

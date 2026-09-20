@@ -1,0 +1,306 @@
+{
+  "source_sha256": {
+    "isolated-a1-seed42.json": "8f60350532a5b6ed2e6a22000546726af0807cf93a394aed1eab01253b18d2b2",
+    "isolated-a2-seed42.json": "ca9d16bb7fc04613acc8e3e453c52ed798dc0f93e9b896a3e34dabeae70bf746"
+  },
+  "scope": "Original code only, fixed seed42, two blocks of five sweeps, nine distinct images. Each comparison reuses observations; pairs are not independent.",
+  "method": "Compare all repeat pairs within image, grouping by identical per-chunk cached-token counts. No new inference.",
+  "conclusion": "Identical cache-hit counts do not ensure identical probability outputs. This does not identify the source of variability or establish a regression caused by a candidate.",
+  "images": {
+    "images/bird.jpg": {
+      "observations": 10,
+      "comparisons": {
+        "same_cached_token_counts": {
+          "pairs": 45,
+          "identical_full_probability_maps": 0,
+          "max_absolute_probability_difference": 0.5870500694026506,
+          "top_answer_changes": 42
+        }
+      },
+      "cache_patterns": [
+        {
+          "cached_tokens_per_chunk": [
+            704,
+            192,
+            224
+          ],
+          "count": 10
+        }
+      ]
+    },
+    "images/cat.jpg": {
+      "observations": 10,
+      "comparisons": {
+        "same_cached_token_counts": {
+          "pairs": 45,
+          "identical_full_probability_maps": 0,
+          "max_absolute_probability_difference": 0.6393988423523861,
+          "top_answer_changes": 16
+        }
+      },
+      "cache_patterns": [
+        {
+          "cached_tokens_per_chunk": [
+            704,
+            192,
+            224
+          ],
+          "count": 10
+        }
+      ]
+    },
+    "images/coffee.jpg": {
+      "observations": 10,
+      "comparisons": {
+        "different_cached_token_counts": {
+          "pairs": 28,
+          "identical_full_probability_maps": 2,
+          "max_absolute_probability_difference": 0.0003031416819397892,
+          "top_answer_changes": 0
+        },
+        "same_cached_token_counts": {
+          "pairs": 17,
+          "identical_full_probability_maps": 2,
+          "max_absolute_probability_difference": 0.0003031416819397892,
+          "top_answer_changes": 0
+        }
+      },
+      "cache_patterns": [
+        {
+          "cached_tokens_per_chunk": [
+            32
+          ],
+          "count": 6
+        },
+        {
+          "cached_tokens_per_chunk": [
+            0
+          ],
+          "count": 2
+        },
+        {
+          "cached_tokens_per_chunk": [
+            256
+          ],
+          "count": 2
+        }
+      ]
+    },
+    "images/deer.jpg": {
+      "observations": 10,
+      "comparisons": {
+        "different_cached_token_counts": {
+          "pairs": 16,
+          "identical_full_probability_maps": 0,
+          "max_absolute_probability_difference": 0.8652375899096888,
+          "top_answer_changes": 10
+        },
+        "same_cached_token_counts": {
+          "pairs": 29,
+          "identical_full_probability_maps": 0,
+          "max_absolute_probability_difference": 0.8658631061601499,
+          "top_answer_changes": 20
+        }
+      },
+      "cache_patterns": [
+        {
+          "cached_tokens_per_chunk": [
+            0,
+            32,
+            32
+          ],
+          "count": 2
+        },
+        {
+          "cached_tokens_per_chunk": [
+            704,
+            192,
+            224
+          ],
+          "count": 8
+        }
+      ]
+    },
+    "images/dog.jpg": {
+      "observations": 10,
+      "comparisons": {
+        "same_cached_token_counts": {
+          "pairs": 45,
+          "identical_full_probability_maps": 0,
+          "max_absolute_probability_difference": 0.752708325638986,
+          "top_answer_changes": 36
+        }
+      },
+      "cache_patterns": [
+        {
+          "cached_tokens_per_chunk": [
+            704,
+            192,
+            224
+          ],
+          "count": 10
+        }
+      ]
+    },
+    "images/fox.jpg": {
+      "observations": 10,
+      "comparisons": {
+        "different_cached_token_counts": {
+          "pairs": 29,
+          "identical_full_probability_maps": 0,
+          "max_absolute_probability_difference": 0.9449858496284724,
+          "top_answer_changes": 51
+        },
+        "same_cached_token_counts": {
+          "pairs": 16,
+          "identical_full_probability_maps": 0,
+          "max_absolute_probability_difference": 0.7226050867776548,
+          "top_answer_changes": 29
+        }
+      },
+      "cache_patterns": [
+        {
+          "cached_tokens_per_chunk": [
+            704,
+            192,
+            224
+          ],
+          "count": 6
+        },
+        {
+          "cached_tokens_per_chunk": [
+            32,
+            32,
+            32
+          ],
+          "count": 2
+        },
+        {
+          "cached_tokens_per_chunk": [
+            0,
+            32,
+            32
+          ],
+          "count": 1
+        },
+        {
+          "cached_tokens_per_chunk": [
+            32,
+            32,
+            0
+          ],
+          "count": 1
+        }
+      ]
+    },
+    "images/horse.jpg": {
+      "observations": 10,
+      "comparisons": {
+        "same_cached_token_counts": {
+          "pairs": 28,
+          "identical_full_probability_maps": 0,
+          "max_absolute_probability_difference": 0.6822421928048243,
+          "top_answer_changes": 23
+        },
+        "different_cached_token_counts": {
+          "pairs": 17,
+          "identical_full_probability_maps": 0,
+          "max_absolute_probability_difference": 0.6706020403925519,
+          "top_answer_changes": 11
+        }
+      },
+      "cache_patterns": [
+        {
+          "cached_tokens_per_chunk": [
+            704,
+            192,
+            224
+          ],
+          "count": 8
+        },
+        {
+          "cached_tokens_per_chunk": [
+            0,
+            32,
+            32
+          ],
+          "count": 1
+        },
+        {
+          "cached_tokens_per_chunk": [
+            32,
+            0,
+            32
+          ],
+          "count": 1
+        }
+      ]
+    },
+    "images/rabbit.jpg": {
+      "observations": 10,
+      "comparisons": {
+        "same_cached_token_counts": {
+          "pairs": 29,
+          "identical_full_probability_maps": 0,
+          "max_absolute_probability_difference": 0.797572128953334,
+          "top_answer_changes": 32
+        },
+        "different_cached_token_counts": {
+          "pairs": 16,
+          "identical_full_probability_maps": 0,
+          "max_absolute_probability_difference": 0.8173577144041467,
+          "top_answer_changes": 16
+        }
+      },
+      "cache_patterns": [
+        {
+          "cached_tokens_per_chunk": [
+            704,
+            192,
+            224
+          ],
+          "count": 8
+        },
+        {
+          "cached_tokens_per_chunk": [
+            32,
+            32,
+            32
+          ],
+          "count": 2
+        }
+      ]
+    },
+    "images/stop.jpg": {
+      "observations": 10,
+      "comparisons": {
+        "same_cached_token_counts": {
+          "pairs": 29,
+          "identical_full_probability_maps": 4,
+          "max_absolute_probability_difference": 0.0089715829812822,
+          "top_answer_changes": 0
+        },
+        "different_cached_token_counts": {
+          "pairs": 16,
+          "identical_full_probability_maps": 0,
+          "max_absolute_probability_difference": 0.005956865618131468,
+          "top_answer_changes": 0
+        }
+      },
+      "cache_patterns": [
+        {
+          "cached_tokens_per_chunk": [
+            256
+          ],
+          "count": 8
+        },
+        {
+          "cached_tokens_per_chunk": [
+            0
+          ],
+          "count": 2
+        }
+      ]
+    }
+  }
+}
